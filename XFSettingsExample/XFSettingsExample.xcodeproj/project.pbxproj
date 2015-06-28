@@ -21,6 +21,7 @@
 		400384E81B404A6F003071FD /* XFSettingItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 400384DD1B404A6F003071FD /* XFSettingItem.m */; };
 		400384E91B404A6F003071FD /* XFSettingSwitchItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 400384E01B404A6F003071FD /* XFSettingSwitchItem.m */; };
 		400384F71B405BA8003071FD /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 400384F61B405BA8003071FD /* Default-568h@2x.png */; };
+		400384FE1B405F52003071FD /* NSString+Tools.m in Sources */ = {isa = PBXBuildFile; fileRef = 400384FD1B405F52003071FD /* NSString+Tools.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +53,8 @@
 		400384DF1B404A6F003071FD /* XFSettingSwitchItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XFSettingSwitchItem.h; path = ../XFSettings/XFSettingSwitchItem.h; sourceTree = "<group>"; };
 		400384E01B404A6F003071FD /* XFSettingSwitchItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XFSettingSwitchItem.m; path = ../XFSettings/XFSettingSwitchItem.m; sourceTree = "<group>"; };
 		400384F61B405BA8003071FD /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		400384FC1B405F52003071FD /* NSString+Tools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+Tools.h"; path = "Category/NSString+Tools.h"; sourceTree = "<group>"; };
+		400384FD1B405F52003071FD /* NSString+Tools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+Tools.m"; path = "Category/NSString+Tools.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +89,7 @@
 		400384B51B404979003071FD /* XFSettingsExample */ = {
 			isa = PBXGroup;
 			children = (
+				400384FB1B405F30003071FD /* Category */,
 				400384B91B404979003071FD /* AppDelegate.h */,
 				400384BA1B404979003071FD /* AppDelegate.m */,
 				400384BC1B404979003071FD /* ViewController.h */,
@@ -129,6 +133,15 @@
 				400384E01B404A6F003071FD /* XFSettingSwitchItem.m */,
 			);
 			name = XFSettings;
+			sourceTree = "<group>";
+		};
+		400384FB1B405F30003071FD /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				400384FC1B405F52003071FD /* NSString+Tools.h */,
+				400384FD1B405F52003071FD /* NSString+Tools.m */,
+			);
+			name = Category;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -209,6 +222,7 @@
 				400384E21B404A6F003071FD /* XFSettingArrowItem.m in Sources */,
 				400384E51B404A6F003071FD /* XFSettingInfoCell.m in Sources */,
 				400384E61B404A6F003071FD /* XFSettingInfoCountCell.m in Sources */,
+				400384FE1B405F52003071FD /* NSString+Tools.m in Sources */,
 				400384E91B404A6F003071FD /* XFSettingSwitchItem.m in Sources */,
 				400384E11B404A6F003071FD /* XFBaseSettingTableViewController.m in Sources */,
 				400384E71B404A6F003071FD /* XFSettingInfoItem.m in Sources */,
