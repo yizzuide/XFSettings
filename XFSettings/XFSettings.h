@@ -60,8 +60,6 @@ extern NSString * const XFSettingItemDestViewControllerClass;
  *  Cell点击后的执行代码块
  */
 extern NSString * const XFSettingOptionActionBlock;
-
-// 使用XFSettingInfoItem和XFSettingInfoCell时的属性
 /**
  * 使用XFSettingInfoItem和XFSettingInfoCell时的属性,详细信息
  */

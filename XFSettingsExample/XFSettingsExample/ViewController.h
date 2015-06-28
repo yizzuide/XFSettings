@@ -6,9 +6,10 @@
 //  Copyright © 2015年 Yizzuide. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "XFBaseSettingTableViewController.h"
 
-@interface ViewController : UIViewController
+
+@interface ViewController : XFBaseSettingTableViewController<XFBaseSettingDataSource>
 
 
 @end

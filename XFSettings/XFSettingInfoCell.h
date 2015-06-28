@@ -8,17 +8,17 @@
 
 #import "XFSettingCell.h"
 
-@protocol XFSettingInfoCellDelegate <NSObject>
+/* @protocol XFSettingInfoCellDelegate <NSObject>
 
 @optional
 - (void)settingInfoValueChanged:(UILabel *)rightInfoLabel;
 
-@end
+@end */
 
 /**
  *  一个显示各种详细的Cell
  */
-@interface XFSettingInfoCell : XFSettingCell<XFSettingInfoCellDelegate>
+@interface XFSettingInfoCell : XFSettingCell//<XFSettingInfoCellDelegate>
 
 @property (nonatomic, weak) UILabel *rightInfoLabel;
 @end

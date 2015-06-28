@@ -6,7 +6,7 @@
 //  Copyright (c) 2015年 Yizzuide. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 typedef enum : NSUInteger {
     XFSettingPhaseTypeCellInit,

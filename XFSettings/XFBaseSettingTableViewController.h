@@ -25,7 +25,7 @@
          XFSettingItemIcon : @"draft",
          XFSettingItemClass : [XFSettingInfoItem class], // 这个字段用于判断是否有右边辅助功能的cell,不写则没有
          XFSettingItemRelatedCellClass:[XFSettingInfoCell class],// 自定义的cell
-         //                             @"destVCClass" : [destVCClass class], // 如果有目标控制器
+         XFSettingItemDestViewControllerClass : [destVCClass class], // 如果有目标控制器
          XFSettingOptionActionBlock : ^(XFSettingInfoCell *cell,,XFSettingPhaseType phaseType,id intentData){ // 如果有可选的操作
                  switch (phaseType) {
                      case XFSettingPhaseTypeCellInit:
