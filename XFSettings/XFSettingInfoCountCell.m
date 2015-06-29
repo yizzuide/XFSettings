@@ -1,6 +1,6 @@
 //
 //  XFSettingInfoCountCell.m
-//  新浪微博
+//  XFSeetings
 //
 //  Created by Yizzuide on 15/6/26.
 //  Copyright © 2015年 Yizzuide. All rights reserved.
