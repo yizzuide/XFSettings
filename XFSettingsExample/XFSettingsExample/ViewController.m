@@ -31,6 +31,19 @@
                  XFSettingGroupHeader: @"基本信息",
                  XFSettingGroupItems : @[ // items
                          @{ // itemModel
+                             XFSettingItemTitle: @"我的朋友",
+                             XFSettingItemIcon : @"1435582804_group",
+                             XFSettingItemClass : [XFSettingInfoItem class], // 这个字段用于判断是否有右边辅助功能的cell,不写则没有
+                             XFSettingItemAttrDetailText : @"你的好友",
+                             XFSettingItemRelatedCellClass:[XFSettingInfoDotCell class],// 自定义的cell
+                             //                             XFSettingItemDestViewControllerClass : [destVCClass class], // 如果有目标控制器
+                             XFSettingOptionActionBlock : ^(XFSettingInfoCountCell *cell,XFSettingPhaseType phaseType,id intentData){ // 如果有可选的操作
+                                 if (phaseType == XFSettingPhaseTypeCellInteracted) {
+                                     cell.rightInfoLabel.hidden = YES;
+                                 }
+                             }
+                             },// end itemModel
+                         @{ // itemModel
                              XFSettingItemTitle: @"我的消息",
                              XFSettingItemIcon : @"1435527299_message",
                              XFSettingItemClass : [XFSettingInfoItem class], // 这个字段用于判断是否有右边辅助功能的cell,不写则没有

@@ -22,6 +22,7 @@
 		400384E91B404A6F003071FD /* XFSettingSwitchItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 400384E01B404A6F003071FD /* XFSettingSwitchItem.m */; };
 		400384F71B405BA8003071FD /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 400384F61B405BA8003071FD /* Default-568h@2x.png */; };
 		400384FE1B405F52003071FD /* NSString+Tools.m in Sources */ = {isa = PBXBuildFile; fileRef = 400384FD1B405F52003071FD /* NSString+Tools.m */; };
+		404672601B412F7D00D5BD62 /* XFSettingInfoDotCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4046725F1B412F7D00D5BD62 /* XFSettingInfoDotCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +56,8 @@
 		400384F61B405BA8003071FD /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		400384FC1B405F52003071FD /* NSString+Tools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+Tools.h"; path = "Category/NSString+Tools.h"; sourceTree = "<group>"; };
 		400384FD1B405F52003071FD /* NSString+Tools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+Tools.m"; path = "Category/NSString+Tools.m"; sourceTree = "<group>"; };
+		4046725E1B412F7D00D5BD62 /* XFSettingInfoDotCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XFSettingInfoDotCell.h; path = ../XFSettings/XFSettingInfoDotCell.h; sourceTree = "<group>"; };
+		4046725F1B412F7D00D5BD62 /* XFSettingInfoDotCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XFSettingInfoDotCell.m; path = ../XFSettings/XFSettingInfoDotCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +125,8 @@
 				400384D51B404A6F003071FD /* XFSettingGroup.m */,
 				400384D61B404A6F003071FD /* XFSettingInfoCell.h */,
 				400384D71B404A6F003071FD /* XFSettingInfoCell.m */,
+				4046725E1B412F7D00D5BD62 /* XFSettingInfoDotCell.h */,
+				4046725F1B412F7D00D5BD62 /* XFSettingInfoDotCell.m */,
 				400384D81B404A6F003071FD /* XFSettingInfoCountCell.h */,
 				400384D91B404A6F003071FD /* XFSettingInfoCountCell.m */,
 				400384DA1B404A6F003071FD /* XFSettingInfoItem.h */,
@@ -213,6 +218,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				404672601B412F7D00D5BD62 /* XFSettingInfoDotCell.m in Sources */,
 				400384E41B404A6F003071FD /* XFSettingGroup.m in Sources */,
 				400384BE1B404979003071FD /* ViewController.m in Sources */,
 				400384BB1B404979003071FD /* AppDelegate.m in Sources */,

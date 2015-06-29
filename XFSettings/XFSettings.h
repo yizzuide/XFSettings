@@ -18,6 +18,8 @@
 #import "XFSettingCell.h"
 #import "XFSettingInfoCell.h"
 #import "XFSettingInfoCountCell.h"
+#import "XFSettingInfoDotCell.h"
+
 
 
 
