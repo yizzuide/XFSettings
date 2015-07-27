@@ -6,7 +6,7 @@
 //  Copyright © 2015年 Yizzuide. All rights reserved.
 //
 
-#import "XFBaseSettingTableViewController.h"
+#import "XFSettings.h"
 
 
 @interface ViewController : XFBaseSettingTableViewController
