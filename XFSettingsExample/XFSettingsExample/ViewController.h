@@ -9,7 +9,7 @@
 #import "XFBaseSettingTableViewController.h"
 
 
-@interface ViewController : XFBaseSettingTableViewController<XFBaseSettingDataSource>
+@interface ViewController : XFBaseSettingTableViewController
 
 
 @end

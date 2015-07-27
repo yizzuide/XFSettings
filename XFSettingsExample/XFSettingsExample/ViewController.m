@@ -10,7 +10,7 @@
 #import "NSString+Tools.h"
 #import "UpdateViewController.h"
 
-@interface ViewController ()
+@interface ViewController ()<XFBaseSettingDataSource>
 
 @end
 
