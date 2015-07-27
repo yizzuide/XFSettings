@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "NSString+Tools.h"
+#import "UpdateViewController.h"
 
 @interface ViewController ()
 
@@ -87,6 +88,7 @@
                              XFSettingItemTitle: @"检测新版本",
                              XFSettingItemIcon : @"1435529156_cloud-arrow-up",
                              XFSettingItemClass : [XFSettingArrowItem class],
+                             XFSettingItemDestViewControllerClass : [UpdateViewController class],
                              XFSettingOptionActionBlock : ^(XFSettingCell *cell,XFSettingPhaseType phaseType,id intentData){
                                  
                              }
