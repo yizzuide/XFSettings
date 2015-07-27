@@ -43,39 +43,36 @@
                                  }
                              }
                              },// end itemModel
-                         @{ // itemModel
+                         @{
                              XFSettingItemTitle: @"我的消息",
                              XFSettingItemIcon : @"1435527299_message",
-                             XFSettingItemClass : [XFSettingInfoItem class], // 这个字段用于判断是否有右边辅助功能的cell,不写则没有
-                             XFSettingItemAttrDetailText : @"新的好友",
+                             XFSettingItemClass : [XFSettingInfoItem class],                              XFSettingItemAttrDetailText : @"新的好友",
                              XFSettingItemAttrRightInfo : @"3",
-                             XFSettingItemRelatedCellClass:[XFSettingInfoCountCell class],// 自定义的cell
-                             //                             XFSettingItemDestViewControllerClass : [destVCClass class], // 如果有目标控制器
-                             XFSettingOptionActionBlock : ^(XFSettingInfoCountCell *cell,XFSettingPhaseType phaseType,id intentData){ // 如果有可选的操作
+                             XFSettingItemRelatedCellClass:[XFSettingInfoCountCell class],
+                             XFSettingOptionActionBlock : ^(XFSettingInfoCountCell *cell,XFSettingPhaseType phaseType,id intentData){
                                  if (phaseType == XFSettingPhaseTypeCellInteracted) {
                                      int count = cell.rightInfoLabel.text.intValue;
                                      cell.rightInfoLabel.text = [NSString stringWithFormat:@"%d",++count];
                                  }
                              }
-                             },// end itemModel
-                         @{ // itemModel
+                             },
+                         @{
                              XFSettingItemTitle: @"缓存大小",
                              XFSettingItemIcon : @"1435529531_CD-DVD Drive-2",
-                             XFSettingItemClass : [XFSettingInfoItem class], // 这个字段用于判断是否有右边辅助功能的cell,不写则没有
+                             XFSettingItemClass : [XFSettingInfoItem class],
                              XFSettingItemAttrDetailText : @"cache",
                              XFSettingItemAttrRightInfo : @"正在计算",
-                             XFSettingItemRelatedCellClass:[XFSettingInfoCell class],// 自定义的cell
-                             //                             XFSettingItemDestViewControllerClass : [destVCClass class], // 如果有目标控制器
-                             XFSettingOptionActionBlock : ^(XFSettingInfoCell *cell,XFSettingPhaseType phaseType,id intentData){ // 如果有可选的操作
-                                 //                                 [self cacheAction:cell phaseType:phaseType];
+                             XFSettingItemRelatedCellClass:[XFSettingInfoCell class],
+                             XFSettingOptionActionBlock : ^(XFSettingInfoCell *cell,XFSettingPhaseType phaseType,id intentData){
+                                
                                  [self cacheDirClear:cell phaseType:phaseType];
                              }
-                             },// end itemModel
-                         @{ // itemModel
+                             },
+                         @{
                              XFSettingItemTitle: @"保存我的设置",
                              XFSettingItemIcon : @"1435527366_1-8",
-                             XFSettingItemClass : [XFSettingSwitchItem class], // 这个字段用于判断是否有右边辅助功能的cell,不写则没有
-                             XFSettingOptionActionBlock : ^(XFSettingCell *cell,XFSettingPhaseType phaseType,id intentData){ // 如果有可选的操作
+                             XFSettingItemClass : [XFSettingSwitchItem class],
+                             XFSettingOptionActionBlock : ^(XFSettingCell *cell,XFSettingPhaseType phaseType,id intentData){
                                  
                                  if (phaseType == XFSettingPhaseTypeCellInteracted) {
                                      if ([intentData[XFSettingIntentDataSwitchOn] boolValue]) {
@@ -86,21 +83,18 @@
                                  }
                              }
                              },
-                         @{ // itemModel
+                         @{
                              XFSettingItemTitle: @"检测新版本",
                              XFSettingItemIcon : @"1435529156_cloud-arrow-up",
-                             XFSettingItemClass : [XFSettingArrowItem class], // 这个字段用于判断是否有右边辅助功能的cell,不写则没有
-//                             XFSettingItemDestViewControllerClass : [XFTestViewController class],
-                             XFSettingOptionActionBlock : ^(XFSettingCell *cell,XFSettingPhaseType phaseType,id intentData){ // 如果有可选的操作
+                             XFSettingItemClass : [XFSettingArrowItem class],
+                             XFSettingOptionActionBlock : ^(XFSettingCell *cell,XFSettingPhaseType phaseType,id intentData){
                                  
                              }
                              },
-                         @{ // itemModel
+                         @{
                              XFSettingItemTitle: @"vip帮助",
                              XFSettingItemIcon : @"1435529211_circle_help_question-mark",
-                             //                             XFSettingItemClass : [XFSettingArrowItem class], // 这个字段用于判断是否有右边辅助功能的cell,不写则没有
-                             //                             XFSettingItemDestViewControllerClass : [XFTestViewController class],
-                             XFSettingOptionActionBlock : ^(XFSettingCell *cell,XFSettingPhaseType phaseType,id intentData){ // 如果有可选的操作
+                             XFSettingOptionActionBlock : ^(XFSettingCell *cell,XFSettingPhaseType phaseType,id intentData){
                                  
                                  
                              }
