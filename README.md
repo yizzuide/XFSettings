@@ -16,6 +16,16 @@ First, add `#import "XFSettings.h` to your UIViewController,the `XFBaseSettingTa
 @interface ViewController ()<XFBaseSettingDataSource>
 @end
 @implementation ViewController
+
+- (void)viewDidLoad {
+    [super viewDidLoad]; // must invoke super method.
+    
+    self.navigationItem.title = @"设置";
+    self.view.backgroundColor = [UIColor whiteColor];
+    
+    self.dataSource = self; // set self as dataSource.
+}
+
 - (NSArray *)baseSettingItems
 {
     return @[ // groupArr
