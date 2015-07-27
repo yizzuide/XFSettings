@@ -40,6 +40,8 @@ First, add `#import "XFSettings.h` to your UIViewController,the `XFBaseSettingTa
                              XFSettingItemRelatedCellClass:[XFSettingInfoDotCell class],// 自定义的cell
                              // XFSettingItemDestViewControllerClass : [destVCClass class], // 如果有目标控制器
                              XFSettingOptionActionBlock : ^(XFSettingInfoCountCell *cell,XFSettingPhaseType phaseType,id intentData){ // 如果有可选的操作
+                             //  XFSettingPhaseTypeCellInteracted当在被点击了的时候
+                             // 还有一个XFSettingPhaseTypeCellInit是cell被始化时调用
                                  if (phaseType == XFSettingPhaseTypeCellInteracted) {
                                      cell.rightInfoLabel.hidden = YES;
                                  }
