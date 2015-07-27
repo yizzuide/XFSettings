@@ -50,7 +50,8 @@ First, add `#import "XFSettings.h` to your UIViewController,the `XFBaseSettingTa
                          @{
                              XFSettingItemTitle: @"我的消息",
                              XFSettingItemIcon : @"1435527299_message",
-                             XFSettingItemClass : [XFSettingInfoItem class],                              XFSettingItemAttrDetailText : @"新的好友",
+                             XFSettingItemClass : [XFSettingInfoItem class],
+                             XFSettingItemAttrDetailText : @"新的好友",
                              XFSettingItemAttrRightInfo : @"3",
                              XFSettingItemRelatedCellClass:[XFSettingInfoCountCell class],
                              XFSettingOptionActionBlock : ^(XFSettingInfoCountCell *cell,XFSettingPhaseType phaseType,id intentData){
