@@ -1,5 +1,5 @@
 # XFSettings
-This is IOS UI framework,the goal is build setting interface more fast,more convenient.
+Custom UITableView for settings,the goal is build setting interface more fast,more convenient.
 
 ![XFSettings usage1](./Doc/usage1.gif)
 
