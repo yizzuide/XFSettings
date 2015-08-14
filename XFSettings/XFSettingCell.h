@@ -18,9 +18,8 @@
 
 + (instancetype)settingCellWithTalbeView:(UITableView *)tableView;
 /**
- *  <#Description#>
+ *  返加不同类型的cell的重用标识字符串
  *
- *  @return <#return value description#>
  */
 + (NSString *)settingCellReuseIdentifierString;
 @end
