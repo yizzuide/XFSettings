@@ -123,27 +123,27 @@
 		400384CD1B404991003071FD /* XFSettings */ = {
 			isa = PBXGroup;
 			children = (
+				400384DE1B404A6F003071FD /* XFSettings.h */,
 				400384CE1B404A6F003071FD /* XFSettingTableViewController.h */,
 				400384CF1B404A6F003071FD /* XFSettingTableViewController.m */,
-				400384D01B404A6F003071FD /* XFSettingArrowItem.h */,
-				400384D11B404A6F003071FD /* XFSettingArrowItem.m */,
 				400384D21B404A6F003071FD /* XFSettingCell.h */,
 				400384D31B404A6F003071FD /* XFSettingCell.m */,
-				400384D41B404A6F003071FD /* XFSettingGroup.h */,
-				400384D51B404A6F003071FD /* XFSettingGroup.m */,
 				400384D61B404A6F003071FD /* XFSettingInfoCell.h */,
 				400384D71B404A6F003071FD /* XFSettingInfoCell.m */,
 				4046725E1B412F7D00D5BD62 /* XFSettingInfoDotCell.h */,
 				4046725F1B412F7D00D5BD62 /* XFSettingInfoDotCell.m */,
 				400384D81B404A6F003071FD /* XFSettingInfoCountCell.h */,
 				400384D91B404A6F003071FD /* XFSettingInfoCountCell.m */,
-				400384DA1B404A6F003071FD /* XFSettingInfoItem.h */,
-				400384DB1B404A6F003071FD /* XFSettingInfoItem.m */,
+				400384D41B404A6F003071FD /* XFSettingGroup.h */,
+				400384D51B404A6F003071FD /* XFSettingGroup.m */,
 				400384DC1B404A6F003071FD /* XFSettingItem.h */,
 				400384DD1B404A6F003071FD /* XFSettingItem.m */,
-				400384DE1B404A6F003071FD /* XFSettings.h */,
 				400384DF1B404A6F003071FD /* XFSettingSwitchItem.h */,
 				400384E01B404A6F003071FD /* XFSettingSwitchItem.m */,
+				400384D01B404A6F003071FD /* XFSettingArrowItem.h */,
+				400384D11B404A6F003071FD /* XFSettingArrowItem.m */,
+				400384DA1B404A6F003071FD /* XFSettingInfoItem.h */,
+				400384DB1B404A6F003071FD /* XFSettingInfoItem.m */,
 			);
 			name = XFSettings;
 			sourceTree = "<group>";

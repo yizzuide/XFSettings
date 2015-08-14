@@ -105,13 +105,15 @@ NSString * const XFSettingIntentDataSwitchOn = @"switchOn";
     // 取消选中状态
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
-    
-    
     XFSettingItem *item = [self.settingGroups[indexPath.section] items][indexPath.row];
     // 如果有操作要执行
-    if (item.optionBlock) {
-        item.optionBlock([tableView cellForRowAtIndexPath:indexPath],XFSettingPhaseTypeCellInteracted,nil);
+    UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+    if (cell.selectionStyle != UITableViewCellSelectionStyleNone) {
+        if (item.optionBlock) {
+            item.optionBlock([tableView cellForRowAtIndexPath:indexPath],XFSettingPhaseTypeCellInteracted,nil);
+        }
     }
+    
     
     // 如果是有第二级控制器显示类型
     if ([item class] == [XFSettingArrowItem class]) {
