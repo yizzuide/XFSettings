@@ -17,4 +17,10 @@
 @property (nonatomic, strong) XFSettingItem *item;
 
 + (instancetype)settingCellWithTalbeView:(UITableView *)tableView;
+/**
+ *  <#Description#>
+ *
+ *  @return <#return value description#>
+ */
++ (NSString *)settingCellReuseIdentifierString;
 @end

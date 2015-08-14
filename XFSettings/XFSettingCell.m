@@ -13,7 +13,7 @@
 @interface XFSettingCell ()
 
 @property (nonatomic, weak) UISwitch *switchView;
-@property (nonatomic, strong) UIImageView *arrowIcon;
+@property (nonatomic, weak) UIImageView *arrowIcon;
 @end
 
 @implementation XFSettingCell
@@ -32,8 +32,10 @@
  - (UIImageView *)arrowIcon
 {
     if (_arrowIcon == nil) {
-        _arrowIcon = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 8, 12)];
-        _arrowIcon.contentMode = UIViewContentModeCenter;
+        UIImageView *arrowIcon = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 8, 12)];
+        arrowIcon.contentMode = UIViewContentModeCenter;
+        self.accessoryView = arrowIcon;
+        _arrowIcon = arrowIcon;
     }
     return _arrowIcon;
 } 
@@ -64,7 +66,6 @@
             // 如果有自定义的图标
             if (arrowItem.arrowIcon) {
                 self.arrowIcon.image = [UIImage imageNamed:arrowItem.arrowIcon];
-                self.accessoryView = self.arrowIcon;
             }else{ // 否则用系统默认
                 self.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
                 self.selectionStyle = UITableViewCellSelectionStyleDefault;
@@ -83,7 +84,7 @@
 }
 // 创建可复用cell
 + (instancetype)settingCellWithTalbeView:(UITableView *)tableView {
-    static NSString *ID = @"cell"; //TODO: deffrent cell for identifier string
+    NSString *ID = [self settingCellReuseIdentifierString];
     
     XFSettingCell *cell = [tableView dequeueReusableCellWithIdentifier:ID];
     
@@ -92,6 +93,11 @@
     }
     
     return cell;
+}
+
++ (NSString *)settingCellReuseIdentifierString
+{
+    return @"setting-cell";
 }
 
 - (void)stateChanged:(UISwitch *)switchView {

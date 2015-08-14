@@ -43,6 +43,11 @@
     self.rightInfoLabel.frame = rightInfoFrame;
 }
 
++ (NSString *)settingCellReuseIdentifierString
+{
+    return @"settingInfo-cell";
+}
+
 - (void)setItem:(XFSettingItem *)item
 {
     [super setItem:item];
