@@ -26,7 +26,7 @@ First, add `#import "XFSettings.h` to your UIViewController,the `XFBaseSettingTa
     self.dataSource = self; // set self as dataSource.
 }
 
-- (NSArray *)baseSettingItems
+- (NSArray *)settingItems
 {
     return @[ // groupArr
              @{ // groupModel
@@ -38,10 +38,8 @@ First, add `#import "XFSettings.h` to your UIViewController,the `XFBaseSettingTa
                              XFSettingItemClass : [XFSettingInfoItem class], // 这个字段用于判断是否有右边辅助功能的cell,不写则没有
                              XFSettingItemAttrDetailText : @"你的好友",
                              XFSettingItemRelatedCellClass:[XFSettingInfoDotCell class],// 自定义的cell
-                             // XFSettingItemDestViewControllerClass : [destVCClass class], // 如果有目标控制器
+                             XFSettingItemDestViewControllerClass : [XFNewFriendViewController class], // 如果有目标控制器
                              XFSettingOptionActionBlock : ^(XFSettingInfoCountCell *cell,XFSettingPhaseType phaseType,id intentData){ // 如果有可选的操作
-                             //  XFSettingPhaseTypeCellInteracted当在被点击了的时候
-                             // 还有一个XFSettingPhaseTypeCellInit是cell被始化时调用
                                  if (phaseType == XFSettingPhaseTypeCellInteracted) {
                                      cell.rightInfoLabel.hidden = YES;
                                  }
@@ -50,11 +48,11 @@ First, add `#import "XFSettings.h` to your UIViewController,the `XFBaseSettingTa
                          @{
                              XFSettingItemTitle: @"我的消息",
                              XFSettingItemIcon : @"1435527299_message",
-                             XFSettingItemClass : [XFSettingInfoItem class],
-                             XFSettingItemAttrDetailText : @"新的好友",
+                             XFSettingItemClass : [XFSettingInfoItem class],                              XFSettingItemAttrDetailText : @"新的好友",
                              XFSettingItemAttrRightInfo : @"3",
                              XFSettingItemRelatedCellClass:[XFSettingInfoCountCell class],
                              XFSettingOptionActionBlock : ^(XFSettingInfoCountCell *cell,XFSettingPhaseType phaseType,id intentData){
+                                 // 交互时处理
                                  if (phaseType == XFSettingPhaseTypeCellInteracted) {
                                      int count = cell.rightInfoLabel.text.intValue;
                                      cell.rightInfoLabel.text = [NSString stringWithFormat:@"%d",++count];
@@ -91,10 +89,17 @@ First, add `#import "XFSettings.h` to your UIViewController,the `XFBaseSettingTa
                          @{
                              XFSettingItemTitle: @"检测新版本",
                              XFSettingItemIcon : @"1435529156_cloud-arrow-up",
-                             XFSettingItemClass : [XFSettingArrowItem class],
+                             // 使用自定义向右箭头
+                             XFSettingItemArrowIcon : @"CellArrow",
+                             XFSettingItemClass : [XFSettingInfoItem class],
+                             XFSettingItemRelatedCellClass:[XFSettingInfoCell class],
+                             XFSettingItemAttrRightInfo : @"有新版本！",
                              XFSettingItemDestViewControllerClass : [UpdateViewController class],
-                             XFSettingOptionActionBlock : ^(XFSettingCell *cell,XFSettingPhaseType phaseType,id intentData){
-                                 
+                             XFSettingOptionActionBlock : ^(XFSettingInfoCell *cell,XFSettingPhaseType phaseType,id intentData){
+                                 // 自定义初始化样式
+                                 if (phaseType == XFSettingPhaseTypeCellInit) {
+                                     cell.rightInfoLabel.textColor = [UIColor orangeColor];
+                                 }
                              }
                              },
                          @{
@@ -110,5 +115,6 @@ First, add `#import "XFSettings.h` to your UIViewController,the `XFBaseSettingTa
                  }// end groupModel
              ];// endgroupArr
 }
+
 @end
 ```
