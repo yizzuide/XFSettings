@@ -13,13 +13,14 @@
 
 - (UILabel *)rightInfoLabel{
     if (_rightInfoLabel == nil) {
-        UILabel *label= [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 50, 20)];
+        UILabel *label= [[UILabel alloc] init];
+//        label.backgroundColor = [UIColor grayColor];
+        label.bounds = CGRectMake(0, 0, 80, 20);
+        label.textColor = [UIColor redColor];
+        label.font = [UIFont systemFontOfSize:10];
+        label.textAlignment = NSTextAlignmentRight;
+        [self.contentView addSubview:label];
         _rightInfoLabel = label;
-        _rightInfoLabel.textColor = [UIColor redColor];
-        _rightInfoLabel.font = [UIFont systemFontOfSize:10];
-        _rightInfoLabel.textAlignment = NSTextAlignmentRight;
-        
-        self.accessoryView = self.rightInfoLabel;
     }
     return _rightInfoLabel;
 }
@@ -30,6 +31,16 @@
     CGRect detailFrame = self.detailTextLabel.frame;
     detailFrame.origin.x = CGRectGetMaxX(self.textLabel.frame)  + 5;
     self.detailTextLabel.frame = detailFrame;
+    
+    XFSettingArrowItem *item = (XFSettingArrowItem *)self.item;
+    CGRect rightInfoFrame = self.rightInfoLabel.frame;
+    if (item.destVCClass) {
+        rightInfoFrame.origin.x = self.contentView.frame.size.width - rightInfoFrame.size.width;
+    }else{
+        rightInfoFrame.origin.x = self.contentView.frame.size.width - rightInfoFrame.size.width - 10;
+    }
+    rightInfoFrame.origin.y = (self.contentView.frame.size.height - rightInfoFrame.size.height) * 0.5;
+    self.rightInfoLabel.frame = rightInfoFrame;
 }
 
 - (void)setItem:(XFSettingItem *)item

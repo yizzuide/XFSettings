@@ -17,6 +17,7 @@ NSString * const XFSettingGroupFooter = @"footer";
 NSString * const XFSettingItemClass = @"itemClass";
 NSString * const XFSettingItemTitle = @"title";
 NSString * const XFSettingItemIcon = @"icon";
+NSString * const XFSettingItemArrowIcon = @"arrowIcon";
 NSString * const XFSettingItemRelatedCellClass = @"relatedCellClass";
 NSString * const XFSettingItemDestViewControllerClass = @"destVCClass";
 NSString * const XFSettingOptionActionBlock = @"optionBlock";
@@ -116,7 +117,7 @@ NSString * const XFSettingIntentDataSwitchOn = @"switchOn";
     
     
     // 如果是有第二级控制器显示类型
-    if ([item class] == [XFSettingArrowItem class]) {
+    if ([item isKindOfClass:[XFSettingArrowItem class]]) {
         Class vcClass = ((XFSettingArrowItem *)item).destVCClass ;
         if (vcClass) {
             UIViewController *controller = [[vcClass alloc] init];

@@ -23,6 +23,8 @@
 		400384F71B405BA8003071FD /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 400384F61B405BA8003071FD /* Default-568h@2x.png */; };
 		400384FE1B405F52003071FD /* NSString+Tools.m in Sources */ = {isa = PBXBuildFile; fileRef = 400384FD1B405F52003071FD /* NSString+Tools.m */; };
 		404672601B412F7D00D5BD62 /* XFSettingInfoDotCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4046725F1B412F7D00D5BD62 /* XFSettingInfoDotCell.m */; };
+		40C058AF1B7E04FE00575C21 /* XFNewFriendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 40C058AD1B7E04FE00575C21 /* XFNewFriendViewController.m */; };
+		40C058B01B7E04FE00575C21 /* XFNewFriendViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 40C058AE1B7E04FE00575C21 /* XFNewFriendViewController.xib */; };
 		40F4057C1B66257100A93A48 /* UpdateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 40F4057A1B66257100A93A48 /* UpdateViewController.m */; };
 		40F4057D1B66257100A93A48 /* UpdateViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 40F4057B1B66257100A93A48 /* UpdateViewController.xib */; };
 /* End PBXBuildFile section */
@@ -60,6 +62,9 @@
 		400384FD1B405F52003071FD /* NSString+Tools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+Tools.m"; path = "Category/NSString+Tools.m"; sourceTree = "<group>"; };
 		4046725E1B412F7D00D5BD62 /* XFSettingInfoDotCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XFSettingInfoDotCell.h; path = ../XFSettings/XFSettingInfoDotCell.h; sourceTree = "<group>"; };
 		4046725F1B412F7D00D5BD62 /* XFSettingInfoDotCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XFSettingInfoDotCell.m; path = ../XFSettings/XFSettingInfoDotCell.m; sourceTree = "<group>"; };
+		40C058AC1B7E04FE00575C21 /* XFNewFriendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFNewFriendViewController.h; sourceTree = "<group>"; };
+		40C058AD1B7E04FE00575C21 /* XFNewFriendViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFNewFriendViewController.m; sourceTree = "<group>"; };
+		40C058AE1B7E04FE00575C21 /* XFNewFriendViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XFNewFriendViewController.xib; sourceTree = "<group>"; };
 		40F405791B66257100A93A48 /* UpdateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UpdateViewController.h; sourceTree = "<group>"; };
 		40F4057A1B66257100A93A48 /* UpdateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UpdateViewController.m; sourceTree = "<group>"; };
 		40F4057B1B66257100A93A48 /* UpdateViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UpdateViewController.xib; sourceTree = "<group>"; };
@@ -105,6 +110,9 @@
 				40F405791B66257100A93A48 /* UpdateViewController.h */,
 				40F4057A1B66257100A93A48 /* UpdateViewController.m */,
 				40F4057B1B66257100A93A48 /* UpdateViewController.xib */,
+				40C058AC1B7E04FE00575C21 /* XFNewFriendViewController.h */,
+				40C058AD1B7E04FE00575C21 /* XFNewFriendViewController.m */,
+				40C058AE1B7E04FE00575C21 /* XFNewFriendViewController.xib */,
 				400384C21B404979003071FD /* Assets.xcassets */,
 				400384C71B404979003071FD /* Info.plist */,
 				400384B61B404979003071FD /* Supporting Files */,
@@ -215,6 +223,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				400384C31B404979003071FD /* Assets.xcassets in Resources */,
+				40C058B01B7E04FE00575C21 /* XFNewFriendViewController.xib in Resources */,
 				400384F71B405BA8003071FD /* Default-568h@2x.png in Resources */,
 				40F4057D1B66257100A93A48 /* UpdateViewController.xib in Resources */,
 			);
@@ -232,6 +241,7 @@
 				40F4057C1B66257100A93A48 /* UpdateViewController.m in Sources */,
 				400384BE1B404979003071FD /* ViewController.m in Sources */,
 				400384BB1B404979003071FD /* AppDelegate.m in Sources */,
+				40C058AF1B7E04FE00575C21 /* XFNewFriendViewController.m in Sources */,
 				400384E81B404A6F003071FD /* XFSettingItem.m in Sources */,
 				400384E31B404A6F003071FD /* XFSettingCell.m in Sources */,
 				400384B81B404979003071FD /* main.m in Sources */,

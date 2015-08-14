@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "NSString+Tools.h"
 #import "UpdateViewController.h"
+#import "XFNewFriendViewController.h"
 
 @interface ViewController ()<XFSettingTableViewDataSource>
 
@@ -37,7 +38,7 @@
                              XFSettingItemClass : [XFSettingInfoItem class], // 这个字段用于判断是否有右边辅助功能的cell,不写则没有
                              XFSettingItemAttrDetailText : @"你的好友",
                              XFSettingItemRelatedCellClass:[XFSettingInfoDotCell class],// 自定义的cell
-                             //                             XFSettingItemDestViewControllerClass : [destVCClass class], // 如果有目标控制器
+                            XFSettingItemDestViewControllerClass : [XFNewFriendViewController class], // 如果有目标控制器
                              XFSettingOptionActionBlock : ^(XFSettingInfoCountCell *cell,XFSettingPhaseType phaseType,id intentData){ // 如果有可选的操作
                                  if (phaseType == XFSettingPhaseTypeCellInteracted) {
                                      cell.rightInfoLabel.hidden = YES;
@@ -51,6 +52,7 @@
                              XFSettingItemAttrRightInfo : @"3",
                              XFSettingItemRelatedCellClass:[XFSettingInfoCountCell class],
                              XFSettingOptionActionBlock : ^(XFSettingInfoCountCell *cell,XFSettingPhaseType phaseType,id intentData){
+                                 // 交互时处理
                                  if (phaseType == XFSettingPhaseTypeCellInteracted) {
                                      int count = cell.rightInfoLabel.text.intValue;
                                      cell.rightInfoLabel.text = [NSString stringWithFormat:@"%d",++count];
@@ -87,10 +89,17 @@
                          @{
                              XFSettingItemTitle: @"检测新版本",
                              XFSettingItemIcon : @"1435529156_cloud-arrow-up",
-                             XFSettingItemClass : [XFSettingArrowItem class],
+                             // 使用自定义向右箭头
+                             XFSettingItemArrowIcon : @"CellArrow",
+                             XFSettingItemClass : [XFSettingInfoItem class],
+                             XFSettingItemRelatedCellClass:[XFSettingInfoCell class],
+                             XFSettingItemAttrRightInfo : @"有新版本！",
                              XFSettingItemDestViewControllerClass : [UpdateViewController class],
-                             XFSettingOptionActionBlock : ^(XFSettingCell *cell,XFSettingPhaseType phaseType,id intentData){
-                                 
+                             XFSettingOptionActionBlock : ^(XFSettingInfoCell *cell,XFSettingPhaseType phaseType,id intentData){
+                                 // 自定义初始化样式
+                                 if (phaseType == XFSettingPhaseTypeCellInit) {
+                                     cell.rightInfoLabel.textColor = [UIColor orangeColor];
+                                 }
                              }
                              },
                          @{
@@ -126,6 +135,7 @@
             NSString *info = cell.rightInfoLabel.text;
             if ([info isEqualToString:@"0.0M"]) return;
             
+            cell.rightInfoLabel.text = @"正在清理中...";
             
             dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
                 

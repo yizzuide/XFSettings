@@ -47,9 +47,13 @@ extern NSString * const XFSettingItemClass;
  */
 extern NSString * const XFSettingItemTitle;
 /**
- *  Cell标题
+ *  Cell图标
  */
 extern NSString * const XFSettingItemIcon;
+/**
+ *  cell arrow图标
+ */
+extern NSString * const XFSettingItemArrowIcon;
 /**
  *  CellView的类型
  */

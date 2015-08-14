@@ -12,7 +12,8 @@
  *  用于跳转控制器
  */
 @interface XFSettingArrowItem : XFSettingItem
-
+// 跳转提示图标
+@property (nonatomic, copy) NSString *arrowIcon;
 // 跳转的目标控制器
 @property (nonatomic, assign) Class destVCClass;
 @end

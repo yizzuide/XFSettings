@@ -13,7 +13,7 @@
 @interface XFSettingCell ()
 
 @property (nonatomic, weak) UISwitch *switchView;
-//@property (nonatomic, strong) UIImageView *arrowIcon;
+@property (nonatomic, strong) UIImageView *arrowIcon;
 @end
 
 @implementation XFSettingCell
@@ -29,13 +29,14 @@
     }
     return _switchView;
 }
-/* - (UIImageView *)arrowIcon
+ - (UIImageView *)arrowIcon
 {
     if (_arrowIcon == nil) {
-        _arrowIcon = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"CellArrow"]];
+        _arrowIcon = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 8, 12)];
+        _arrowIcon.contentMode = UIViewContentModeCenter;
     }
     return _arrowIcon;
-} */
+} 
 
 - (void)setItem:(XFSettingItem *)item
 {
@@ -57,10 +58,18 @@
     // 设置辅助视图类型
     Class itemClass = [item class];
     // 如果是带有向右箭头的cell
-    if (itemClass == [XFSettingArrowItem class]) {
-//        self.accessoryView = self.arrowIcon;
-        self.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-        self.selectionStyle = UITableViewCellSelectionStyleDefault;
+    if ([item isKindOfClass:[XFSettingArrowItem class]]) {
+        XFSettingArrowItem *arrowItem = (XFSettingArrowItem *)item;
+        if (arrowItem.destVCClass) {
+            // 如果有自定义的图标
+            if (arrowItem.arrowIcon) {
+                self.arrowIcon.image = [UIImage imageNamed:arrowItem.arrowIcon];
+                self.accessoryView = self.arrowIcon;
+            }else{ // 否则用系统默认
+                self.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+                self.selectionStyle = UITableViewCellSelectionStyleDefault;
+            }
+        }
     }else if (itemClass == [XFSettingSwitchItem class]){ // Switch Cell
         self.accessoryType = UITableViewCellAccessoryNone;
         [self switchView];
@@ -74,7 +83,7 @@
 }
 // 创建可复用cell
 + (instancetype)settingCellWithTalbeView:(UITableView *)tableView {
-    static NSString *ID = @"cell";
+    static NSString *ID = @"cell"; //TODO: deffrent cell for identifier string
     
     XFSettingCell *cell = [tableView dequeueReusableCellWithIdentifier:ID];
     
