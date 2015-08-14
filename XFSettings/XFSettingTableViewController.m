@@ -6,7 +6,7 @@
 //  Copyright (c) 2015年 Yizzuide. All rights reserved.
 //
 
-#import "XFBaseSettingTableViewController.h"
+#import "XFSettingTableViewController.h"
 
 // group
 NSString * const XFSettingGroupHeader = @"header";
@@ -29,17 +29,17 @@ NSString * const XFSettingItemAttrRightInfo = @"rightInfo";
 NSString * const XFSettingIntentDataSwitchOn = @"switchOn";
 
 
-@interface XFBaseSettingTableViewController ()
+@interface XFSettingTableViewController ()
 
 @property (nonatomic, strong) NSMutableArray *settingGroups;
 @end
 
-@implementation XFBaseSettingTableViewController
+@implementation XFSettingTableViewController
 
 - (NSMutableArray *)settingGroups
 {
     if (_settingGroups == nil) {
-        NSArray *source = [self.dataSource baseSettingItems];
+        NSArray *source = [self.dataSource settingItems];
         _settingGroups = [XFSettingGroup settingGroupsWithArray:source];
     }
     return _settingGroups;

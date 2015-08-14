@@ -10,7 +10,7 @@
 
 #import "XFSettings.h"
 
-@protocol XFBaseSettingDataSource <NSObject>
+@protocol XFSettingTableViewDataSource <NSObject>
 
 @required
 /**
@@ -46,7 +46,7 @@
  ];// endgroupArr
  *  @return 返回NSArray数据模型
  */
-- (NSArray *)baseSettingItems;
+- (NSArray *)settingItems;
 
 //@optional
 /**
@@ -57,7 +57,7 @@
 //- (Class)typeOfSettingCellForBaseSettingTableView;
 @end
 
-@interface XFBaseSettingTableViewController : UITableViewController
+@interface XFSettingTableViewController : UITableViewController
 
-@property (nonatomic, weak) id<XFBaseSettingDataSource> dataSource;
+@property (nonatomic, weak) id<XFSettingTableViewDataSource> dataSource;
 @end

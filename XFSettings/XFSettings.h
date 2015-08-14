@@ -9,7 +9,7 @@
 #ifndef XFSettings_h
 #define XFSettings_h
 
-#import "XFBaseSettingTableViewController.h"
+#import "XFSettingTableViewController.h"
 #import "XFSettingGroup.h"
 #import "XFSettingItem.h"
 #import "XFSettingArrowItem.h"

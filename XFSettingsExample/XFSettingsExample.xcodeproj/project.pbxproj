@@ -11,7 +11,7 @@
 		400384BB1B404979003071FD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 400384BA1B404979003071FD /* AppDelegate.m */; };
 		400384BE1B404979003071FD /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 400384BD1B404979003071FD /* ViewController.m */; };
 		400384C31B404979003071FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 400384C21B404979003071FD /* Assets.xcassets */; };
-		400384E11B404A6F003071FD /* XFBaseSettingTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 400384CF1B404A6F003071FD /* XFBaseSettingTableViewController.m */; };
+		400384E11B404A6F003071FD /* XFSettingTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 400384CF1B404A6F003071FD /* XFSettingTableViewController.m */; };
 		400384E21B404A6F003071FD /* XFSettingArrowItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 400384D11B404A6F003071FD /* XFSettingArrowItem.m */; };
 		400384E31B404A6F003071FD /* XFSettingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 400384D31B404A6F003071FD /* XFSettingCell.m */; };
 		400384E41B404A6F003071FD /* XFSettingGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 400384D51B404A6F003071FD /* XFSettingGroup.m */; };
@@ -36,8 +36,8 @@
 		400384BD1B404979003071FD /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		400384C21B404979003071FD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		400384C71B404979003071FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		400384CE1B404A6F003071FD /* XFBaseSettingTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XFBaseSettingTableViewController.h; path = ../XFSettings/XFBaseSettingTableViewController.h; sourceTree = "<group>"; };
-		400384CF1B404A6F003071FD /* XFBaseSettingTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XFBaseSettingTableViewController.m; path = ../XFSettings/XFBaseSettingTableViewController.m; sourceTree = "<group>"; };
+		400384CE1B404A6F003071FD /* XFSettingTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XFSettingTableViewController.h; path = ../XFSettings/XFSettingTableViewController.h; sourceTree = "<group>"; };
+		400384CF1B404A6F003071FD /* XFSettingTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XFSettingTableViewController.m; path = ../XFSettings/XFSettingTableViewController.m; sourceTree = "<group>"; };
 		400384D01B404A6F003071FD /* XFSettingArrowItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XFSettingArrowItem.h; path = ../XFSettings/XFSettingArrowItem.h; sourceTree = "<group>"; };
 		400384D11B404A6F003071FD /* XFSettingArrowItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XFSettingArrowItem.m; path = ../XFSettings/XFSettingArrowItem.m; sourceTree = "<group>"; };
 		400384D21B404A6F003071FD /* XFSettingCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XFSettingCell.h; path = ../XFSettings/XFSettingCell.h; sourceTree = "<group>"; };
@@ -123,8 +123,8 @@
 		400384CD1B404991003071FD /* XFSettings */ = {
 			isa = PBXGroup;
 			children = (
-				400384CE1B404A6F003071FD /* XFBaseSettingTableViewController.h */,
-				400384CF1B404A6F003071FD /* XFBaseSettingTableViewController.m */,
+				400384CE1B404A6F003071FD /* XFSettingTableViewController.h */,
+				400384CF1B404A6F003071FD /* XFSettingTableViewController.m */,
 				400384D01B404A6F003071FD /* XFSettingArrowItem.h */,
 				400384D11B404A6F003071FD /* XFSettingArrowItem.m */,
 				400384D21B404A6F003071FD /* XFSettingCell.h */,
@@ -240,7 +240,7 @@
 				400384E61B404A6F003071FD /* XFSettingInfoCountCell.m in Sources */,
 				400384FE1B405F52003071FD /* NSString+Tools.m in Sources */,
 				400384E91B404A6F003071FD /* XFSettingSwitchItem.m in Sources */,
-				400384E11B404A6F003071FD /* XFBaseSettingTableViewController.m in Sources */,
+				400384E11B404A6F003071FD /* XFSettingTableViewController.m in Sources */,
 				400384E71B404A6F003071FD /* XFSettingInfoItem.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

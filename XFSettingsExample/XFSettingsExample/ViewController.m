@@ -10,7 +10,7 @@
 #import "NSString+Tools.h"
 #import "UpdateViewController.h"
 
-@interface ViewController ()<XFBaseSettingDataSource>
+@interface ViewController ()<XFSettingTableViewDataSource>
 
 @end
 
@@ -25,7 +25,7 @@
     self.dataSource = self;
 }
 
-- (NSArray *)baseSettingItems
+- (NSArray *)settingItems
 {
     return @[ // groupArr
              @{ // groupModel
