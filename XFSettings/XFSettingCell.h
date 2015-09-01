@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 #import "XFSettingItem.h"
 
+
+@class XFCellColorData;
 /**
  *  基本功能Cell,可用XFSettingArrowItem和XFSettingSwitchItem模型来区分类型
  */
@@ -16,7 +18,7 @@
 
 @property (nonatomic, strong) XFSettingItem *item;
 
-+ (instancetype)settingCellWithTalbeView:(UITableView *)tableView;
++ (instancetype)settingCellWithTalbeView:(UITableView *)tableView cellColorData:(XFCellColorData *)cellColorData;
 /**
  *  返加不同类型的cell的重用标识字符串
  *

@@ -81,12 +81,12 @@ NSString * const XFSettingIntentDataSwitchOn = @"switchOn";
         cell = [XFSettingCell settingCellWithTalbeView:tableView];
     } */
     if (item.relatedCellClass) {
-        cell = [item.relatedCellClass settingCellWithTalbeView:tableView];
+        cell = [item.relatedCellClass settingCellWithTalbeView:tableView cellColorData:self.cellColorData];
     }else{
-        cell = [XFSettingCell settingCellWithTalbeView:tableView];
+        cell = [XFSettingCell settingCellWithTalbeView:tableView cellColorData:self.cellColorData];
     }
     
-    
+//    cell.backgroundColor = [UIColor redColor];
     cell.item = item;
     
     return cell;

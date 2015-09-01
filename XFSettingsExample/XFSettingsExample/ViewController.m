@@ -24,6 +24,11 @@
     self.view.backgroundColor = [UIColor whiteColor];
     
     self.dataSource = self;
+    XFCellColorData *cellColorData = [[XFCellColorData alloc] init];
+    cellColorData.cellBackgroundColor = [UIColor whiteColor];
+    cellColorData.cellSelectedBackgroundColor = [UIColor colorWithWhite:0 alpha:0.1];
+    self.cellColorData = cellColorData;
+    
 }
 
 - (NSArray *)settingItems

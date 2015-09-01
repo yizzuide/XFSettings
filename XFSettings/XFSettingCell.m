@@ -9,6 +9,8 @@
 #import "XFSettingCell.h"
 #import "XFSettingArrowItem.h"
 #import "XFSettingSwitchItem.h"
+#import "XFSettingTableViewController.h"
+#import "XFCellColorData.h"
 
 @interface XFSettingCell ()
 
@@ -83,13 +85,28 @@
     }
 }
 // 创建可复用cell
-+ (instancetype)settingCellWithTalbeView:(UITableView *)tableView {
++ (instancetype)settingCellWithTalbeView:(UITableView *)tableView cellColorData:(XFCellColorData *)cellColorData {
     NSString *ID = [self settingCellReuseIdentifierString];
     
     XFSettingCell *cell = [tableView dequeueReusableCellWithIdentifier:ID];
     
     if (cell == nil) {
         cell = [[self alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:ID];
+        
+        NSLog(@"%@",cell);
+        
+        // 设置cell颜色
+        if (cellColorData.cellBackgroundColor)
+            cell.backgroundColor = cellColorData.cellBackgroundColor;
+        if (cellColorData.cellSelectedBackgroundColor){
+            UIView *view = [[UIView alloc] init];
+            view.backgroundColor = cellColorData.cellSelectedBackgroundColor;
+            cell.selectedBackgroundView = view;
+        }
+        if (cellColorData.cellBackgroundView)
+            cell.backgroundView = cellColorData.cellBackgroundView;
+        if (cellColorData.cellSelectedBackgroundView)
+            cell.selectedBackgroundView = cellColorData.cellSelectedBackgroundView;
     }
     
     return cell;

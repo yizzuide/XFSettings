@@ -22,6 +22,7 @@
 		400384E91B404A6F003071FD /* XFSettingSwitchItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 400384E01B404A6F003071FD /* XFSettingSwitchItem.m */; };
 		400384F71B405BA8003071FD /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 400384F61B405BA8003071FD /* Default-568h@2x.png */; };
 		400384FE1B405F52003071FD /* NSString+Tools.m in Sources */ = {isa = PBXBuildFile; fileRef = 400384FD1B405F52003071FD /* NSString+Tools.m */; };
+		4028F60E1B95A36C006086C7 /* XFCellColorData.m in Sources */ = {isa = PBXBuildFile; fileRef = 4028F60D1B95A36C006086C7 /* XFCellColorData.m */; };
 		404672601B412F7D00D5BD62 /* XFSettingInfoDotCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4046725F1B412F7D00D5BD62 /* XFSettingInfoDotCell.m */; };
 		40C058AF1B7E04FE00575C21 /* XFNewFriendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 40C058AD1B7E04FE00575C21 /* XFNewFriendViewController.m */; };
 		40C058B01B7E04FE00575C21 /* XFNewFriendViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 40C058AE1B7E04FE00575C21 /* XFNewFriendViewController.xib */; };
@@ -60,6 +61,8 @@
 		400384F61B405BA8003071FD /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		400384FC1B405F52003071FD /* NSString+Tools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+Tools.h"; path = "Category/NSString+Tools.h"; sourceTree = "<group>"; };
 		400384FD1B405F52003071FD /* NSString+Tools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+Tools.m"; path = "Category/NSString+Tools.m"; sourceTree = "<group>"; };
+		4028F60C1B95A36C006086C7 /* XFCellColorData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFCellColorData.h; sourceTree = "<group>"; };
+		4028F60D1B95A36C006086C7 /* XFCellColorData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFCellColorData.m; sourceTree = "<group>"; };
 		4046725E1B412F7D00D5BD62 /* XFSettingInfoDotCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XFSettingInfoDotCell.h; path = ../XFSettings/XFSettingInfoDotCell.h; sourceTree = "<group>"; };
 		4046725F1B412F7D00D5BD62 /* XFSettingInfoDotCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XFSettingInfoDotCell.m; path = ../XFSettings/XFSettingInfoDotCell.m; sourceTree = "<group>"; };
 		40C058AC1B7E04FE00575C21 /* XFNewFriendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFNewFriendViewController.h; sourceTree = "<group>"; };
@@ -152,6 +155,8 @@
 				400384D11B404A6F003071FD /* XFSettingArrowItem.m */,
 				400384DA1B404A6F003071FD /* XFSettingInfoItem.h */,
 				400384DB1B404A6F003071FD /* XFSettingInfoItem.m */,
+				4028F60C1B95A36C006086C7 /* XFCellColorData.h */,
+				4028F60D1B95A36C006086C7 /* XFCellColorData.m */,
 			);
 			name = XFSettings;
 			sourceTree = "<group>";
@@ -240,6 +245,7 @@
 				400384E41B404A6F003071FD /* XFSettingGroup.m in Sources */,
 				40F4057C1B66257100A93A48 /* UpdateViewController.m in Sources */,
 				400384BE1B404979003071FD /* ViewController.m in Sources */,
+				4028F60E1B95A36C006086C7 /* XFCellColorData.m in Sources */,
 				400384BB1B404979003071FD /* AppDelegate.m in Sources */,
 				40C058AF1B7E04FE00575C21 /* XFNewFriendViewController.m in Sources */,
 				400384E81B404A6F003071FD /* XFSettingItem.m in Sources */,

@@ -9,6 +9,7 @@
 #ifndef XFSettings_h
 #define XFSettings_h
 
+#import "XFCellColorData.h"
 #import "XFSettingTableViewController.h"
 #import "XFSettingGroup.h"
 #import "XFSettingItem.h"

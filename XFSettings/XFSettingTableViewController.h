@@ -58,6 +58,8 @@
 @end
 
 @interface XFSettingTableViewController : UITableViewController
-
+@property (nonatomic, strong) XFCellColorData *cellColorData;
 @property (nonatomic, weak) id<XFSettingTableViewDataSource> dataSource;
 @end
+
+
