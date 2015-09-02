@@ -24,6 +24,12 @@ First, add `#import "XFSettings.h` to your UIViewController,the `XFBaseSettingTa
     self.view.backgroundColor = [UIColor whiteColor];
     
     self.dataSource = self; // set self as dataSource.
+    
+    // set cell color
+    XFCellColorData *cellColorData = [[XFCellColorData alloc] init];
+    cellColorData.cellBackgroundColor = [UIColor whiteColor];
+    cellColorData.cellSelectedBackgroundColor = [UIColor colorWithWhite:0 alpha:0.1];
+    self.cellColorData = cellColorData;
 }
 
 - (NSArray *)settingItems
