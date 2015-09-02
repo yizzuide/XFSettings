@@ -109,13 +109,21 @@
                                  }
                              }
                              },
-                         @{
+                         /*@{
                              XFSettingItemTitle: @"vip帮助",
                              XFSettingItemIcon : @"1435529211_circle_help_question-mark",
                              XFSettingOptionActionBlock : ^(XFSettingCell *cell,XFSettingPhaseType phaseType,id intentData){
                                  
                                  
                              }
+                             }*/
+                         @{
+                             XFSettingItemTitle: @"vip帮助",
+                             XFSettingItemIcon : @"1435529211_circle_help_question-mark",
+                             XFSettingItemAttrDetailText : @"帮助文档",
+                             XFSettingItemAttrAssistImageName : @"picture_download",
+                             XFSettingItemClass : [XFSettingAssistImageItem class],
+                             XFSettingItemRelatedCellClass:[XFSettingAssistImageCell class],
                              }
                          ],
                  XFSettingGroupFooter : @"lalala~"

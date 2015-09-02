@@ -16,10 +16,14 @@
 #import "XFSettingArrowItem.h"
 #import "XFSettingSwitchItem.h"
 #import "XFSettingInfoItem.h"
+#import "XFSettingAssistImageItem.h"
+
 #import "XFSettingCell.h"
 #import "XFSettingInfoCell.h"
 #import "XFSettingInfoCountCell.h"
 #import "XFSettingInfoDotCell.h"
+#import "XFSettingAssistImageCell.h"
+
 
 
 
@@ -75,7 +79,10 @@ extern NSString * const XFSettingItemAttrDetailText;
  *  使用XFSettingInfoItem和XFSettingInfoCell时的属性,右边辅助信息
  */
 extern NSString * const XFSettingItemAttrRightInfo;
-
+/**
+ *  使用XFSettingAssistImageItem和XfSettingAssistImageCell时的属性，右边辅助图
+ */
+extern NSString * const XFSettingItemAttrAssistImageName;
 
 
 /**

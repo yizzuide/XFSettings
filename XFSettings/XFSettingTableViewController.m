@@ -25,6 +25,7 @@ NSString * const XFSettingOptionActionBlock = @"optionBlock";
 // 属性
 NSString * const XFSettingItemAttrDetailText = @"detailText";
 NSString * const XFSettingItemAttrRightInfo = @"rightInfo";
+NSString * const XFSettingItemAttrAssistImageName= @"assistImageName";
 
 // intentData
 NSString * const XFSettingIntentDataSwitchOn = @"switchOn";
