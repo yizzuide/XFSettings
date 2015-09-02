@@ -24,6 +24,8 @@
     self.view.backgroundColor = [UIColor whiteColor];
     
     self.dataSource = self;
+    
+    // set cell color
     XFCellColorData *cellColorData = [[XFCellColorData alloc] init];
     cellColorData.cellBackgroundColor = [UIColor whiteColor];
     cellColorData.cellSelectedBackgroundColor = [UIColor colorWithWhite:0 alpha:0.1];
@@ -44,7 +46,7 @@
                              XFSettingItemAttrDetailText : @"你的好友",
                              XFSettingItemRelatedCellClass:[XFSettingInfoDotCell class],// 自定义的cell
                             XFSettingItemDestViewControllerClass : [XFNewFriendViewController class], // 如果有目标控制器
-                             XFSettingOptionActionBlock : ^(XFSettingInfoCountCell *cell,XFSettingPhaseType phaseType,id intentData){ // 如果有可选的操作
+                             XFSettingOptionActionBlock : ^(XFSettingInfoDotCell *cell,XFSettingPhaseType phaseType,id intentData){ // 如果有可选的操作
                                  if (phaseType == XFSettingPhaseTypeCellInteracted) {
                                      cell.rightInfoLabel.hidden = YES;
                                  }
