@@ -26,10 +26,7 @@
     self.dataSource = self;
     
     // set cell color
-    XFCellColorData *cellColorData = [[XFCellColorData alloc] init];
-    cellColorData.cellBackgroundColor = [UIColor whiteColor];
-    cellColorData.cellSelectedBackgroundColor = [UIColor colorWithWhite:0 alpha:0.1];
-    self.cellColorData = cellColorData;
+    self.cellColorData = [XFCellColorData cellColorDataWithBackgroundColor:[UIColor whiteColor] selBackgroundColor:[UIColor colorWithWhite:0 alpha:0.1]];
     
 }
 

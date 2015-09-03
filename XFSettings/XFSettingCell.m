@@ -93,7 +93,7 @@
     if (cell == nil) {
         cell = [[self alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:ID];
         
-        NSLog(@"%@",cell);
+//        NSLog(@"%@",cell);
         
         // 设置cell颜色
         if (cellColorData.cellBackgroundColor)
