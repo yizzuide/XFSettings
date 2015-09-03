@@ -10,7 +10,7 @@
 #import "XFSettingArrowItem.h"
 #import "XFSettingSwitchItem.h"
 #import "XFSettingTableViewController.h"
-#import "XFCellColorData.h"
+#import "XFCellAttrsData.h"
 
 @interface XFSettingCell ()
 
@@ -85,7 +85,7 @@
     }
 }
 // 创建可复用cell
-+ (instancetype)settingCellWithTalbeView:(UITableView *)tableView cellColorData:(XFCellColorData *)cellColorData {
++ (instancetype)settingCellWithTalbeView:(UITableView *)tableView cellColorData:(XFCellAttrsData *)cellAttrsData {
     NSString *ID = [self settingCellReuseIdentifierString];
     
     XFSettingCell *cell = [tableView dequeueReusableCellWithIdentifier:ID];
@@ -94,22 +94,45 @@
         cell = [[self alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:ID];
         
 //        NSLog(@"%@",cell);
-        
-        // 设置cell颜色
-        if (cellColorData.cellBackgroundColor)
-            cell.backgroundColor = cellColorData.cellBackgroundColor;
-        if (cellColorData.cellSelectedBackgroundColor){
+        cell.cellAttrsData = cellAttrsData;
+        // 设置cell属性
+        if (cellAttrsData.cellBackgroundColor)
+            cell.backgroundColor = cellAttrsData.cellBackgroundColor;
+        if (cellAttrsData.cellSelectedBackgroundColor){
             UIView *view = [[UIView alloc] init];
-            view.backgroundColor = cellColorData.cellSelectedBackgroundColor;
+            view.backgroundColor = cellAttrsData.cellSelectedBackgroundColor;
             cell.selectedBackgroundView = view;
         }
-        if (cellColorData.cellBackgroundView)
-            cell.backgroundView = cellColorData.cellBackgroundView;
-        if (cellColorData.cellSelectedBackgroundView)
-            cell.selectedBackgroundView = cellColorData.cellSelectedBackgroundView;
+        if (cellAttrsData.cellBackgroundView)
+            cell.backgroundView = cellAttrsData.cellBackgroundView;
+        if (cellAttrsData.cellSelectedBackgroundView)
+            cell.selectedBackgroundView = cellAttrsData.cellSelectedBackgroundView;
     }
     
     return cell;
+}
+
+- (void)layoutSubviews
+{
+    [super layoutSubviews];
+    
+    
+//    NSLog(@"%f",self.cellAttrsData.contentEachOtherPadding);
+    
+    // 更改ImageView
+    CGRect bounds = self.imageView.bounds;
+    CGFloat wh = self.cellAttrsData.contentIconSize > 1.f ? self.cellAttrsData.contentIconSize : 24;
+    bounds.size = CGSizeMake(wh, wh);
+    self.imageView.bounds = bounds;
+    
+    CGRect imageFrame = self.imageView.frame;
+    imageFrame.origin.x = self.cellAttrsData.contentEachOtherPadding > 1.f ? self.cellAttrsData.contentEachOtherPadding : 15;
+    self.imageView.frame = imageFrame;
+    // textLabel
+    CGRect titleFrame = self.textLabel.frame;
+    titleFrame.origin.x = CGRectGetMaxX(imageFrame) + imageFrame.origin.x;
+    self.textLabel.frame = titleFrame;
+    
 }
 
 + (NSString *)settingCellReuseIdentifierString

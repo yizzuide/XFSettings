@@ -8,11 +8,24 @@
 
 #import <UIKit/UIKit.h>
 
-@interface XFCellColorData : NSObject
+@interface XFCellAttrsData : NSObject
+// Cell Color
 @property (nonatomic, strong) UIColor *cellBackgroundColor;
 @property (nonatomic, strong) UIColor *cellSelectedBackgroundColor;
 @property (nonatomic, strong) UIView *cellBackgroundView;
 @property (nonatomic, strong) UIView *cellSelectedBackgroundView;
+// cell下线颜色
+@property (nonatomic, strong) UIColor *cellBottomLineColor;
+
+// Content
+@property (nonatomic, strong) UIColor *contentTitleTextColor;
+@property (nonatomic, strong) UIColor *contentDetailTextColor;
+@property (nonatomic, strong) UIColor *contentInfoTextColor;
+@property (nonatomic, assign) CGFloat contentTextMaxSize;
+@property (nonatomic, assign) CGFloat contentIconSize;
+@property (nonatomic, assign) CGFloat contentEachOtherPadding;
+
+
 
 /**
  *  快速初始化一个CellColorData

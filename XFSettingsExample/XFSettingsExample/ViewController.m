@@ -25,8 +25,13 @@
     
     self.dataSource = self;
     
-    // set cell color
-    self.cellColorData = [XFCellColorData cellColorDataWithBackgroundColor:[UIColor whiteColor] selBackgroundColor:[UIColor colorWithWhite:0 alpha:0.1]];
+    // set cell attrs
+    XFCellAttrsData *cellAttrsData = [XFCellAttrsData cellColorDataWithBackgroundColor:[UIColor whiteColor] selBackgroundColor:[UIColor colorWithWhite:0 alpha:0.1]];
+    // 设置图标大小
+    cellAttrsData.contentIconSize = 28;
+    // 设置内容间距
+    cellAttrsData.contentEachOtherPadding = 15;
+    self.cellAttrsData = cellAttrsData;
     
 }
 
