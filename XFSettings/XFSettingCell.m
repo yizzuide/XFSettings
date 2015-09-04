@@ -116,9 +116,6 @@
 {
     [super layoutSubviews];
     
-    
-//    NSLog(@"%f",self.cellAttrsData.contentEachOtherPadding);
-    
     // 更改ImageView
     CGRect bounds = self.imageView.bounds;
     CGFloat wh = self.cellAttrsData.contentIconSize > 1.f ? self.cellAttrsData.contentIconSize : 24;
@@ -132,6 +129,23 @@
     CGRect titleFrame = self.textLabel.frame;
     titleFrame.origin.x = CGRectGetMaxX(imageFrame) + imageFrame.origin.x;
     self.textLabel.frame = titleFrame;
+    
+    // 调整系统的下划线
+    NSUInteger count = self.subviews.count;
+    for (int i = 0; i < count; i++) {
+        UIView *subView = self.subviews[i];
+        if ([subView isMemberOfClass:NSClassFromString(@"_UITableViewCellSeparatorView")]) {
+            CGFloat lineW = subView.frame.size.width;
+            CGRect lineFrame = subView.frame;
+            if (lineW < [UIScreen mainScreen].bounds.size.width) {
+                lineFrame.origin.x = titleFrame.origin.x;
+                lineFrame.size.width = [UIScreen mainScreen].bounds.size.width - lineFrame.origin.x;
+                subView.frame = lineFrame;
+            }
+            // 线条颜色
+            subView.backgroundColor = self.cellAttrsData.cellBottomLineColor;
+        }
+    }
     
 }
 
