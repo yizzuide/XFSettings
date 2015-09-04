@@ -128,6 +128,7 @@
                              XFSettingItemAttrAssistImageName : @"picture_download",
                              XFSettingItemClass : [XFSettingAssistImageItem class],
                              XFSettingItemRelatedCellClass:[XFSettingAssistImageCell class],
+                             XFSettingItemDestViewControllerClass:[XFNewFriendViewController class]
                              }
                          ],
                  XFSettingGroupFooter : @"lalala~"

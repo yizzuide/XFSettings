@@ -8,6 +8,7 @@
 
 #import "XFSettingInfoCell.h"
 #import "XFSettingInfoItem.h"
+#import "XFCellAttrsData.h"
 
 @implementation XFSettingInfoCell
 
@@ -29,7 +30,7 @@
 {
     [super layoutSubviews];
     CGRect detailFrame = self.detailTextLabel.frame;
-    detailFrame.origin.x = CGRectGetMaxX(self.textLabel.frame)  + 5;
+    detailFrame.origin.x = CGRectGetMaxX(self.textLabel.frame)  + (self.cellAttrsData.contentEachOtherPadding > 1.f ? self.cellAttrsData.contentEachOtherPadding * 0.5 : 7.5);
     self.detailTextLabel.frame = detailFrame;
     
     XFSettingArrowItem *item = (XFSettingArrowItem *)self.item;
@@ -37,7 +38,7 @@
     if (item.destVCClass) {
         rightInfoFrame.origin.x = self.contentView.frame.size.width - rightInfoFrame.size.width;
     }else{
-        rightInfoFrame.origin.x = self.contentView.frame.size.width - rightInfoFrame.size.width - 10;
+        rightInfoFrame.origin.x = self.contentView.frame.size.width - rightInfoFrame.size.width - (self.cellAttrsData.contentEachOtherPadding > 1.f ? self.cellAttrsData.contentEachOtherPadding : 15);
     }
     rightInfoFrame.origin.y = (self.contentView.frame.size.height - rightInfoFrame.size.height) * 0.5;
     self.rightInfoLabel.frame = rightInfoFrame;
