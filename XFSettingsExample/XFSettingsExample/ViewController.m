@@ -33,6 +33,14 @@
     cellAttrsData.contentEachOtherPadding = 15;
     // cell 线条颜色
     cellAttrsData.cellBottomLineColor = [UIColor purpleColor];
+    // 标题文字大小（其它文字会按个大小自动调整）
+    cellAttrsData.contentTextMaxSize = 13;
+    // 标题颜色
+    cellAttrsData.contentTitleTextColor = [UIColor purpleColor];
+    // 详细文字颜色
+    cellAttrsData.contentDetailTextColor = [UIColor blueColor];
+    // 辅助文字颜色
+    cellAttrsData.contentInfoTextColor = [UIColor brownColor];
     self.cellAttrsData = cellAttrsData;
     
 }
@@ -110,6 +118,7 @@
                                  // 自定义初始化样式
                                  if (phaseType == XFSettingPhaseTypeCellInit) {
                                      cell.rightInfoLabel.textColor = [UIColor orangeColor];
+                                     cell.rightInfoLabel.font = [UIFont systemFontOfSize:10];
                                  }
                              }
                              },
@@ -127,8 +136,7 @@
                              XFSettingItemAttrDetailText : @"帮助文档",
                              XFSettingItemAttrAssistImageName : @"picture_download",
                              XFSettingItemClass : [XFSettingAssistImageItem class],
-                             XFSettingItemRelatedCellClass:[XFSettingAssistImageCell class],
-                             XFSettingItemDestViewControllerClass:[XFNewFriendViewController class]
+                             XFSettingItemRelatedCellClass:[XFSettingAssistImageCell class]
                              }
                          ],
                  XFSettingGroupFooter : @"lalala~"

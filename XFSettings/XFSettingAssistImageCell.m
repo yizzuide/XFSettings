@@ -60,6 +60,7 @@
     self.detailTextLabel.font = [UIFont systemFontOfSize:12];
     self.detailTextLabel.text = assistImageItem.detailText;
     self.detailTextLabel.textAlignment = NSTextAlignmentLeft;
+    self.detailTextLabel.textColor = self.cellAttrsData.contentDetailTextColor ? self.cellAttrsData.contentDetailTextColor : [UIColor grayColor];
     
     self.assistImageView.image = [UIImage imageNamed:assistImageItem.assistImageName];
 }

@@ -18,7 +18,6 @@
 //        label.backgroundColor = [UIColor grayColor];
         label.bounds = CGRectMake(0, 0, 80, 20);
         label.textColor = [UIColor redColor];
-        label.font = [UIFont systemFontOfSize:10];
         label.textAlignment = NSTextAlignmentRight;
         [self.contentView addSubview:label];
         _rightInfoLabel = label;
@@ -55,11 +54,14 @@
     
     XFSettingInfoItem *infoItem = (XFSettingInfoItem *)item;
     
-    self.detailTextLabel.font = [UIFont systemFontOfSize:12];
+    self.detailTextLabel.font = [UIFont systemFontOfSize:(self.cellAttrsData.contentTextMaxSize > 1.f ? self.cellAttrsData.contentTextMaxSize - 1 : 12)];
     self.detailTextLabel.text = infoItem.detailText;
     self.detailTextLabel.textAlignment = NSTextAlignmentLeft;
+    self.detailTextLabel.textColor = self.cellAttrsData.contentDetailTextColor ? self.cellAttrsData.contentDetailTextColor : [UIColor grayColor];
     
     self.rightInfoLabel.text = infoItem.rightInfo;
+    self.rightInfoLabel.font = [UIFont systemFontOfSize:(self.cellAttrsData.contentTextMaxSize > 1.f ? self.cellAttrsData.contentTextMaxSize - 1 : 12)];
+    self.rightInfoLabel.textColor = self.cellAttrsData.contentInfoTextColor ? self.cellAttrsData.contentInfoTextColor : [UIColor redColor];
     
     /* [infoItem addObserver:self forKeyPath:@"rightInfo" options:NSKeyValueObservingOptionNew context:nil]; */
 }
