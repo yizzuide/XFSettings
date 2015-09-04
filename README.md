@@ -25,11 +25,13 @@ First, add `#import "XFSettings.h` to your UIViewController,the `XFBaseSettingTa
     
     self.dataSource = self; // set self as dataSource.
     
-    // set cell color
-    XFCellColorData *cellColorData = [[XFCellColorData alloc] init];
-    cellColorData.cellBackgroundColor = [UIColor whiteColor];
-    cellColorData.cellSelectedBackgroundColor = [UIColor colorWithWhite:0 alpha:0.1];
-    self.cellColorData = cellColorData;
+    // set cell attrs
+    XFCellAttrsData *cellAttrsData = [XFCellAttrsData cellColorDataWithBackgroundColor:[UIColor whiteColor] selBackgroundColor:[UIColor colorWithWhite:0 alpha:0.1]];
+    // 设置图标大小
+    cellAttrsData.contentIconSize = 28;
+    // 设置内容间距
+    cellAttrsData.contentEachOtherPadding = 15;
+    self.cellAttrsData = cellAttrsData;
 }
 
 - (NSArray *)settingItems
