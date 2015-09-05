@@ -16,6 +16,10 @@
 @property (nonatomic, strong) UIView *cellSelectedBackgroundView;
 // cell下线颜色
 @property (nonatomic, strong) UIColor *cellBottomLineColor;
+/**
+ *  只显示下方的画线
+ */
+@property (nonatomic, assign) BOOL cellFullLineEnable;
 
 // Content
 /**
@@ -42,6 +46,7 @@
  *  设置内容间距
  */
 @property (nonatomic, assign) CGFloat contentEachOtherPadding;
+
 
 
 

@@ -43,6 +43,11 @@ NSString * const XFSettingIntentDataSwitchOn = @"switchOn";
     if (_settingGroups == nil) {
         NSArray *source = [self.dataSource settingItems];
         _settingGroups = [XFSettingGroup settingGroupsWithArray:source];
+        
+        // 是否取消系统划线
+        if (self.cellAttrsData.cellFullLineEnable) {
+            self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+        }
     }
     return _settingGroups;
 }

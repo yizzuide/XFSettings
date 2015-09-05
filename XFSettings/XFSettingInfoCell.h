@@ -16,7 +16,7 @@
 @end */
 
 /**
- *  一个显示各种详细的Cell
+ *  一个显示右边文字的Cell
  */
 @interface XFSettingInfoCell : XFSettingCell//<XFSettingInfoCellDelegate>
 

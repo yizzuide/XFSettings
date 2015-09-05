@@ -7,8 +7,9 @@
 //
 
 #import "XFSettingCell.h"
-
+/**
+ *  用于右边显示图片的cell
+ */
 @interface XFSettingAssistImageCell : XFSettingCell
 
-@property (nonatomic, weak) UIImageView *assistImageView;
 @end

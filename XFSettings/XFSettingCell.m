@@ -16,6 +16,8 @@
 
 @property (nonatomic, weak) UISwitch *switchView;
 @property (nonatomic, weak) UIImageView *arrowIcon;
+
+@property (nonatomic, weak) UIView *bottomLineView;
 @end
 
 @implementation XFSettingCell
@@ -40,7 +42,17 @@
         _arrowIcon = arrowIcon;
     }
     return _arrowIcon;
-} 
+}
+- (UIView *)bottomLineView
+{
+    if (_bottomLineView == nil) {
+        UIView *bottomLineView = [[UIView alloc] init];
+        bottomLineView.backgroundColor = [UIColor grayColor];
+        [self addSubview:bottomLineView];
+        _bottomLineView = bottomLineView;
+    }
+    return _bottomLineView;
+}
 
 - (void)setItem:(XFSettingItem *)item
 {
@@ -60,6 +72,10 @@
     // 有的设置栏没有图标
     if (item.icon.length) {
         self.imageView.image = [UIImage imageNamed:item.icon];
+    }
+    // 如果用户用了cellFullLineEnable
+    if (self.cellAttrsData.cellFullLineEnable) {
+        [self bottomLineView];
     }
     
     // 设置辅助视图类型
@@ -133,20 +149,31 @@
     titleFrame.origin.x = CGRectGetMaxX(imageFrame) + imageFrame.origin.x;
     self.textLabel.frame = titleFrame;
     
-    // 调整系统的下划线
-    NSUInteger count = self.subviews.count;
-    for (int i = 0; i < count; i++) {
-        UIView *subView = self.subviews[i];
-        if ([subView isMemberOfClass:NSClassFromString(@"_UITableViewCellSeparatorView")]) {
-            CGFloat lineW = subView.frame.size.width;
-            CGRect lineFrame = subView.frame;
-            if (lineW < [UIScreen mainScreen].bounds.size.width) {
-                lineFrame.origin.x = titleFrame.origin.x;
-                lineFrame.size.width = [UIScreen mainScreen].bounds.size.width - lineFrame.origin.x;
-                subView.frame = lineFrame;
+    if(self.cellAttrsData.cellFullLineEnable){
+        // 画cell底部的线
+        CGRect frame = self.bottomLineView.frame;
+        frame.size.width = self.frame.size.width;
+        frame.size.height = 0.3;
+        frame.origin.y = self.frame.size.height - frame.size.height;
+        self.bottomLineView.frame = frame;
+        // 线条颜色
+        self.bottomLineView.backgroundColor = self.cellAttrsData.cellBottomLineColor;
+    }else{
+        // 调整系统的下划线
+        NSUInteger count = self.subviews.count;
+        for (int i = 0; i < count; i++) {
+            UIView *subView = self.subviews[i];
+            if ([subView isMemberOfClass:NSClassFromString(@"_UITableViewCellSeparatorView")]) {
+                CGFloat lineW = subView.frame.size.width;
+                CGRect lineFrame = subView.frame;
+                if (lineW < [UIScreen mainScreen].bounds.size.width) {
+                    lineFrame.origin.x = titleFrame.origin.x;
+                    lineFrame.size.width = [UIScreen mainScreen].bounds.size.width - lineFrame.origin.x;
+                    subView.frame = lineFrame;
+                }
+                // 线条颜色
+                subView.backgroundColor = self.cellAttrsData.cellBottomLineColor;
             }
-            // 线条颜色
-            subView.backgroundColor = self.cellAttrsData.cellBottomLineColor;
         }
     }
     
