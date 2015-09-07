@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "XFSettings.h"
 
-@interface XFNewFriendViewController : UIViewController
+@interface XFNewFriendViewController : UIViewController <XFSettingIntentUserInfo>
 
+@property (nonatomic, strong) NSDictionary *userInfo;
 @end

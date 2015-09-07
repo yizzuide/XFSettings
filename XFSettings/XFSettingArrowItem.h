@@ -16,4 +16,6 @@
 @property (nonatomic, copy) NSString *arrowIcon;
 // 跳转的目标控制器
 @property (nonatomic, assign) Class destVCClass;
+// 目标控制器参数信息
+@property (nonatomic, strong) NSDictionary *destVCUserInfo;
 @end

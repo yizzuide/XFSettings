@@ -64,9 +64,13 @@ extern NSString * const XFSettingItemArrowIcon;
  */
 extern NSString * const XFSettingItemRelatedCellClass;
 /**
- *  第二组跳转控制器Class
+ *  第二级跳转控制器Class
  */
 extern NSString * const XFSettingItemDestViewControllerClass;
+/**
+ *  使用XFSettingArrowItem时，第二级跳转控制器传参数信息（新的控制器里添加XFSettingIntentUserInfo协议）
+ */
+extern NSString * const XFSettingItemDestViewControllerUserInfo;
 /**
  *  Cell点击后的执行代码块
  */
@@ -89,6 +93,13 @@ extern NSString * const XFSettingItemAttrAssistImageName;
  *  开关交互信息
  */
 extern NSString * const XFSettingIntentDataSwitchOn;
+
+
+@protocol XFSettingIntentUserInfo <NSObject>
+@required
+@property (nonatomic, strong) NSDictionary *userInfo;
+
+@end
 
 
 #endif /* XFSettings_h */

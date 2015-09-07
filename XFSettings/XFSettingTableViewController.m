@@ -20,6 +20,8 @@ NSString * const XFSettingItemIcon = @"icon";
 NSString * const XFSettingItemArrowIcon = @"arrowIcon";
 NSString * const XFSettingItemRelatedCellClass = @"relatedCellClass";
 NSString * const XFSettingItemDestViewControllerClass = @"destVCClass";
+NSString * const XFSettingItemDestViewControllerUserInfo = @"destVCUserInfo";
+
 NSString * const XFSettingOptionActionBlock = @"optionBlock";
 
 // 属性
@@ -124,11 +126,20 @@ NSString * const XFSettingIntentDataSwitchOn = @"switchOn";
     
     // 如果是有第二级控制器显示类型
     if ([item isKindOfClass:[XFSettingArrowItem class]]) {
-        Class vcClass = ((XFSettingArrowItem *)item).destVCClass ;
+        XFSettingArrowItem *arrowItem = (XFSettingArrowItem *)item;
+        Class vcClass = ((XFSettingArrowItem *)arrowItem).destVCClass ;
         if (vcClass) {
             UIViewController *controller = [[vcClass alloc] init];
+            
+            // 是否带有参数
+            id<XFSettingIntentUserInfo> intent = (id<XFSettingIntentUserInfo>)controller;
+            if (arrowItem.destVCUserInfo) {
+                if([intent respondsToSelector:@selector(setUserInfo:)])
+                    intent.userInfo = arrowItem.destVCUserInfo;
+            }
+            
             // 设置标题
-            controller.title = item.title;
+            controller.title = arrowItem.title;
             
             [self.navigationController pushViewController:controller animated:YES];
         }

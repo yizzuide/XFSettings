@@ -60,6 +60,7 @@
                              XFSettingItemAttrDetailText : @"你的好友",
                              XFSettingItemRelatedCellClass:[XFSettingInfoDotCell class],// 自定义的cell
                             XFSettingItemDestViewControllerClass : [XFNewFriendViewController class], // 如果有目标控制器
+                             XFSettingItemDestViewControllerUserInfo : @{@"url":@"http://www.yizzuide.com"},// 目标控制器带有参数
                              XFSettingOptionActionBlock : ^(XFSettingInfoDotCell *cell,XFSettingPhaseType phaseType,id intentData){ // 如果有可选的操作
                                  if (phaseType == XFSettingPhaseTypeCellInteracted) {
                                      cell.rightInfoLabel.hidden = YES;
