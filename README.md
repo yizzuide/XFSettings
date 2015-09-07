@@ -58,8 +58,9 @@ First, add `#import "XFSettings.h` to your UIViewController,the `XFBaseSettingTa
                              XFSettingItemClass : [XFSettingInfoItem class], // 这个字段用于判断是否有右边辅助功能的cell,不写则没有
                              XFSettingItemAttrDetailText : @"你的好友",
                              XFSettingItemRelatedCellClass:[XFSettingInfoDotCell class],// 自定义的cell
-                             XFSettingItemDestViewControllerClass : [XFNewFriendViewController class], // 如果有目标控制器
-                             XFSettingOptionActionBlock : ^(XFSettingInfoCountCell *cell,XFSettingPhaseType phaseType,id intentData){ // 如果有可选的操作
+                            XFSettingItemDestViewControllerClass : [XFNewFriendViewController class], // 如果有目标控制器
+                             XFSettingItemDestViewControllerUserInfo : @{@"url":@"http://www.yizzuide.com"},// 目标控制器带有参数
+                             XFSettingOptionActionBlock : ^(XFSettingInfoDotCell *cell,XFSettingPhaseType phaseType,id intentData){ // 如果有可选的操作
                                  if (phaseType == XFSettingPhaseTypeCellInteracted) {
                                      cell.rightInfoLabel.hidden = YES;
                                  }
