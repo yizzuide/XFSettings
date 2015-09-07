@@ -26,13 +26,15 @@ First, add `#import "XFSettings.h` to your UIViewController,the `XFBaseSettingTa
     self.dataSource = self; // set self as dataSource.
     
     // set cell attrs
-    XFCellAttrsData *cellAttrsData = [XFCellAttrsData cellColorDataWithBackgroundColor:[UIColor whiteColor] selBackgroundColor:[UIColor colorWithWhite:0 alpha:0.1]];
+    XFCellAttrsData *cellAttrsData = [XFCellAttrsData cellColorDataWithBackgroundColor:[UIColor whiteColor] selBackgroundColor:[UIColor colorWithWhite:0 alpha:0.4]];
     // 设置图标大小
     cellAttrsData.contentIconSize = 20;
     // 设置内容间距
     cellAttrsData.contentEachOtherPadding = 15;
     // cell 线条颜色
     cellAttrsData.cellBottomLineColor = [UIColor purpleColor];
+    // 显示填充整个cell宽度画线
+    cellAttrsData.cellFullLineEnable = YES;
     // 标题文字大小（其它文字会按个大小自动调整）
     cellAttrsData.contentTextMaxSize = 13;
     // 标题颜色
