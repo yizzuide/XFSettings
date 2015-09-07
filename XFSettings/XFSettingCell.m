@@ -73,10 +73,6 @@
     if (item.icon.length) {
         self.imageView.image = [UIImage imageNamed:item.icon];
     }
-    // 如果用户用了cellFullLineEnable
-    if (self.cellAttrsData.cellFullLineEnable) {
-        [self bottomLineView];
-    }
     
     // 设置辅助视图类型
     Class itemClass = [item class];
@@ -101,6 +97,11 @@
         self.accessoryType = UITableViewCellAccessoryNone;
         self.accessoryView = nil;
         self.selectionStyle = UITableViewCellSelectionStyleDefault;
+    }
+    
+    // 如果用户用了cellFullLineEnable
+    if (self.cellAttrsData.cellFullLineEnable) {
+        [self bottomLineView];
     }
 }
 // 创建可复用cell
@@ -153,7 +154,7 @@
         // 画cell底部的线
         CGRect frame = self.bottomLineView.frame;
         frame.size.width = self.frame.size.width;
-        frame.size.height = 0.3;
+        frame.size.height = 0.8;
         frame.origin.y = self.frame.size.height - frame.size.height;
         self.bottomLineView.frame = frame;
         // 线条颜色
