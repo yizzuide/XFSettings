@@ -16,7 +16,7 @@
     if (_rightInfoLabel == nil) {
         UILabel *label= [[UILabel alloc] init];
 //        label.backgroundColor = [UIColor grayColor];
-        label.bounds = CGRectMake(0, 0, 80, 20);
+        label.bounds = CGRectMake(0, 0, 115, 20);
         label.textColor = [UIColor redColor];
         label.textAlignment = NSTextAlignmentRight;
         [self.contentView addSubview:label];
@@ -32,8 +32,10 @@
     detailFrame.origin.x = CGRectGetMaxX(self.textLabel.frame)  + (self.cellAttrsData.contentEachOtherPadding > 1.f ? self.cellAttrsData.contentEachOtherPadding * 0.5 : 7.5);
     self.detailTextLabel.frame = detailFrame;
     
-    XFSettingArrowItem *item = (XFSettingArrowItem *)self.item;
+    XFSettingInfoItem *item = (XFSettingInfoItem *)self.item;
     CGRect rightInfoFrame = self.rightInfoLabel.frame;
+
+    
     if (item.destVCClass) {
         rightInfoFrame.origin.x = self.contentView.frame.size.width - rightInfoFrame.size.width - self.cellAttrsData.contentEachOtherPadding;
     }else{

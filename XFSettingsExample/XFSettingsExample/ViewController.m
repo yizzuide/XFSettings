@@ -156,7 +156,7 @@
                              },
                          @{
                              XFSettingItemTitle: @"更新数据",
-                             XFSettingItemAttrRightInfo : @"有新的数据",
+                             XFSettingItemAttrRightInfo : @"123456789@qq.com",
                              XFSettingItemArrowIcon : @"CellArrow",
                              XFSettingItemClass : [XFSettingInfoItem class],
                              XFSettingItemRelatedCellClass:[XFSettingInfoCell class],
