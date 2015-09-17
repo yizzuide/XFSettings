@@ -129,7 +129,12 @@ NSString * const XFSettingIntentDataSwitchOn = @"switchOn";
         XFSettingArrowItem *arrowItem = (XFSettingArrowItem *)item;
         Class vcClass = ((XFSettingArrowItem *)arrowItem).destVCClass ;
         if (vcClass) {
-            UIViewController *controller = [[vcClass alloc] init];
+            // 通过Class生成对象，如果这个对象不是控制器直接返回
+            id object = [[vcClass alloc] init];
+            if (![object isKindOfClass:[UIViewController class]]) {
+                return;
+            }
+            UIViewController *controller = object;
             
             // 是否带有参数
             id<XFSettingIntentUserInfo> intent = (id<XFSettingIntentUserInfo>)controller;

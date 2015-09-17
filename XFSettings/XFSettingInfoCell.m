@@ -35,7 +35,7 @@
     XFSettingArrowItem *item = (XFSettingArrowItem *)self.item;
     CGRect rightInfoFrame = self.rightInfoLabel.frame;
     if (item.destVCClass) {
-        rightInfoFrame.origin.x = self.contentView.frame.size.width - rightInfoFrame.size.width;
+        rightInfoFrame.origin.x = self.contentView.frame.size.width - rightInfoFrame.size.width - self.cellAttrsData.contentEachOtherPadding;
     }else{
         rightInfoFrame.origin.x = self.contentView.frame.size.width - rightInfoFrame.size.width - (self.cellAttrsData.contentEachOtherPadding > 1.f ? self.cellAttrsData.contentEachOtherPadding : 15);
     }

@@ -153,6 +153,25 @@
                                      cell.rightInfoLabel.hidden = YES;
                                  }
                              }
+                             },
+                         @{
+                             XFSettingItemTitle: @"更新数据",
+                             XFSettingItemAttrRightInfo : @"有新的数据",
+                             XFSettingItemArrowIcon : @"CellArrow",
+                             XFSettingItemClass : [XFSettingInfoItem class],
+                             XFSettingItemRelatedCellClass:[XFSettingInfoCell class],
+                             // 当不使用控制器类时可以实现有箭头并且不会调转
+                             XFSettingItemDestViewControllerClass:[NSObject class],
+                             // 只是实行相当动作
+                             XFSettingOptionActionBlock : ^(XFSettingInfoCell *cell,XFSettingPhaseType phaseType,id intentData){
+                                 if (phaseType == XFSettingPhaseTypeCellInit) {
+                                     cell.rightInfoLabel.textColor = [UIColor grayColor];
+                                     cell.rightInfoLabel.font = [UIFont systemFontOfSize:10];
+                                 }
+                                 if (phaseType == XFSettingPhaseTypeCellInteracted) {
+                                     NSLog(@"%@",@"正在更新中。。。");
+                                 }
+                             }
                              }
                          ],
                  XFSettingGroupFooter : @"lalala~"
