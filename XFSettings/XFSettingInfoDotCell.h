@@ -12,4 +12,5 @@
  */
 @interface XFSettingInfoDotCell : XFSettingInfoCell
 
+@property (nonatomic, strong) UIColor *dotColor;
 @end

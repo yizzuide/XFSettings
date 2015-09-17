@@ -136,19 +136,28 @@
 {
     [super layoutSubviews];
     
-    // 更改ImageView
-    CGRect bounds = self.imageView.bounds;
-    CGFloat wh = self.cellAttrsData.contentIconSize > 1.f ? self.cellAttrsData.contentIconSize : 24;
-    bounds.size = CGSizeMake(wh, wh);
-    self.imageView.bounds = bounds;
-    
-    CGRect imageFrame = self.imageView.frame;
-    imageFrame.origin.x = self.cellAttrsData.contentEachOtherPadding > 1.f ? self.cellAttrsData.contentEachOtherPadding : 15;
-    self.imageView.frame = imageFrame;
-    // textLabel
-    CGRect titleFrame = self.textLabel.frame;
-    titleFrame.origin.x = CGRectGetMaxX(imageFrame) + imageFrame.origin.x;
-    self.textLabel.frame = titleFrame;
+     CGRect titleFrame = self.textLabel.frame;
+    // 根据是否有icon来确定titleFrame的位置
+    if(self.imageView.image){
+        // 调整IconView的位置
+        CGRect bounds = self.imageView.bounds;
+        CGFloat wh = self.cellAttrsData.contentIconSize > 1.f ? self.cellAttrsData.contentIconSize : 24;
+        bounds.size = CGSizeMake(wh, wh);
+        self.imageView.bounds = bounds;
+        
+        CGRect imageFrame = self.imageView.frame;
+        imageFrame.origin.x = self.cellAttrsData.contentEachOtherPadding > 1.f ? self.cellAttrsData.contentEachOtherPadding : 15;
+        self.imageView.frame = imageFrame;
+        
+        // textLabel
+        titleFrame.origin.x = CGRectGetMaxX(imageFrame) + imageFrame.origin.x;
+        self.textLabel.frame = titleFrame;
+    }else{
+       // 如果没有图片就向左靠
+        titleFrame.origin.x = self.cellAttrsData.contentEachOtherPadding;
+        self.textLabel.frame = titleFrame;
+    }
+   
     
     if(self.cellAttrsData.cellFullLineEnable){
         // 画cell底部的线

@@ -141,6 +141,19 @@
                              XFSettingItemClass : [XFSettingAssistImageItem class],
                              XFSettingItemRelatedCellClass:[XFSettingAssistImageCell class]
                              },
+                         @{
+                             XFSettingItemTitle: @"服务协议",
+                             XFSettingItemClass : [XFSettingInfoItem class],
+                             XFSettingItemRelatedCellClass:[XFSettingInfoDotCell class],
+                             XFSettingOptionActionBlock : ^(XFSettingInfoDotCell *cell,XFSettingPhaseType phaseType,id intentData){ // 如果有可选的操作
+                                 if (phaseType == XFSettingPhaseTypeCellInit) {
+                                     cell.dotColor = [UIColor greenColor];
+                                 }
+                                 if (phaseType == XFSettingPhaseTypeCellInteracted) {
+                                     cell.rightInfoLabel.hidden = YES;
+                                 }
+                             }
+                             }
                          ],
                  XFSettingGroupFooter : @"lalala~"
                  }// end groupModel
