@@ -4,7 +4,7 @@ Custom UITableView for settings,the goal is build setting interface more fast,mo
 ![XFSettings usage1](./Doc/usage1.gif)
 
 ##Usage
-First, add `#import "XFSettings.h` to your UIViewController,the `XFBaseSettingTableViewController` is subclass of UIKit `UITableViewCotroller`,you must extends this clas add set `self.dataSource` reference to your `ViewController`,add `- (NSArray *)baseSettingItems;` method and return `NSArray` datas for background render.
+First, add `#import "XFSettings.h` to your UIViewController,the `XFSettingTableViewController` is subclass of UIKit `UITableViewCotroller`,you must extends this clas add set `self.dataSource` reference to your `ViewController`,add `- (NSArray *)settingItems;` method and return `NSArray` datas for background render.
 
 ```objc
 //.h
