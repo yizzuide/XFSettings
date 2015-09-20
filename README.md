@@ -9,11 +9,11 @@ First, add `#import "XFSettings.h` to your UIViewController,the `XFBaseSettingTa
 ```objc
 //.h
 #import "XFSettings.h"
-@interface ViewController : XFBaseSettingTableViewController
+@interface ViewController : XFSettingTableViewController
 @end
 
 //.m
-@interface ViewController ()<XFBaseSettingDataSource>
+@interface ViewController ()<XFSettingTableViewDataSource>
 @end
 @implementation ViewController
 
