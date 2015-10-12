@@ -11,6 +11,8 @@
 #import "UpdateViewController.h"
 #import "XFNewFriendViewController.h"
 
+#define WS(weakSelf)  __weak __typeof(&*self)weakSelf = self;
+
 @interface ViewController ()<XFSettingTableViewDataSource>
 
 @end
@@ -49,6 +51,7 @@
 
 - (NSArray *)settingItems
 {
+    WS(weakSelf)
     return @[ // groupArr
              @{ // groupModel
                  XFSettingGroupHeader: @"基本信息",
@@ -90,7 +93,7 @@
                              XFSettingItemRelatedCellClass:[XFSettingInfoCell class],
                              XFSettingOptionActionBlock : ^(XFSettingInfoCell *cell,XFSettingPhaseType phaseType,id intentData){
                                 
-                                 [self cacheDirClear:cell phaseType:phaseType];
+                                 [weakSelf cacheDirClear:cell phaseType:phaseType];
                              }
                              },
                          @{
