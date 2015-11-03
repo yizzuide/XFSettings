@@ -1,7 +1,11 @@
-# XFSettings    [![Version](https://img.shields.io/cocoapods/v/XFSettings.svg?style=flat)](http://cocoadocs.org/docsets/XFSettings)
+# XFSettings
+
+[![CocoaPods](https://img.shields.io/cocoapods/v/XFSettings.svg?style=flat)](http://cocoadocs.org/docsets/XFSettings)
+![Language](https://img.shields.io/badge/language-ObjC-orange.svg)
+![License](https://img.shields.io/hexpm/l/plug.svg)
+![Version](https://img.shields.io/badge/platform-ios7%2B-green.svg)
+
 Custom UITableView for settings,the goal is build setting interface more fast,more convenient.
-
-
 
 ![XFSettings usage1](./ScreenShot/usage1.gif)
 
