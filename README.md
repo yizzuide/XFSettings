@@ -1,5 +1,7 @@
-# XFSettings
+# XFSettings    [![Version](https://img.shields.io/cocoapods/v/XFSettings.svg?style=flat)](http://cocoadocs.org)
 Custom UITableView for settings,the goal is build setting interface more fast,more convenient.
+
+
 
 ![XFSettings usage1](./ScreenShot/usage1.gif)
 
