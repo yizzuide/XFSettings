@@ -36,7 +36,7 @@
     // cell 线条颜色
     cellAttrsData.cellBottomLineColor = [UIColor purpleColor];
     // 显示填充整个cell宽度画线
-    cellAttrsData.cellFullLineEnable = YES;
+//    cellAttrsData.cellFullLineEnable = YES;
     // 标题文字大小（其它文字会按个大小自动调整）
     cellAttrsData.contentTextMaxSize = 13;
     // 标题颜色
