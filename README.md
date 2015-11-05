@@ -1,4 +1,4 @@
-# XFSettings
+![XFSettings logo](./ScreenShot/XFSettingLogo.png)
 
 [![CocoaPods](https://img.shields.io/cocoapods/v/XFSettings.svg?style=flat)](http://cocoadocs.org/docsets/XFSettings)
 ![Language](https://img.shields.io/badge/language-ObjC-orange.svg)
