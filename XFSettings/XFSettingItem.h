@@ -19,7 +19,6 @@ typedef void(^SettingItemOptionBlock)(UITableViewCell *cell,XFSettingPhaseType p
 
 @property (nonatomic, copy) NSString *title;
 @property (nonatomic, copy) NSString *icon;
-
 @property (nonatomic, assign) Class relatedCellClass;
 
 @property (nonatomic, copy) SettingItemOptionBlock optionBlock;
@@ -28,4 +27,10 @@ typedef void(^SettingItemOptionBlock)(UITableViewCell *cell,XFSettingPhaseType p
 - (instancetype)initWithDict:(NSDictionary *)dict;
 + (instancetype)settingItemWithDict:(NSDictionary *)dict;
 + (NSMutableArray *)settingItemsWithArray:(NSArray *)arr;
+
+/**
+ *  是否是第一个item
+ *
+ */
+- (BOOL)isFirst;
 @end

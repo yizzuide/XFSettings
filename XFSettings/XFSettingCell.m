@@ -174,19 +174,31 @@
         for (int i = 0; i < count; i++) {
             UIView *subView = self.subviews[i];
             if ([subView isMemberOfClass:NSClassFromString(@"_UITableViewCellSeparatorView")]) {
-                CGFloat lineW = subView.frame.size.width;
                 CGRect lineFrame = subView.frame;
+                CGFloat lineW = lineFrame.size.width;
+                CGFloat lineX = lineFrame.origin.x;
+                CGFloat lineY = lineFrame.origin.y;
+                // 是否隐藏TopLine
+                if (self.cellAttrsData.disableTopLine) {
+                    if (self.item.isFirst && lineW == [UIScreen mainScreen].bounds.size.width && lineX == 0 && lineY == 0) {
+                        subView.hidden = YES;
+                        continue;
+                    }
+                }
+                // 重新计算底部下划线
                 if (lineW < [UIScreen mainScreen].bounds.size.width) {
                     lineFrame.origin.x = titleFrame.origin.x;
-                    lineFrame.size.width = [UIScreen mainScreen].bounds.size.width - lineFrame.origin.x;
+                    lineFrame.size.width = [UIScreen mainScreen].bounds.size.width - lineX;
                     subView.frame = lineFrame;
                 }
-                // 线条颜色
-                subView.backgroundColor = self.cellAttrsData.cellBottomLineColor;
+                
+                // 设置线条颜色
+                if (self.cellAttrsData.cellBottomLineColor) {
+                    subView.backgroundColor = self.cellAttrsData.cellBottomLineColor;
+                }
             }
         }
     }
-    
 }
 
 + (NSString *)settingCellReuseIdentifierString

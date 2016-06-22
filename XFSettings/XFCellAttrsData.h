@@ -46,6 +46,10 @@
  *  设置内容间距
  */
 @property (nonatomic, assign) CGFloat contentEachOtherPadding;
+/**
+ *  禁止显示第一条线
+ */
+@property (nonatomic, assign) BOOL disableTopLine;
 
 
 

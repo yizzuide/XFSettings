@@ -48,13 +48,6 @@
  */
 - (NSArray *)settingItems;
 
-//@optional
-/**
- *  继承XFSettingCell的子类要实现这个方法
- *
- *  @return 返回子类的Class
- */
-//- (Class)typeOfSettingCellForBaseSettingTableView;
 @end
 
 @interface XFSettingTableViewController : UITableViewController
