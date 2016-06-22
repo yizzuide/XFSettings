@@ -26,6 +26,8 @@
 		40940A921B968DD6000635EC /* XFSettingAssistImageItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 40940A911B968DD6000635EC /* XFSettingAssistImageItem.m */; };
 		40940AE11B96A0D1000635EC /* XFCellAttrsData.m in Sources */ = {isa = PBXBuildFile; fileRef = 40940ADE1B96A0D1000635EC /* XFCellAttrsData.m */; };
 		40940AE51B96A0FE000635EC /* XFSettingAssistImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 40940AE41B96A0FE000635EC /* XFSettingAssistImageCell.m */; };
+		4098AE9B1D1AE4ED00F0FE7A /* UIViewController+XFSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = 4098AE9A1D1AE4ED00F0FE7A /* UIViewController+XFSettings.m */; };
+		4098AE9D1D1AE53700F0FE7A /* XFSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = 4098AE9C1D1AE53700F0FE7A /* XFSettings.m */; };
 		40C058AF1B7E04FE00575C21 /* XFNewFriendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 40C058AD1B7E04FE00575C21 /* XFNewFriendViewController.m */; };
 		40C058B01B7E04FE00575C21 /* XFNewFriendViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 40C058AE1B7E04FE00575C21 /* XFNewFriendViewController.xib */; };
 		40F4057C1B66257100A93A48 /* UpdateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 40F4057A1B66257100A93A48 /* UpdateViewController.m */; };
@@ -71,6 +73,9 @@
 		40940ADE1B96A0D1000635EC /* XFCellAttrsData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XFCellAttrsData.m; path = ../XFSettings/XFCellAttrsData.m; sourceTree = "<group>"; };
 		40940AE31B96A0FE000635EC /* XFSettingAssistImageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XFSettingAssistImageCell.h; path = ../XFSettings/XFSettingAssistImageCell.h; sourceTree = "<group>"; };
 		40940AE41B96A0FE000635EC /* XFSettingAssistImageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XFSettingAssistImageCell.m; path = ../XFSettings/XFSettingAssistImageCell.m; sourceTree = "<group>"; };
+		4098AE991D1AE4ED00F0FE7A /* UIViewController+XFSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIViewController+XFSettings.h"; path = "../XFSettings/UIViewController+XFSettings.h"; sourceTree = "<group>"; };
+		4098AE9A1D1AE4ED00F0FE7A /* UIViewController+XFSettings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+XFSettings.m"; path = "../XFSettings/UIViewController+XFSettings.m"; sourceTree = "<group>"; };
+		4098AE9C1D1AE53700F0FE7A /* XFSettings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XFSettings.m; path = ../XFSettings/XFSettings.m; sourceTree = "<group>"; };
 		40C058AC1B7E04FE00575C21 /* XFNewFriendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFNewFriendViewController.h; sourceTree = "<group>"; };
 		40C058AD1B7E04FE00575C21 /* XFNewFriendViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFNewFriendViewController.m; sourceTree = "<group>"; };
 		40C058AE1B7E04FE00575C21 /* XFNewFriendViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XFNewFriendViewController.xib; sourceTree = "<group>"; };
@@ -141,6 +146,7 @@
 			isa = PBXGroup;
 			children = (
 				400384DE1B404A6F003071FD /* XFSettings.h */,
+				4098AE9C1D1AE53700F0FE7A /* XFSettings.m */,
 				40940ADD1B96A0D1000635EC /* XFCellAttrsData.h */,
 				40940ADE1B96A0D1000635EC /* XFCellAttrsData.m */,
 				400384CE1B404A6F003071FD /* XFSettingTableViewController.h */,
@@ -167,6 +173,8 @@
 				400384DB1B404A6F003071FD /* XFSettingInfoItem.m */,
 				40940A901B968DD6000635EC /* XFSettingAssistImageItem.h */,
 				40940A911B968DD6000635EC /* XFSettingAssistImageItem.m */,
+				4098AE991D1AE4ED00F0FE7A /* UIViewController+XFSettings.h */,
+				4098AE9A1D1AE4ED00F0FE7A /* UIViewController+XFSettings.m */,
 			);
 			name = XFSettings;
 			sourceTree = "<group>";
@@ -253,7 +261,9 @@
 			files = (
 				404672601B412F7D00D5BD62 /* XFSettingInfoDotCell.m in Sources */,
 				400384E41B404A6F003071FD /* XFSettingGroup.m in Sources */,
+				4098AE9D1D1AE53700F0FE7A /* XFSettings.m in Sources */,
 				40F4057C1B66257100A93A48 /* UpdateViewController.m in Sources */,
+				4098AE9B1D1AE4ED00F0FE7A /* UIViewController+XFSettings.m in Sources */,
 				40940AE51B96A0FE000635EC /* XFSettingAssistImageCell.m in Sources */,
 				400384BE1B404979003071FD /* ViewController.m in Sources */,
 				400384BB1B404979003071FD /* AppDelegate.m in Sources */,

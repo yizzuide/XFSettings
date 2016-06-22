@@ -158,7 +158,7 @@
         self.textLabel.frame = titleFrame;
     }
    
-    
+    // 如果满横屏填充
     if(self.cellAttrsData.cellFullLineEnable){
         // 画cell底部的线
         CGRect frame = self.bottomLineView.frame;
@@ -188,7 +188,7 @@
                 // 重新计算底部下划线
                 if (lineW < [UIScreen mainScreen].bounds.size.width) {
                     lineFrame.origin.x = titleFrame.origin.x;
-                    lineFrame.size.width = [UIScreen mainScreen].bounds.size.width - lineX;
+                    lineFrame.size.width = [UIScreen mainScreen].bounds.size.width - lineFrame.origin.x;
                     subView.frame = lineFrame;
                 }
                 

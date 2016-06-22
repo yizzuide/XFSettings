@@ -8,30 +8,6 @@
 
 #import "XFSettingTableViewController.h"
 
-// group
-NSString * const XFSettingGroupHeader = @"header";
-NSString * const XFSettingGroupItems = @"items";
-NSString * const XFSettingGroupFooter = @"footer";
-
-// item
-NSString * const XFSettingItemClass = @"itemClass";
-NSString * const XFSettingItemTitle = @"title";
-NSString * const XFSettingItemIcon = @"icon";
-NSString * const XFSettingItemArrowIcon = @"arrowIcon";
-NSString * const XFSettingItemRelatedCellClass = @"relatedCellClass";
-NSString * const XFSettingItemDestViewControllerClass = @"destVCClass";
-NSString * const XFSettingItemDestViewControllerUserInfo = @"destVCUserInfo";
-
-NSString * const XFSettingOptionActionBlock = @"optionBlock";
-
-// 属性
-NSString * const XFSettingItemAttrDetailText = @"detailText";
-NSString * const XFSettingItemAttrRightInfo = @"rightInfo";
-NSString * const XFSettingItemAttrAssistImageName= @"assistImageName";
-
-// intentData
-NSString * const XFSettingIntentDataSwitchOn = @"switchOn";
-
 
 @interface XFSettingTableViewController ()
 
@@ -80,21 +56,15 @@ NSString * const XFSettingIntentDataSwitchOn = @"switchOn";
 {
     // cell的模型
     XFSettingItem *item = [self.settingGroups[indexPath.section] items][indexPath.row];
-    
+    // 显示的cell
     XFSettingCell *cell;
-    // 如果有子类继承并现了cell的类型
-    /* if ([self.dataSource respondsToSelector:@selector(typeOfSettingCellForBaseSettingTableView)]) {
-        cell = [[self.dataSource typeOfSettingCellForBaseSettingTableView] settingCellWithTalbeView:tableView];
-    }else{
-        cell = [XFSettingCell settingCellWithTalbeView:tableView];
-    } */
+    // 如果有自定义的cell类型
     if (item.relatedCellClass) {
         cell = [item.relatedCellClass settingCellWithTalbeView:tableView cellColorData:self.cellAttrsData];
-    }else{
+    }else{ // 使用默认类型
         cell = [XFSettingCell settingCellWithTalbeView:tableView cellColorData:self.cellAttrsData];
     }
-    
-//    cell.backgroundColor = [UIColor redColor];
+    // 绑定item
     cell.item = item;
     
     return cell;
