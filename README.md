@@ -5,31 +5,27 @@
 ![License](https://img.shields.io/hexpm/l/plug.svg)
 ![Version](https://img.shields.io/badge/platform-ios7%2B-green.svg)
 
-Custom UITableView for settings,the goal is build setting interface more fast,more convenient.
+基于UITableView的界面定制，目标是更快更方便构建设置界面。
 
 ![XFSettings usage1](./ScreenShot/usage.gif)
 
 ##Usage
-First, add `#import "XFSettings.h` to your UIViewController,the `XFSettingTableViewController` is subclass of UIKit `UITableViewCotroller`,you must extends this clas add set `self.dataSource` reference to your `ViewController`,add `- (NSArray *)settingItems;` method and return `NSArray` datas for background render.
+首先, 在`.m`里添加 `#import "XFSettings.h`，在`viewDidLoad`方法里设置`XFCellAttrsData`参数，数据源`self.dataSource`并调用`[self xf_setup]`进行配置，然后添加 `- (NSArray *)settingItems`数据源方法返回`NSArray`以供库内部的渲染。
 
 ```objc
-//.h
-#import "XFSettings.h"
-@interface ViewController : XFSettingTableViewController
-@end
 
 //.m
 @interface ViewController ()<XFSettingTableViewDataSource>
+
 @end
+
 @implementation ViewController
 
 - (void)viewDidLoad {
-    [super viewDidLoad]; // must invoke super method.
+    [super viewDidLoad];
     
     self.navigationItem.title = @"设置";
     self.view.backgroundColor = [UIColor whiteColor];
-    
-    self.dataSource = self; // set self as dataSource.
     
     // set cell attrs
     XFCellAttrsData *cellAttrsData = [XFCellAttrsData cellColorDataWithBackgroundColor:[UIColor whiteColor] selBackgroundColor:[UIColor colorWithWhite:0 alpha:0.4]];
@@ -40,7 +36,7 @@ First, add `#import "XFSettings.h` to your UIViewController,the `XFSettingTableV
     // cell 线条颜色
     cellAttrsData.cellBottomLineColor = [UIColor purpleColor];
     // 显示填充整个cell宽度画线
-    cellAttrsData.cellFullLineEnable = YES;
+//    cellAttrsData.cellFullLineEnable = YES;
     // 标题文字大小（其它文字会按个大小自动调整）
     cellAttrsData.contentTextMaxSize = 13;
     // 标题颜色
@@ -50,10 +46,17 @@ First, add `#import "XFSettings.h` to your UIViewController,the `XFSettingTableV
     // 辅助文字颜色
     cellAttrsData.contentInfoTextColor = [UIColor brownColor];
     self.cellAttrsData = cellAttrsData;
+    // 设置数据源
+    self.dataSource = self;
+    // 调用配置设置
+    [self xf_setup];
+    
+    
 }
 
 - (NSArray *)settingItems
 {
+    WS(weakSelf)
     return @[ // groupArr
              @{ // groupModel
                  XFSettingGroupHeader: @"基本信息",
@@ -95,7 +98,7 @@ First, add `#import "XFSettings.h` to your UIViewController,the `XFSettingTableV
                              XFSettingItemRelatedCellClass:[XFSettingInfoCell class],
                              XFSettingOptionActionBlock : ^(XFSettingInfoCell *cell,XFSettingPhaseType phaseType,id intentData){
                                 
-                                 [self cacheDirClear:cell phaseType:phaseType];
+                                 [weakSelf cacheDirClear:cell phaseType:phaseType];
                              }
                              },
                          @{
@@ -126,6 +129,7 @@ First, add `#import "XFSettings.h` to your UIViewController,the `XFSettingTableV
                                  // 自定义初始化样式
                                  if (phaseType == XFSettingPhaseTypeCellInit) {
                                      cell.rightInfoLabel.textColor = [UIColor orangeColor];
+                                     cell.rightInfoLabel.font = [UIFont systemFontOfSize:10];
                                  }
                              }
                              },
@@ -137,13 +141,45 @@ First, add `#import "XFSettings.h` to your UIViewController,the `XFSettingTableV
                                  
                              }
                              }*/
-                             @{
+                         @{
                              XFSettingItemTitle: @"vip帮助",
                              XFSettingItemIcon : @"1435529211_circle_help_question-mark",
                              XFSettingItemAttrDetailText : @"帮助文档",
                              XFSettingItemAttrAssistImageName : @"picture_download",
                              XFSettingItemClass : [XFSettingAssistImageItem class],
                              XFSettingItemRelatedCellClass:[XFSettingAssistImageCell class]
+                             },
+                         @{
+                             XFSettingItemTitle: @"服务协议",
+                             XFSettingItemClass : [XFSettingInfoItem class],
+                             XFSettingItemRelatedCellClass:[XFSettingInfoDotCell class],
+                             XFSettingOptionActionBlock : ^(XFSettingInfoDotCell *cell,XFSettingPhaseType phaseType,id intentData){ // 如果有可选的操作
+                                 if (phaseType == XFSettingPhaseTypeCellInit) {
+                                     cell.dotColor = [UIColor greenColor];
+                                 }
+                                 if (phaseType == XFSettingPhaseTypeCellInteracted) {
+                                     cell.rightInfoLabel.hidden = YES;
+                                 }
+                             }
+                             },
+                         @{
+                             XFSettingItemTitle: @"更新数据",
+                             XFSettingItemAttrRightInfo : @"123456789@qq.com",
+                             XFSettingItemArrowIcon : @"CellArrow",
+                             XFSettingItemClass : [XFSettingInfoItem class],
+                             XFSettingItemRelatedCellClass:[XFSettingInfoCell class],
+                             // 当不使用控制器类时可以实现有箭头并且不会调转
+                             XFSettingItemDestViewControllerClass:[NSObject class],
+                             // 只是实行相当动作
+                             XFSettingOptionActionBlock : ^(XFSettingInfoCell *cell,XFSettingPhaseType phaseType,id intentData){
+                                 if (phaseType == XFSettingPhaseTypeCellInit) {
+                                     cell.rightInfoLabel.textColor = [UIColor grayColor];
+                                     cell.rightInfoLabel.font = [UIFont systemFontOfSize:10];
+                                 }
+                                 if (phaseType == XFSettingPhaseTypeCellInteracted) {
+                                     NSLog(@"%@",@"正在更新中。。。");
+                                 }
+                             }
                              }
                          ],
                  XFSettingGroupFooter : @"lalala~"
