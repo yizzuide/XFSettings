@@ -14,9 +14,10 @@
 > pod 'XFSettings'
 
 2、手动加入
+
 把XFSettings整个目录拖入到工程
 
-##使用方法
+##快速使用方法
 首先, 在`.m`里添加 `#import "XFSettings.h`，在`viewDidLoad`方法里设置`XFCellAttrsData`参数，数据源`self.dataSource`并调用`[self xf_setup]`进行配置，然后添加 `- (NSArray *)settingItems`数据源方法返回`NSArray`以供库内部的渲染。
 
 ```objc
