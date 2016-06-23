@@ -10,7 +10,9 @@
 #define XFSettings_h
 
 #import "XFCellAttrsData.h"
-#import "XFSettingTableViewController.h"
+//#import "XFSettingTableViewController.h"
+#import "UIViewController+XFSettings.h"
+#import "XFSettingTableViewDataSource.h"
 #import "XFSettingGroup.h"
 #import "XFSettingItem.h"
 #import "XFSettingArrowItem.h"

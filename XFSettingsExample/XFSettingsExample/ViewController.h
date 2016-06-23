@@ -6,10 +6,9 @@
 //  Copyright © 2015年 Yizzuide. All rights reserved.
 //
 
-#import "XFSettings.h"
+#import <UIKit/UIKit.h>
 
-
-@interface ViewController : XFSettingTableViewController
+@interface ViewController : UIViewController
 
 
 @end

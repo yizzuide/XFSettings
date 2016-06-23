@@ -7,7 +7,7 @@
 //
 
 #import "XFSettingTableViewController.h"
-
+#import "XFSettings.h"
 
 @interface XFSettingTableViewController ()
 

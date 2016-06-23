@@ -8,6 +8,19 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UIViewController (XFSettings)
+@class XFCellAttrsData;
+@protocol XFSettingTableViewDataSource;
+
+@interface UIViewController (XFSettings) <UITableViewDelegate,UITableViewDataSource>
+
+@property (nonatomic, weak) UITableView *tableView;
+@property (nonatomic, weak) id<XFSettingTableViewDataSource> dataSource;
+@property (nonatomic, strong) NSMutableArray *settingGroups;
+@property (nonatomic, strong) XFCellAttrsData *cellAttrsData;
+
+/**
+ *  建立配置设置
+ */
+- (void)xf_setup;
 
 @end

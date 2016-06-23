@@ -8,11 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-#import "XFSettings.h"
+//@protocol XFSettingTableViewDataSource <NSObject>
 
-@protocol XFSettingTableViewDataSource <NSObject>
-
-@required
+//@required
 /**
  *  返回要填充的数据
  *  如: 
@@ -46,13 +44,19 @@
  ];// endgroupArr
  *  @return 返回NSArray数据模型
  */
-- (NSArray *)settingItems;
+//- (NSArray *)settingItems;
 
-@end
+//@end
 
+@class XFCellAttrsData;
+@protocol XFSettingTableViewDataSource;
+
+NS_CLASS_DEPRECATED_IOS(1_0, 2_0,"继承方式类XFSettingTableViewController已经过期，请使用非侵入式分类UIViewController+XFSettings")
 @interface XFSettingTableViewController : UITableViewController
+
 @property (nonatomic, strong) XFCellAttrsData *cellAttrsData;
 @property (nonatomic, weak) id<XFSettingTableViewDataSource> dataSource;
+
 @end
 
 

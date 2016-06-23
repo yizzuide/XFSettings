@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "XFSettings.h"
 #import "NSString+Tools.h"
 #import "UpdateViewController.h"
 #import "XFNewFriendViewController.h"
@@ -24,8 +25,6 @@
     
     self.navigationItem.title = @"设置";
     self.view.backgroundColor = [UIColor whiteColor];
-    
-    self.dataSource = self;
     
     // set cell attrs
     XFCellAttrsData *cellAttrsData = [XFCellAttrsData cellColorDataWithBackgroundColor:[UIColor whiteColor] selBackgroundColor:[UIColor colorWithWhite:0 alpha:0.4]];
@@ -46,6 +45,11 @@
     // 辅助文字颜色
     cellAttrsData.contentInfoTextColor = [UIColor brownColor];
     self.cellAttrsData = cellAttrsData;
+    // 设置数据源
+    self.dataSource = self;
+    // 调用配置设置
+    [self xf_setup];
+    
     
 }
 
