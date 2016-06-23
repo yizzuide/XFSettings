@@ -44,6 +44,9 @@
     cellAttrsData.contentDetailTextColor = [UIColor blueColor];
     // 辅助文字颜色
     cellAttrsData.contentInfoTextColor = [UIColor brownColor];
+    // 表格风格
+    cellAttrsData.tableViewStyle = UITableViewStyleGrouped;
+    
     self.cellAttrsData = cellAttrsData;
     // 设置数据源
     self.dataSource = self;

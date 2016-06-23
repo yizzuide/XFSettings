@@ -166,8 +166,10 @@
         frame.size.height = 0.8;
         frame.origin.y = self.frame.size.height - frame.size.height;
         self.bottomLineView.frame = frame;
-        // 线条颜色
-        self.bottomLineView.backgroundColor = self.cellAttrsData.cellBottomLineColor;
+        // 设置线条颜色
+        if (self.cellAttrsData.cellBottomLineColor) {
+            self.bottomLineView.backgroundColor = self.cellAttrsData.cellBottomLineColor;
+        }
     }else{
         // 调整系统的下划线
         NSUInteger count = self.subviews.count;

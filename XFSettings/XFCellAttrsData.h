@@ -50,6 +50,10 @@
  *  禁止显示第一条线
  */
 @property (nonatomic, assign) BOOL disableTopLine;
+/**
+ *  列表显示风格
+ */
+@property (nonatomic, assign) UITableViewStyle tableViewStyle;
 
 
 

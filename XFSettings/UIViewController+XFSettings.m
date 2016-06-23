@@ -26,7 +26,8 @@ static void * xfSettings_cellAttrsData = (void *)@"xfSettings_cellAttrsData";
 {
     UITableView *view = objc_getAssociatedObject(self, &xfSettings_TableView);
     if(!view){
-        view = [[UITableView alloc] initWithFrame:self.view.frame style:UITableViewStyleGrouped];
+        UITableViewStyle style = self.cellAttrsData.tableViewStyle;
+        view = [[UITableView alloc] initWithFrame:self.view.frame style:style];
         [self.view addSubview:view];
         [self setTableView:view];
         return view;
