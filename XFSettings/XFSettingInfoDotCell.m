@@ -7,6 +7,8 @@
 //
 
 #import "XFSettingInfoDotCell.h"
+#import "XFCellAttrsData.h"
+
 
 @implementation XFSettingInfoDotCell
 
@@ -15,19 +17,18 @@
 {
     [super setItem:item];
     
-    CGRect frame = self.rightInfoLabel.frame;
-    frame.size.width = 6;
-    frame.size.height = 6;
-    self.rightInfoLabel.frame = frame;
-    
-//    self.rightInfoLabel.textColor = [UIColor whiteColor];
-//    self.rightInfoLabel.font = [UIFont systemFontOfSize:15];
-//    self.rightInfoLabel.textAlignment = NSTextAlignmentCenter;
     
     CALayer *layer = self.rightInfoLabel.layer;
     layer.cornerRadius = 3;
     layer.backgroundColor = [UIColor colorWithRed:1.000 green:0.000 blue:0.000 alpha:0.760].CGColor;
 }
+
+// 覆盖真实大小，让父类基于这个大小布局
+- (CGSize)rightInfoSize
+{
+    return CGSizeMake(6, 6);
+}
+
 
 - (void)setDotColor:(UIColor *)dotColor
 {

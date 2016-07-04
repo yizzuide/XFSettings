@@ -57,6 +57,13 @@ NS_CLASS_DEPRECATED_IOS(1_0, 2_0,"继承方式类XFSettingTableViewController已
 @property (nonatomic, strong) XFCellAttrsData *cellAttrsData;
 @property (nonatomic, weak) id<XFSettingTableViewDataSource> dataSource;
 
+/**
+ *  设置表格风格
+ *
+ *  @return UITableViewStyle
+ */
+- (UITableViewStyle)tableViewStyle;
+
 @end
 
 

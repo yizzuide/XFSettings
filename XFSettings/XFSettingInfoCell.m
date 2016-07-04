@@ -15,12 +15,14 @@
 - (UILabel *)rightInfoLabel{
     if (_rightInfoLabel == nil) {
         UILabel *label= [[UILabel alloc] init];
-//        label.backgroundColor = [UIColor grayColor];
-        label.bounds = CGRectMake(0, 0, 115, 20);
+        //label.backgroundColor = [UIColor grayColor];
+        label.bounds = CGRectMake(0, 0, 20, 20);
         label.textColor = [UIColor redColor];
         label.textAlignment = NSTextAlignmentRight;
         [self.contentView addSubview:label];
         _rightInfoLabel = label;
+        // 监听右边文字改变
+        [_rightInfoLabel addObserver:self forKeyPath:@"text" options:NSKeyValueObservingOptionNew context:nil];
     }
     return _rightInfoLabel;
 }
@@ -32,17 +34,20 @@
     detailFrame.origin.x = CGRectGetMaxX(self.textLabel.frame)  + (self.cellAttrsData.contentEachOtherPadding > 1.f ? self.cellAttrsData.contentEachOtherPadding * 0.5 : 7.5);
     self.detailTextLabel.frame = detailFrame;
     
-    XFSettingInfoItem *item = (XFSettingInfoItem *)self.item;
+    // 基类实现，子类根据情况实现这个勾子方法进行布局
+    //XFSettingInfoItem *item = (XFSettingInfoItem *)self.item;
     CGRect rightInfoFrame = self.rightInfoLabel.frame;
-
-    
-    if (item.destVCClass) {
-        rightInfoFrame.origin.x = self.contentView.frame.size.width - rightInfoFrame.size.width - self.cellAttrsData.contentEachOtherPadding;
-    }else{
-        rightInfoFrame.origin.x = self.contentView.frame.size.width - rightInfoFrame.size.width - (self.cellAttrsData.contentEachOtherPadding > 1.f ? self.cellAttrsData.contentEachOtherPadding : 15);
-    }
-    rightInfoFrame.origin.y = (self.contentView.frame.size.height - rightInfoFrame.size.height) * 0.5;
+    // 根据文字调整大小
+    CGSize rightInfoSize = [self rightInfoSize];
+    rightInfoFrame.size = rightInfoSize;
+    rightInfoFrame.origin.x = self.contentView.frame.size.width - rightInfoSize.width - (self.cellAttrsData.contentEachOtherPadding > 1.f ? self.cellAttrsData.contentEachOtherPadding : 15);
+    rightInfoFrame.origin.y = (self.contentView.frame.size.height - rightInfoSize.height) * 0.5;
     self.rightInfoLabel.frame = rightInfoFrame;
+}
+
+- (CGSize)rightInfoSize
+{
+    return [self.rightInfoLabel.text sizeWithFont:self.rightInfoLabel.font];
 }
 
 + (NSString *)settingCellReuseIdentifierString
@@ -64,17 +69,24 @@
     self.rightInfoLabel.text = infoItem.rightInfo;
     self.rightInfoLabel.font = [UIFont systemFontOfSize:(self.cellAttrsData.contentTextMaxSize > 1.f ? self.cellAttrsData.contentTextMaxSize - 1 : 12)];
     self.rightInfoLabel.textColor = self.cellAttrsData.contentInfoTextColor ? self.cellAttrsData.contentInfoTextColor : [UIColor redColor];
-    
-    /* [infoItem addObserver:self forKeyPath:@"rightInfo" options:NSKeyValueObservingOptionNew context:nil]; */
+
 }
 
-/* - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
 {
-    if ([self respondsToSelector:@selector(settingInfoValueChanged:)]) {
-        [self settingInfoValueChanged:self.rightInfoLabel];
-    }
+//    if ([self respondsToSelector:@selector(settingInfoValueChanged:)]) {
+//        [self settingInfoValueChanged:self.rightInfoLabel];
+//    }
+//    重新布局
+    [self setNeedsLayout];
     
-} */
+}
+
+- (void)dealloc
+{
+//    移除侦听
+    [self.rightInfoLabel removeObserver:self forKeyPath:@"text"];
+}
 
 
 @end

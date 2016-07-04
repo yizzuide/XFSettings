@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "XFSettings.h"
+#import "UIViewController+XFSettings.h"
 #import "NSString+Tools.h"
 #import "UpdateViewController.h"
 #import "XFNewFriendViewController.h"

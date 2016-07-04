@@ -51,7 +51,7 @@
  */
 @property (nonatomic, assign) BOOL disableTopLine;
 /**
- *  列表显示风格
+ *  列表显示风格（注意：只适用于使用分类UIViewController+XFSettings.h方式）
  */
 @property (nonatomic, assign) UITableViewStyle tableViewStyle;
 

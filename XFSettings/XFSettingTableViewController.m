@@ -33,7 +33,7 @@
 // 默认初始化时使用分组
 - (instancetype)init
 {
-    return [self initWithStyle:UITableViewStyleGrouped];
+    return [self initWithStyle:[self tableViewStyle]];
 }
 
 - (void)viewDidLoad {
@@ -41,6 +41,11 @@
     // Do any additional setup after loading the view.
     
     //self.navigationItem.title = @"设置";
+}
+
+- (UITableViewStyle)tableViewStyle
+{
+    return UITableViewStyleGrouped;
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView

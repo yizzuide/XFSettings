@@ -39,14 +39,9 @@
     detailFrame.origin.x = CGRectGetMaxX(self.textLabel.frame)  + (self.cellAttrsData.contentEachOtherPadding > 1.f ? self.cellAttrsData.contentEachOtherPadding * 0.5 : 7.5);
     self.detailTextLabel.frame = detailFrame;
     
-    XFSettingArrowItem *item = (XFSettingArrowItem *)self.item;
     CGRect assistImageFrame = self.assistImageView.frame;
-    if (item.destVCClass) {
-        NSLog(@"%@",@"destVC");
-        assistImageFrame.origin.x = self.contentView.frame.size.width - assistImageFrame.size.width;
-    }else{
-        assistImageFrame.origin.x = self.contentView.frame.size.width - assistImageFrame.size.width - (self.cellAttrsData.contentEachOtherPadding > 1.f ? self.cellAttrsData.contentEachOtherPadding : 15);
-    }
+    assistImageFrame.origin.x = self.contentView.frame.size.width - assistImageFrame.size.width -(self.cellAttrsData.contentEachOtherPadding > 1.f ? self.cellAttrsData.contentEachOtherPadding : 15);
+    
     assistImageFrame.origin.y = (self.contentView.frame.size.height - assistImageFrame.size.height) * 0.5;
     self.assistImageView.frame = assistImageFrame;
 

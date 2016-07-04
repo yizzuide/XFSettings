@@ -15,10 +15,17 @@
 
 @end */
 
+@class XFSettingInfoItem,XFCellAttrsData;
 /**
  *  一个显示右边文字的Cell
  */
 @interface XFSettingInfoCell : XFSettingCell//<XFSettingInfoCellDelegate>
 
 @property (nonatomic, weak) UILabel *rightInfoLabel;
+
+/**
+ *  子类必须实现这个勾子方法测量rightInfoLabel大小
+ *
+ */
+- (CGSize)rightInfoSize;
 @end
