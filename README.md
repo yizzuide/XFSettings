@@ -18,11 +18,14 @@
 把XFSettings整个目录拖入到工程
 
 ##快速使用方法
-首先, 在`.m`里添加 `#import "XFSettings.h`，在`viewDidLoad`方法里设置`XFCellAttrsData`参数，数据源`self.dataSource`并调用`[self xf_setup]`进行配置，然后添加 `- (NSArray *)settingItems`数据源方法返回`NSArray`以供库内部的渲染。
+首先, 在`.m`里添加 `#import "XFSettings.h`和`#import "UIViewController+XFSettings.h"`，在`viewDidLoad`方法里设置`XFCellAttrsData`参数，数据源`self.dataSource`并调用`[self xf_setup]`进行配置，然后添加 `- (NSArray *)settingItems`数据源方法返回`NSArray`以供库内部的渲染。
 
 ```objc
 
 //.m
+#import "XFSettings.h"
+#import "UIViewController+XFSettings.h"
+
 @interface ViewController ()<XFSettingTableViewDataSource>
 
 @end
@@ -43,7 +46,9 @@
     cellAttrsData.contentEachOtherPadding = 15;
     // cell 线条颜色
     cellAttrsData.cellBottomLineColor = [UIColor purpleColor];
-    // 显示填充整个cell宽度画线
+// 是否隐藏顶部第一条线
+//    cellAttrsData.disableTopLine = YES;
+// 显示填充整个cell宽度画线
 //    cellAttrsData.cellFullLineEnable = YES;
     // 标题文字大小（其它文字会按个大小自动调整）
     cellAttrsData.contentTextMaxSize = 13;
@@ -53,6 +58,9 @@
     cellAttrsData.contentDetailTextColor = [UIColor blueColor];
     // 辅助文字颜色
     cellAttrsData.contentInfoTextColor = [UIColor brownColor];
+    // 表格风格
+    cellAttrsData.tableViewStyle = UITableViewStyleGrouped;
+    
     self.cellAttrsData = cellAttrsData;
     // 设置数据源
     self.dataSource = self;
