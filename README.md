@@ -273,7 +273,7 @@ typedef void(^SettingItemOptionBlock)(UITableViewCell *cell,XFSettingPhaseType p
         }
 ```
 #####6.3. 普通显示带右边箭头且有交互事件跳转控制器的Cell
-有无右边的箭头不仅是设置`XFSettingItemClass`为`XFSettingArrowItem`,还要设置`XFSettingItemDestViewControllerClass`，不加后者将为会显示箭头
+有无右边的箭头不仅是设置`XFSettingItemClass`为`XFSettingArrowItem`,还要设置`XFSettingItemDestViewControllerClass`，不加后者将不会显示箭头
 ```objc
      @{
         XFSettingItemTitle: @"标题",
