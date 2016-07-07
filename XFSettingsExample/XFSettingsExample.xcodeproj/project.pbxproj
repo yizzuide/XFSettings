@@ -378,6 +378,10 @@
 				INFOPLIST_FILE = XFSettingsExample/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-W",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.yizzuide.XFSettingsExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -393,6 +397,10 @@
 				INFOPLIST_FILE = XFSettingsExample/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-W",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.yizzuide.XFSettingsExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
