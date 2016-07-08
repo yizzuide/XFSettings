@@ -48,9 +48,9 @@
     // 表格风格
     cellAttrsData.tableViewStyle = UITableViewStyleGrouped;
     
-    self.cellAttrsData = cellAttrsData;
+    self.xf_cellAttrsData = cellAttrsData;
     // 设置数据源
-    self.dataSource = self;
+    self.xf_dataSource = self;
     // 调用配置设置
     [self xf_setup];
     
