@@ -1,6 +1,6 @@
 ![XFSettings logo](./ScreenShot/XFSettingLogo.png)
 
-[![CocoaPods](https://img.shields.io/badge/cocoapods-v2.0.2-brightgreen.svg)](http://cocoadocs.org/docsets/XFSettings)
+[![CocoaPods](https://img.shields.io/badge/cocoapods-v2.1.0-brightgreen.svg)](http://cocoadocs.org/docsets/XFSettings)
 ![Language](https://img.shields.io/badge/language-ObjC-orange.svg)
 ![License](https://img.shields.io/hexpm/l/plug.svg)
 ![Version](https://img.shields.io/badge/platform-ios7%2B-green.svg)
@@ -11,11 +11,19 @@
 
 ##安装
 1、通过cocoapods
-> pod 'XFSettings','2.0.2'
+> pod 'XFSettings','2.1.0'
 
 2、手动加入
 
 把XFSettings整个目录拖入到工程
+
+##更新记录
+* 2016/7/8    V2.1.0  重要！修复使用"UIViewController+XFSettings"分类方式引发其它基于TableView的控制器崩溃问题，请及时更新！
+* 2016/7/1    V2.0.2  支持动态设置右边文字后自适应大小，优化布局计算，"UIViewController+XFSettings.h"分类方式需要手动导入
+* 2016/7/1    V2.0.1  修复自定义线色未设置为空问题，支持设置TableViewStyle
+* 2016/6/23   V2.0.0  使用非侵入式分类UIViewController+XFSettings方式构建设置界面
+* 2015/6/28   V1.0.0  提交第一个版本，支持基本配置功能
+
 
 ##开发文档
 ###一、快速开始使用
