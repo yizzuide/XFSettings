@@ -29,9 +29,9 @@
 ###一、快速开始使用
 1.导入主头文件`#import "XFSettings.h`和分类`#import "UIViewController+XFSettings.h"`
 
-2.在`viewDidLoad`方法里设置`XFCellAttrsData`参数
+2.在`viewDidLoad`方法使用`self.xf_cellAttrsData`设置`XFCellAttrsData`类型参数
 
-3.设置数据源`self.dataSource`并调用`[self xf_setup]`进行配置
+3.设置数据源`self.xf_dataSource`并调用`[self xf_setup]`进行配置
 
 4.实现`XFSettingTableViewDataSource`协议的`- (NSArray *)settingItems`数据源方法返回`NSArray`以供库内部的渲染
 
@@ -63,9 +63,9 @@
     // 表格风格
     cellAttrsData.tableViewStyle = UITableViewStyleGrouped;
     
-    self.cellAttrsData = cellAttrsData;
+    self.xf_cellAttrsData = cellAttrsData;
     // 设置数据源
-    self.dataSource = self;
+    self.xf_dataSource = self;
     // 调用配置设置
     [self xf_setup];
     
