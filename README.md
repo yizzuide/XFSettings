@@ -1,6 +1,6 @@
 ![XFSettings logo](./ScreenShot/XFSettingLogo.png)
 
-[![CocoaPods](https://img.shields.io/badge/cocoapods-v2.1.0-brightgreen.svg)](http://cocoadocs.org/docsets/XFSettings)
+[![CocoaPods](https://img.shields.io/badge/cocoapods-v2.2.0-brightgreen.svg)](http://cocoadocs.org/docsets/XFSettings)
 ![Language](https://img.shields.io/badge/language-ObjC-orange.svg)
 ![License](https://img.shields.io/hexpm/l/plug.svg)
 ![Version](https://img.shields.io/badge/platform-ios7%2B-green.svg)
@@ -11,7 +11,7 @@
 
 ##安装
 1、通过cocoapods
-> pod 'XFSettings','2.1.0'
+> pod 'XFSettings','2.2.0'
 
 2、手动加入
 
