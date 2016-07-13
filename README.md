@@ -18,6 +18,7 @@
 把XFSettings整个目录拖入到工程
 
 ##更新记录
+* 2016/7/13   V2.2.0  支持横竖屏自适配，开发者无需修改代码
 * 2016/7/8    V2.1.0  重要！修复使用"UIViewController+XFSettings"分类方式引发其它基于TableView的控制器崩溃问题，请及时更新！
 * 2016/7/4    V2.0.2  支持动态设置右边文字后自适应大小，优化布局计算，"UIViewController+XFSettings.h"分类方式需要手动导入
 * 2016/7/1    V2.0.1  修复自定义线色未设置为空问题，支持设置TableViewStyle
