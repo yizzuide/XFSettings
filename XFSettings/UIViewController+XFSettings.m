@@ -103,27 +103,12 @@ static void * xfSettings_Agent = (void *)@"xfSettings_Agent";
 {
     self.xf_tableView.dataSource = self.xf_agent;
     self.xf_tableView.delegate = self.xf_agent;
-}
-
-// 支持横竖屏配置
-- (void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration
-{
-    // 如果不是设置界面
-    if (!self.xf_cellAttrsData) {
-        return;
-    }
-    CGFloat currentSW = self.view.bounds.size.width;
-    CGFloat currentSH = self.view.bounds.size.height;
-    [UIView animateWithDuration:duration animations:^{
-        if (toInterfaceOrientation == UIInterfaceOrientationLandscapeLeft || toInterfaceOrientation == UIInterfaceOrientationLandscapeRight) {
-            if (currentSW < currentSH) {
-                self.xf_tableView.frame = CGRectMake(0, 0, currentSH, currentSW);
-            }
-        }else{
-            if (currentSW > currentSH) {
-                self.xf_tableView.frame = CGRectMake(0, 0, currentSH, currentSW);
-            }
-        }
-    }];
+    
+    self.xf_tableView.translatesAutoresizingMaskIntoConstraints = NO;
+    NSArray *hConstraint = [NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[xf_tableView]-0-|" options:0 metrics:nil views:@{@"xf_tableView":self.xf_tableView}];
+    [self.view addConstraints:hConstraint];
+    NSArray *vConstraint = [NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[xf_tableView]-0-|" options:0 metrics:nil views:@{@"xf_tableView":self.xf_tableView}];
+    [self.view addConstraints:vConstraint];
+    
 }
 @end
