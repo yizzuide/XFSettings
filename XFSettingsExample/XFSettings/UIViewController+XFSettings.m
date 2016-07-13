@@ -33,6 +33,7 @@ static void * xfSettings_Agent = (void *)@"xfSettings_Agent";
     if(!view){
         UITableViewStyle style = self.xf_cellAttrsData.tableViewStyle;
         view = [[UITableView alloc] initWithFrame:self.view.frame style:style];
+        //view.backgroundColor = [UIColor orangeColor];
         [self.view addSubview:view];
         [self setXf_tableView:view];
         return view;
@@ -104,4 +105,25 @@ static void * xfSettings_Agent = (void *)@"xfSettings_Agent";
     self.xf_tableView.delegate = self.xf_agent;
 }
 
+// 支持横竖屏配置
+- (void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration
+{
+    // 如果不是设置界面
+    if (!self.xf_cellAttrsData) {
+        return;
+    }
+    CGFloat currentSW = self.view.bounds.size.width;
+    CGFloat currentSH = self.view.bounds.size.height;
+    [UIView animateWithDuration:duration animations:^{
+        if (toInterfaceOrientation == UIInterfaceOrientationLandscapeLeft || toInterfaceOrientation == UIInterfaceOrientationLandscapeRight) {
+            if (currentSW < currentSH) {
+                self.xf_tableView.frame = CGRectMake(0, 0, currentSH, currentSW);
+            }
+        }else{
+            if (currentSW > currentSH) {
+                self.xf_tableView.frame = CGRectMake(0, 0, currentSH, currentSW);
+            }
+        }
+    }];
+}
 @end
