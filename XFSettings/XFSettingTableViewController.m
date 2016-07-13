@@ -126,4 +126,22 @@
     }
 }
 
+// 支持横竖屏配置
+- (void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration
+{
+    CGFloat currentSW = self.view.bounds.size.width;
+    CGFloat currentSH = self.view.bounds.size.height;
+    [UIView animateWithDuration:duration animations:^{
+        if (toInterfaceOrientation == UIInterfaceOrientationLandscapeLeft || toInterfaceOrientation == UIInterfaceOrientationLandscapeRight) {
+            if (currentSW < currentSH) {
+                self.tableView.frame = CGRectMake(0, 0, currentSH, currentSW);
+            }
+        }else{
+            if (currentSW > currentSH) {
+                self.tableView.frame = CGRectMake(0, 0, currentSH, currentSW);
+            }
+        }
+    }];
+}
+
 @end
