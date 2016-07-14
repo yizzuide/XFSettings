@@ -1,6 +1,6 @@
 ![XFSettings logo](./ScreenShot/XFSettingLogo.png)
 
-[![CocoaPods](https://img.shields.io/badge/cocoapods-v2.2.0-brightgreen.svg)](http://cocoadocs.org/docsets/XFSettings)
+[![CocoaPods](https://img.shields.io/badge/cocoapods-v2.2.1-brightgreen.svg)](http://cocoadocs.org/docsets/XFSettings)
 ![Language](https://img.shields.io/badge/language-ObjC-orange.svg)
 ![License](https://img.shields.io/hexpm/l/plug.svg)
 ![Version](https://img.shields.io/badge/platform-ios7%2B-green.svg)
@@ -11,13 +11,14 @@
 
 ##安装
 1、通过cocoapods
-> pod 'XFSettings','2.2.0'
+> pod 'XFSettings','2.2.1'
 
 2、手动加入
 
 把XFSettings整个目录拖入到工程
 
 ##更新记录
+* 2016/7/14   V2.2.1  修复在第二级控制器旋转屏幕后，返回到设置界面无法正确适配问题
 * 2016/7/13   V2.2.0  支持横竖屏自适配，开发者无需修改代码
 * 2016/7/8    V2.1.0  重要！修复使用"UIViewController+XFSettings"分类方式引发其它基于TableView的控制器崩溃问题，请及时更新！
 * 2016/7/4    V2.0.2  支持动态设置右边文字后自适应大小，优化布局计算，"UIViewController+XFSettings.h"分类方式需要手动导入
