@@ -34,15 +34,16 @@
     detailFrame.origin.x = CGRectGetMaxX(self.textLabel.frame)  + (self.cellAttrsData.contentEachOtherPadding > 1.f ? self.cellAttrsData.contentEachOtherPadding * 0.5 : 7.5);
     self.detailTextLabel.frame = detailFrame;
     
-    // 基类实现，子类根据情况实现这个勾子方法进行布局
-    //XFSettingInfoItem *item = (XFSettingInfoItem *)self.item;
-    CGRect rightInfoFrame = self.rightInfoLabel.frame;
     // 根据文字调整大小
+    CGRect rightInfoFrame = self.rightInfoLabel.frame;
     CGSize rightInfoSize = [self rightInfoSize];
     rightInfoFrame.size = rightInfoSize;
     rightInfoFrame.origin.x = self.contentView.frame.size.width - rightInfoSize.width - (self.cellAttrsData.contentEachOtherPadding > 1.f ? self.cellAttrsData.contentEachOtherPadding : 15);
     rightInfoFrame.origin.y = (self.contentView.frame.size.height - rightInfoSize.height) * 0.5;
     self.rightInfoLabel.frame = rightInfoFrame;
+    
+    // 执行自定义布局
+    self.item.optionBlock(self,XFSettingPhaseTypeCellLayout,nil);
 }
 
 - (CGSize)rightInfoSize
@@ -69,6 +70,13 @@
     self.rightInfoLabel.text = infoItem.rightInfo;
     self.rightInfoLabel.font = [UIFont systemFontOfSize:(self.cellAttrsData.contentTextMaxSize > 1.f ? self.cellAttrsData.contentTextMaxSize - 1 : 12)];
     self.rightInfoLabel.textColor = self.cellAttrsData.contentInfoTextColor ? self.cellAttrsData.contentInfoTextColor : [UIColor redColor];
+    
+    // 如果没有跳转控制器和动作执行代码块
+    if (!infoItem.destVCClass && !infoItem.optionBlock) {
+        // 使cell不能点击
+        self.selectionStyle = UITableViewCellSelectionStyleNone;
+    }
+    
 
 }
 

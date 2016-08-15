@@ -36,9 +36,4 @@
     self.rightInfoLabel.layer.backgroundColor = self.dotColor ? self.dotColor.CGColor : [UIColor colorWithRed:1.000 green:0.000 blue:0.000 alpha:0.760].CGColor;
 }
 
-
-+ (NSString *)settingCellReuseIdentifierString
-{
-    return @"settingInfoDot-cell";
-}
 @end

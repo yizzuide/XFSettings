@@ -183,7 +183,21 @@
                                      NSLog(@"%@",@"正在更新中。。。");
                                  }
                              }
+                             },
+                         @{
+                             XFSettingItemTitle: @"版本号",
+                             XFSettingItemClass : [XFSettingInfoItem class],
+                             XFSettingItemAttrRightInfo : @"当前版本：V2.3.0",
+                             XFSettingItemRelatedCellClass:[XFSettingInfoCell class],
+                             XFSettingOptionActionBlock : ^(XFSettingInfoCell *cell,XFSettingPhaseType phaseType,id intentData){
+                                if(phaseType == XFSettingPhaseTypeCellLayout){
+                                     CGSize textSize = [cell.rightInfoLabel.text sizeWithFont:cell.rightInfoLabel.font];
+                                     CGRect frame = cell.rightInfoLabel.frame;
+                                     frame.origin.x =  [UIScreen mainScreen].bounds.size.width - textSize.width - 32 - 15;
+                                     cell.rightInfoLabel.frame = frame;
+                                 }
                              }
+                             },
                          ],
                  XFSettingGroupFooter : @"lalala~"
                  }// end groupModel

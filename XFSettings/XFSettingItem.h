@@ -10,6 +10,7 @@
 
 typedef enum : NSUInteger {
     XFSettingPhaseTypeCellInit,
+    XFSettingPhaseTypeCellLayout,
     XFSettingPhaseTypeCellInteracted
 } XFSettingPhaseType;
 
