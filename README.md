@@ -245,7 +245,8 @@ extern NSString * const XFSettingItemAttrAssistImageName;
 可选操作定义如下：
 ```objc
 typedef enum : NSUInteger {
-    XFSettingPhaseTypeCellInit, // 布局阶段
+    XFSettingPhaseTypeCellInit, // 初始化阶段
+    XFSettingPhaseTypeCellLayout, // 布局阶段
     XFSettingPhaseTypeCellInteracted // 有交互事件
 } XFSettingPhaseType;
 
