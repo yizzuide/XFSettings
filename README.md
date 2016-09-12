@@ -1,6 +1,6 @@
 ![XFSettings logo](./ScreenShot/XFSettingLogo.png)
 
-[![CocoaPods](https://img.shields.io/badge/cocoapods-v2.3.0-brightgreen.svg)](http://cocoadocs.org/docsets/XFSettings)
+[![CocoaPods](https://img.shields.io/badge/cocoapods-v2.3.1-brightgreen.svg)](http://cocoadocs.org/docsets/XFSettings)
 ![Language](https://img.shields.io/badge/language-ObjC-orange.svg)
 ![License](https://img.shields.io/hexpm/l/plug.svg)
 ![Version](https://img.shields.io/badge/platform-ios7%2B-green.svg)
@@ -11,13 +11,14 @@
 
 ##安装
 1、通过cocoapods
-> pod 'XFSettings','2.3.0'
+> pod 'XFSettings','2.3.1'
 
 2、手动加入
 
 把XFSettings整个目录拖入到工程
 
 ##更新记录
+* 2016/9/12   V2.3.1  使`XFSetttingCell`可以在外部初始化设置它的子视图状态
 * 2016/8/15   V2.3.0  支持自定义布局`XFSettingPhaseTypeCellLayout`阶段
 * 2016/7/14   V2.2.1  修复在第二级控制器旋转屏幕后，返回到设置界面无法正确适配问题
 * 2016/7/13   V2.2.0  支持横竖屏自适配，开发者无需修改代码
