@@ -14,10 +14,6 @@
 
 @interface XFSettingCell ()
 
-@property (nonatomic, weak) UISwitch *switchView;
-@property (nonatomic, weak) UIImageView *arrowIcon;
-
-@property (nonatomic, weak) UIView *bottomLineView;
 @end
 
 @implementation XFSettingCell

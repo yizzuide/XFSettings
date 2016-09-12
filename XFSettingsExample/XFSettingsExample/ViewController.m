@@ -109,8 +109,11 @@
                              XFSettingItemIcon : @"1435527366_1-8",
                              XFSettingItemClass : [XFSettingSwitchItem class],
                              XFSettingOptionActionBlock : ^(XFSettingCell *cell,XFSettingPhaseType phaseType,id intentData){
-                                 
-                                 if (phaseType == XFSettingPhaseTypeCellInteracted) {
+                                 // 视图初始化
+                                 if (phaseType == XFSettingPhaseTypeCellInit) {
+                                     // 初始化时设置为开启
+                                     cell.switchView.on = YES;
+                                 }else if (phaseType == XFSettingPhaseTypeCellInteracted) {
                                      if ([intentData[XFSettingIntentDataSwitchOn] boolValue]) {
                                          NSLog(@"%@", @"保存");
                                      }else{
