@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
 s.name = 'XFSettings'
-s.version = '2.3.1'
+s.version = '2.3.2'
 s.license = 'Apache'
 s.summary = 'Build setting interface on iOS using Objective-C JSON.'
 s.homepage = 'https://github.com/yizzuide/XFSettings'
