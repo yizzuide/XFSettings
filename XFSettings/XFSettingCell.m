@@ -65,9 +65,11 @@
     self.textLabel.font = [UIFont systemFontOfSize:(self.cellAttrsData.contentTextMaxSize > 1.f ? self.cellAttrsData.contentTextMaxSize : 13)];
     self.textLabel.textColor = self.cellAttrsData.contentTitleTextColor ? self.cellAttrsData.contentTitleTextColor : [UIColor blackColor];
     
-    // 有的设置栏没有图标
+    // 处理图标的显示
     if (item.icon.length) {
         self.imageView.image = [UIImage imageNamed:item.icon];
+    } else {
+        self.imageView.image = nil;
     }
     
     // 设置辅助视图类型
