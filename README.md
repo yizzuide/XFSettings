@@ -336,10 +336,10 @@ typedef void(^SettingItemOptionBlock)(UITableViewCell *cell,XFSettingPhaseType p
 ##### 7.1. 扩展模型数据类
 自定义类继承`XFSettingArrowItem`，添加一些必要的`property`
 ##### 7.2. 扩展Cell
-1) 自定义Cell继承`XFSettingCell`  
-2) 覆盖`- (void)setItem:(XFSettingItem *)item`方法，填充自己的数据到视图  
-3）覆盖`- (void)layoutSubviews`方法，并调用`[super layoutSubviews]`父类实现，对子视图进行布局  
-4) 覆盖`+ (NSString *)settingCellReuseIdentifierString`方法，为自定义的Cell打一个标签，用于循环利用  
+1. 自定义Cell继承`XFSettingCell`  
+2. 覆盖`- (void)setItem:(XFSettingItem *)item`方法，填充自己的数据到视图  
+3. 覆盖`- (void)layoutSubviews`方法，并调用`[super layoutSubviews]`父类实现，对子视图进行布局  
+4. 覆盖`+ (NSString *)settingCellReuseIdentifierString`方法，为自定义的Cell打一个标签，用于循环利用  
 
 
 
