@@ -9,7 +9,7 @@
 
 ![XFSettings usage1](./ScreenShot/usage.gif)
 
-##安装
+## 安装
 1、通过cocoapods
 > pod 'XFSettings','2.3.2'
 
@@ -17,7 +17,7 @@
 
 把XFSettings整个目录拖入到工程
 
-##更新记录
+## 更新记录
 * 2016/12/9   V2.3.2  修复图标循环使用问题
 * 2016/9/12   V2.3.1  使`XFSetttingCell`可以在外部初始化设置它的子视图状态
 * 2016/8/15   V2.3.0  支持自定义布局`XFSettingPhaseTypeCellLayout`阶段
@@ -30,8 +30,8 @@
 * 2015/6/28   V1.0.0  提交第一个版本，支持基本配置功能
 
 
-##开发文档
-###一、快速开始使用
+## 开发文档
+### 一、快速开始使用
 1.导入主头文件`#import "XFSettings.h`和分类`#import "UIViewController+XFSettings.h"`
 
 2.在`viewDidLoad`方法使用`self.xf_cellAttrsData`设置`XFCellAttrsData`类型参数
@@ -111,10 +111,10 @@
 @end
 ```
 
-###二、框架文档
+### 二、框架文档
 整体框架图如下：
 ![](./ScreenShot/framework.png)
-####1. 框架集成的两种方式
+#### 1. 框架集成的两种方式
 1.1. 集成之继承`XFSettingTableViewController`（过时）  
 注意：从2.0.0开始，这种方式就标为过时了，因为一个类只能继承一个类，不方便开发者自由使用  
 使用方式：
@@ -128,7 +128,7 @@
 注意：从2.0.0开始支持  
 使用方式：见上面**快速开始使用**
 
-####2. 数据源格式
+#### 2. 数据源格式
 使用`- (NSArray *)settingItems`返回数据源的格式如下，该方法不能返回`nil`。
 ```objc
 - (NSArray *)settingItems
@@ -147,7 +147,7 @@
 }
 ```
 
-####3.全局配置
+#### 3.全局配置
 使用`XFCellAttrsData`类全局配置设置界面：
 ```objc
 // Cell Color
@@ -178,7 +178,7 @@
 @property (nonatomic, assign) UITableViewStyle tableViewStyle;
 ```
 
-####4. 配置属性
+#### 4. 配置属性
 每一个Cell的显示内容，都会根据以下配置字段：
 ```objc
 // 组信息
@@ -242,7 +242,7 @@ extern NSString * const XFSettingItemAttrRightInfo;
 extern NSString * const XFSettingItemAttrAssistImageName;
 ```
 
-####4. Cell的可选操作
+#### 4. Cell的可选操作
 每个Cell有布局阶段和有交互事件，在布局阶段可以用代码修改一些信息，被点击时可执行相应操作  
 可选操作定义如下：
 ```objc
@@ -257,7 +257,7 @@ typedef enum : NSUInteger {
 typedef void(^SettingItemOptionBlock)(UITableViewCell *cell,XFSettingPhaseType phaseType,id intentData);
 ```
 
-####5. 预定义模型类和Cell搭配
+#### 5. 预定义模型类和Cell搭配
 框架有定义一些预设的模型数据类（如：`XFSettingItem`）和Cell（如：`XFSettingCell`），用于搭配出不同的显示内容：
 - 无交互事件的Cell: `XFSettingItem` + `XFSettingCell`
 - 带UISwitch的Cell: `XFSettingSwitchItem` + `XFSettingCell`
@@ -265,8 +265,8 @@ typedef void(^SettingItemOptionBlock)(UITableViewCell *cell,XFSettingPhaseType p
 - 带右边箭头、有右边消息文字/点的Cell: `XFSettingInfoItem` + `XFSettingInfoCell/XFSettingInfoCountCell/XFSettingInfoDotCell`
 - 带右边箭头、有右边图片的Cell: `XFSettingAssistImageItem` + `XFSettingAssistImageCell`
 
-####6. 组装显示各种类型的Cell
-#####6.1. 普通显示无交互事件的Cell
+#### 6. 组装显示各种类型的Cell
+##### 6.1. 普通显示无交互事件的Cell
 可以不用配置`XFSettingItem`和`XFSettingCell`,因为默认就是这种类型，如：
 ```objc
     @{
@@ -274,7 +274,7 @@ typedef void(^SettingItemOptionBlock)(UITableViewCell *cell,XFSettingPhaseType p
         XFSettingItemIcon : @"img",
         }
 ```
-#####6.2. 普通显示有交互事件的Cell
+##### 6.2. 普通显示有交互事件的Cell
 ```objc
     @{
         XFSettingItemTitle: @"标题",
@@ -286,7 +286,7 @@ typedef void(^SettingItemOptionBlock)(UITableViewCell *cell,XFSettingPhaseType p
             }
         }
 ```
-#####6.3. 普通显示带右边箭头且有交互事件跳转控制器的Cell
+##### 6.3. 普通显示带右边箭头且有交互事件跳转控制器的Cell
 有无右边的箭头不仅是设置`XFSettingItemClass`为`XFSettingArrowItem`,还要设置`XFSettingItemDestViewControllerClass`，不加后者将不会显示箭头
 ```objc
      @{
@@ -296,7 +296,7 @@ typedef void(^SettingItemOptionBlock)(UITableViewCell *cell,XFSettingPhaseType p
         XFSettingItemDestViewControllerClass:[ViewController class],
         }
 ```
-#####6.4. 普通显示带自定义右边箭头图标无交互事件的Cell
+##### 6.4. 普通显示带自定义右边箭头图标无交互事件的Cell
 在要显示右边箭头，又不能跳转控制器的情况下，设置` XFSettingItemDestViewControllerClass:[NSObject class]`
 ```objc
     @{
@@ -309,7 +309,7 @@ typedef void(^SettingItemOptionBlock)(UITableViewCell *cell,XFSettingPhaseType p
         XFSettingItemDestViewControllerClass:[NSObject class],
         }
 ```
-#####6.5. 显示有详细信息文字的Cell
+##### 6.5. 显示有详细信息文字的Cell
 ```objc
     @{
         XFSettingItemTitle: @"标题",
@@ -321,7 +321,7 @@ typedef void(^SettingItemOptionBlock)(UITableViewCell *cell,XFSettingPhaseType p
         }
 ```
 
-#####6.6 显示右边带图图片的Cell
+##### 6.6 显示右边带图图片的Cell
 ```objc
     @{
         XFSettingItemTitle: @"标题",
@@ -331,11 +331,11 @@ typedef void(^SettingItemOptionBlock)(UITableViewCell *cell,XFSettingPhaseType p
         XFSettingItemRelatedCellClass:[XFSettingAssistImageCell class],
         }
 ```
-####7. 扩展模型子类和子Cell
+#### 7. 扩展模型子类和子Cell
 开发者可以扩展自己Cell显示的内容，扩展形式可以参考`XFSettingAssistImageItem` 和 `XFSettingAssistImageCell`
-#####7.1. 扩展模型数据类
+##### 7.1. 扩展模型数据类
 自定义类继承`XFSettingArrowItem`，添加一些必要的`property`
-#####7.2. 扩展Cell
+##### 7.2. 扩展Cell
 1) 自定义Cell继承`XFSettingCell`  
 2) 覆盖`- (void)setItem:(XFSettingItem *)item`方法，填充自己的数据到视图  
 3）覆盖`- (void)layoutSubviews`方法，并调用`[super layoutSubviews]`父类实现，对子视图进行布局  
