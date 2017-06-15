@@ -78,6 +78,10 @@ extern NSString * const XFSettingItemDestViewControllerUserInfo;
  */
 extern NSString * const XFSettingOptionActionBlock;
 /**
+ *  Cell状态存储器
+ */
+extern NSString * const XFSettingItemState;
+/**
  * 使用XFSettingInfoItem和XFSettingInfoCell时的属性,详细信息
  */
 extern NSString * const XFSettingItemAttrDetailText;

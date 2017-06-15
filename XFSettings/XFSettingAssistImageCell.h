@@ -12,4 +12,5 @@
  */
 @interface XFSettingAssistImageCell : XFSettingCell
 
+@property (nonatomic, weak) UIImageView *assistImageView;
 @end

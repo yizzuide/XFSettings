@@ -57,7 +57,7 @@
     // 执行初始化
     if (item.optionBlock) {
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.01 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-            item.optionBlock(self,XFSettingPhaseTypeCellInit,nil);
+            item.optionBlock(self,XFSettingPhaseTypeCellInit,nil,item.state);
         });
     }
 
@@ -100,6 +100,11 @@
     // 如果用户用了cellFullLineEnable
     if (self.cellAttrsData.cellFullLineEnable) {
         [self bottomLineView];
+    }
+    
+    // 如果当前是全局Radio单选样式
+    if(self.cellAttrsData.cellEnableRadioSelectStyle){
+        self.selectionStyle = UITableViewCellSelectionStyleNone;
     }
 }
 // 创建可复用cell
@@ -208,7 +213,7 @@
 
 - (void)stateChanged:(UISwitch *)switchView {
     if (self.item.optionBlock) {
-        self.item.optionBlock(self,XFSettingPhaseTypeCellInteracted,@{@"switchOn":@(switchView.isOn)});
+        self.item.optionBlock(self,XFSettingPhaseTypeCellInteracted,@{@"switchOn":@(switchView.isOn)},self.item.state);
     }
 }
 

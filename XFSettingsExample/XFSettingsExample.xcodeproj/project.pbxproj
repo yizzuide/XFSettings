@@ -13,22 +13,22 @@
 		400384C31B404979003071FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 400384C21B404979003071FD /* Assets.xcassets */; };
 		400384F71B405BA8003071FD /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 400384F61B405BA8003071FD /* Default-568h@2x.png */; };
 		400384FE1B405F52003071FD /* NSString+Tools.m in Sources */ = {isa = PBXBuildFile; fileRef = 400384FD1B405F52003071FD /* NSString+Tools.m */; };
-		4008886A1D35ECEE006ACFC8 /* UIViewController+XFSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = 400888491D35ECEE006ACFC8 /* UIViewController+XFSettings.m */; };
-		4008886B1D35ECEE006ACFC8 /* XFCellAttrsData.m in Sources */ = {isa = PBXBuildFile; fileRef = 4008884B1D35ECEE006ACFC8 /* XFCellAttrsData.m */; };
-		4008886C1D35ECEE006ACFC8 /* XFSettingArrowItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 4008884D1D35ECEE006ACFC8 /* XFSettingArrowItem.m */; };
-		4008886D1D35ECEE006ACFC8 /* XFSettingAssistImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4008884F1D35ECEE006ACFC8 /* XFSettingAssistImageCell.m */; };
-		4008886E1D35ECEE006ACFC8 /* XFSettingAssistImageItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 400888511D35ECEE006ACFC8 /* XFSettingAssistImageItem.m */; };
-		4008886F1D35ECEE006ACFC8 /* XFSettingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 400888531D35ECEE006ACFC8 /* XFSettingCell.m */; };
-		400888701D35ECEE006ACFC8 /* XFSettingGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 400888551D35ECEE006ACFC8 /* XFSettingGroup.m */; };
-		400888711D35ECEE006ACFC8 /* XFSettingInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 400888571D35ECEE006ACFC8 /* XFSettingInfoCell.m */; };
-		400888721D35ECEE006ACFC8 /* XFSettingInfoCountCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 400888591D35ECEE006ACFC8 /* XFSettingInfoCountCell.m */; };
-		400888731D35ECEE006ACFC8 /* XFSettingInfoDotCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4008885B1D35ECEE006ACFC8 /* XFSettingInfoDotCell.m */; };
-		400888741D35ECEE006ACFC8 /* XFSettingInfoItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 4008885D1D35ECEE006ACFC8 /* XFSettingInfoItem.m */; };
-		400888751D35ECEE006ACFC8 /* XFSettingItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 4008885F1D35ECEE006ACFC8 /* XFSettingItem.m */; };
-		400888761D35ECEE006ACFC8 /* XFSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = 400888611D35ECEE006ACFC8 /* XFSettings.m */; };
-		400888771D35ECEE006ACFC8 /* XFSettingSwitchItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 400888641D35ECEE006ACFC8 /* XFSettingSwitchItem.m */; };
-		400888781D35ECEE006ACFC8 /* XFSettingTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 400888661D35ECEE006ACFC8 /* XFSettingTableViewController.m */; };
-		400888791D35ECEE006ACFC8 /* XFTableViewAgent.m in Sources */ = {isa = PBXBuildFile; fileRef = 400888691D35ECEE006ACFC8 /* XFTableViewAgent.m */; };
+		4048AF6C1EF2828600E8715A /* UIViewController+XFSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = 4048AF4B1EF2828600E8715A /* UIViewController+XFSettings.m */; };
+		4048AF6D1EF2828600E8715A /* XFCellAttrsData.m in Sources */ = {isa = PBXBuildFile; fileRef = 4048AF4D1EF2828600E8715A /* XFCellAttrsData.m */; };
+		4048AF6E1EF2828600E8715A /* XFSettingArrowItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 4048AF4F1EF2828600E8715A /* XFSettingArrowItem.m */; };
+		4048AF6F1EF2828600E8715A /* XFSettingAssistImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4048AF511EF2828600E8715A /* XFSettingAssistImageCell.m */; };
+		4048AF701EF2828600E8715A /* XFSettingAssistImageItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 4048AF531EF2828600E8715A /* XFSettingAssistImageItem.m */; };
+		4048AF711EF2828600E8715A /* XFSettingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4048AF551EF2828600E8715A /* XFSettingCell.m */; };
+		4048AF721EF2828600E8715A /* XFSettingGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 4048AF571EF2828600E8715A /* XFSettingGroup.m */; };
+		4048AF731EF2828600E8715A /* XFSettingInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4048AF591EF2828600E8715A /* XFSettingInfoCell.m */; };
+		4048AF741EF2828600E8715A /* XFSettingInfoCountCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4048AF5B1EF2828600E8715A /* XFSettingInfoCountCell.m */; };
+		4048AF751EF2828600E8715A /* XFSettingInfoDotCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4048AF5D1EF2828600E8715A /* XFSettingInfoDotCell.m */; };
+		4048AF761EF2828600E8715A /* XFSettingInfoItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 4048AF5F1EF2828600E8715A /* XFSettingInfoItem.m */; };
+		4048AF771EF2828600E8715A /* XFSettingItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 4048AF611EF2828600E8715A /* XFSettingItem.m */; };
+		4048AF781EF2828600E8715A /* XFSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = 4048AF631EF2828600E8715A /* XFSettings.m */; };
+		4048AF791EF2828600E8715A /* XFSettingSwitchItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 4048AF661EF2828600E8715A /* XFSettingSwitchItem.m */; };
+		4048AF7A1EF2828600E8715A /* XFSettingTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4048AF681EF2828600E8715A /* XFSettingTableViewController.m */; };
+		4048AF7B1EF2828600E8715A /* XFTableViewAgent.m in Sources */ = {isa = PBXBuildFile; fileRef = 4048AF6B1EF2828600E8715A /* XFTableViewAgent.m */; };
 		40C058AF1B7E04FE00575C21 /* XFNewFriendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 40C058AD1B7E04FE00575C21 /* XFNewFriendViewController.m */; };
 		40C058B01B7E04FE00575C21 /* XFNewFriendViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 40C058AE1B7E04FE00575C21 /* XFNewFriendViewController.xib */; };
 		40F4057C1B66257100A93A48 /* UpdateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 40F4057A1B66257100A93A48 /* UpdateViewController.m */; };
@@ -47,40 +47,40 @@
 		400384F61B405BA8003071FD /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		400384FC1B405F52003071FD /* NSString+Tools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+Tools.h"; path = "Category/NSString+Tools.h"; sourceTree = "<group>"; };
 		400384FD1B405F52003071FD /* NSString+Tools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+Tools.m"; path = "Category/NSString+Tools.m"; sourceTree = "<group>"; };
-		400888481D35ECEE006ACFC8 /* UIViewController+XFSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+XFSettings.h"; sourceTree = "<group>"; };
-		400888491D35ECEE006ACFC8 /* UIViewController+XFSettings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+XFSettings.m"; sourceTree = "<group>"; };
-		4008884A1D35ECEE006ACFC8 /* XFCellAttrsData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFCellAttrsData.h; sourceTree = "<group>"; };
-		4008884B1D35ECEE006ACFC8 /* XFCellAttrsData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFCellAttrsData.m; sourceTree = "<group>"; };
-		4008884C1D35ECEE006ACFC8 /* XFSettingArrowItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFSettingArrowItem.h; sourceTree = "<group>"; };
-		4008884D1D35ECEE006ACFC8 /* XFSettingArrowItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFSettingArrowItem.m; sourceTree = "<group>"; };
-		4008884E1D35ECEE006ACFC8 /* XFSettingAssistImageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFSettingAssistImageCell.h; sourceTree = "<group>"; };
-		4008884F1D35ECEE006ACFC8 /* XFSettingAssistImageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFSettingAssistImageCell.m; sourceTree = "<group>"; };
-		400888501D35ECEE006ACFC8 /* XFSettingAssistImageItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFSettingAssistImageItem.h; sourceTree = "<group>"; };
-		400888511D35ECEE006ACFC8 /* XFSettingAssistImageItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFSettingAssistImageItem.m; sourceTree = "<group>"; };
-		400888521D35ECEE006ACFC8 /* XFSettingCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFSettingCell.h; sourceTree = "<group>"; };
-		400888531D35ECEE006ACFC8 /* XFSettingCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFSettingCell.m; sourceTree = "<group>"; };
-		400888541D35ECEE006ACFC8 /* XFSettingGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFSettingGroup.h; sourceTree = "<group>"; };
-		400888551D35ECEE006ACFC8 /* XFSettingGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFSettingGroup.m; sourceTree = "<group>"; };
-		400888561D35ECEE006ACFC8 /* XFSettingInfoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFSettingInfoCell.h; sourceTree = "<group>"; };
-		400888571D35ECEE006ACFC8 /* XFSettingInfoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFSettingInfoCell.m; sourceTree = "<group>"; };
-		400888581D35ECEE006ACFC8 /* XFSettingInfoCountCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFSettingInfoCountCell.h; sourceTree = "<group>"; };
-		400888591D35ECEE006ACFC8 /* XFSettingInfoCountCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFSettingInfoCountCell.m; sourceTree = "<group>"; };
-		4008885A1D35ECEE006ACFC8 /* XFSettingInfoDotCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFSettingInfoDotCell.h; sourceTree = "<group>"; };
-		4008885B1D35ECEE006ACFC8 /* XFSettingInfoDotCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFSettingInfoDotCell.m; sourceTree = "<group>"; };
-		4008885C1D35ECEE006ACFC8 /* XFSettingInfoItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFSettingInfoItem.h; sourceTree = "<group>"; };
-		4008885D1D35ECEE006ACFC8 /* XFSettingInfoItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFSettingInfoItem.m; sourceTree = "<group>"; };
-		4008885E1D35ECEE006ACFC8 /* XFSettingItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFSettingItem.h; sourceTree = "<group>"; };
-		4008885F1D35ECEE006ACFC8 /* XFSettingItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFSettingItem.m; sourceTree = "<group>"; };
-		400888601D35ECEE006ACFC8 /* XFSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFSettings.h; sourceTree = "<group>"; };
-		400888611D35ECEE006ACFC8 /* XFSettings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFSettings.m; sourceTree = "<group>"; };
-		400888621D35ECEE006ACFC8 /* XFSettingsProt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFSettingsProt.h; sourceTree = "<group>"; };
-		400888631D35ECEE006ACFC8 /* XFSettingSwitchItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFSettingSwitchItem.h; sourceTree = "<group>"; };
-		400888641D35ECEE006ACFC8 /* XFSettingSwitchItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFSettingSwitchItem.m; sourceTree = "<group>"; };
-		400888651D35ECEE006ACFC8 /* XFSettingTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFSettingTableViewController.h; sourceTree = "<group>"; };
-		400888661D35ECEE006ACFC8 /* XFSettingTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFSettingTableViewController.m; sourceTree = "<group>"; };
-		400888671D35ECEE006ACFC8 /* XFSettingTableViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFSettingTableViewDataSource.h; sourceTree = "<group>"; };
-		400888681D35ECEE006ACFC8 /* XFTableViewAgent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFTableViewAgent.h; sourceTree = "<group>"; };
-		400888691D35ECEE006ACFC8 /* XFTableViewAgent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFTableViewAgent.m; sourceTree = "<group>"; };
+		4048AF4A1EF2828600E8715A /* UIViewController+XFSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+XFSettings.h"; sourceTree = "<group>"; };
+		4048AF4B1EF2828600E8715A /* UIViewController+XFSettings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+XFSettings.m"; sourceTree = "<group>"; };
+		4048AF4C1EF2828600E8715A /* XFCellAttrsData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFCellAttrsData.h; sourceTree = "<group>"; };
+		4048AF4D1EF2828600E8715A /* XFCellAttrsData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFCellAttrsData.m; sourceTree = "<group>"; };
+		4048AF4E1EF2828600E8715A /* XFSettingArrowItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFSettingArrowItem.h; sourceTree = "<group>"; };
+		4048AF4F1EF2828600E8715A /* XFSettingArrowItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFSettingArrowItem.m; sourceTree = "<group>"; };
+		4048AF501EF2828600E8715A /* XFSettingAssistImageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFSettingAssistImageCell.h; sourceTree = "<group>"; };
+		4048AF511EF2828600E8715A /* XFSettingAssistImageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFSettingAssistImageCell.m; sourceTree = "<group>"; };
+		4048AF521EF2828600E8715A /* XFSettingAssistImageItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFSettingAssistImageItem.h; sourceTree = "<group>"; };
+		4048AF531EF2828600E8715A /* XFSettingAssistImageItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFSettingAssistImageItem.m; sourceTree = "<group>"; };
+		4048AF541EF2828600E8715A /* XFSettingCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFSettingCell.h; sourceTree = "<group>"; };
+		4048AF551EF2828600E8715A /* XFSettingCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFSettingCell.m; sourceTree = "<group>"; };
+		4048AF561EF2828600E8715A /* XFSettingGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFSettingGroup.h; sourceTree = "<group>"; };
+		4048AF571EF2828600E8715A /* XFSettingGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFSettingGroup.m; sourceTree = "<group>"; };
+		4048AF581EF2828600E8715A /* XFSettingInfoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFSettingInfoCell.h; sourceTree = "<group>"; };
+		4048AF591EF2828600E8715A /* XFSettingInfoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFSettingInfoCell.m; sourceTree = "<group>"; };
+		4048AF5A1EF2828600E8715A /* XFSettingInfoCountCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFSettingInfoCountCell.h; sourceTree = "<group>"; };
+		4048AF5B1EF2828600E8715A /* XFSettingInfoCountCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFSettingInfoCountCell.m; sourceTree = "<group>"; };
+		4048AF5C1EF2828600E8715A /* XFSettingInfoDotCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFSettingInfoDotCell.h; sourceTree = "<group>"; };
+		4048AF5D1EF2828600E8715A /* XFSettingInfoDotCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFSettingInfoDotCell.m; sourceTree = "<group>"; };
+		4048AF5E1EF2828600E8715A /* XFSettingInfoItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFSettingInfoItem.h; sourceTree = "<group>"; };
+		4048AF5F1EF2828600E8715A /* XFSettingInfoItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFSettingInfoItem.m; sourceTree = "<group>"; };
+		4048AF601EF2828600E8715A /* XFSettingItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFSettingItem.h; sourceTree = "<group>"; };
+		4048AF611EF2828600E8715A /* XFSettingItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFSettingItem.m; sourceTree = "<group>"; };
+		4048AF621EF2828600E8715A /* XFSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFSettings.h; sourceTree = "<group>"; };
+		4048AF631EF2828600E8715A /* XFSettings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFSettings.m; sourceTree = "<group>"; };
+		4048AF641EF2828600E8715A /* XFSettingsProt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFSettingsProt.h; sourceTree = "<group>"; };
+		4048AF651EF2828600E8715A /* XFSettingSwitchItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFSettingSwitchItem.h; sourceTree = "<group>"; };
+		4048AF661EF2828600E8715A /* XFSettingSwitchItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFSettingSwitchItem.m; sourceTree = "<group>"; };
+		4048AF671EF2828600E8715A /* XFSettingTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFSettingTableViewController.h; sourceTree = "<group>"; };
+		4048AF681EF2828600E8715A /* XFSettingTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFSettingTableViewController.m; sourceTree = "<group>"; };
+		4048AF691EF2828600E8715A /* XFSettingTableViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFSettingTableViewDataSource.h; sourceTree = "<group>"; };
+		4048AF6A1EF2828600E8715A /* XFTableViewAgent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFTableViewAgent.h; sourceTree = "<group>"; };
+		4048AF6B1EF2828600E8715A /* XFTableViewAgent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFTableViewAgent.m; sourceTree = "<group>"; };
 		40C058AC1B7E04FE00575C21 /* XFNewFriendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFNewFriendViewController.h; sourceTree = "<group>"; };
 		40C058AD1B7E04FE00575C21 /* XFNewFriendViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFNewFriendViewController.m; sourceTree = "<group>"; };
 		40C058AE1B7E04FE00575C21 /* XFNewFriendViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XFNewFriendViewController.xib; sourceTree = "<group>"; };
@@ -104,7 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				400384F61B405BA8003071FD /* Default-568h@2x.png */,
-				400888471D35ECEE006ACFC8 /* XFSettings */,
+				4048AF491EF2828600E8715A /* XFSettings */,
 				400384B51B404979003071FD /* XFSettingsExample */,
 				400384B41B404979003071FD /* Products */,
 			);
@@ -156,43 +156,43 @@
 			name = Category;
 			sourceTree = "<group>";
 		};
-		400888471D35ECEE006ACFC8 /* XFSettings */ = {
+		4048AF491EF2828600E8715A /* XFSettings */ = {
 			isa = PBXGroup;
 			children = (
-				400888481D35ECEE006ACFC8 /* UIViewController+XFSettings.h */,
-				400888491D35ECEE006ACFC8 /* UIViewController+XFSettings.m */,
-				4008884A1D35ECEE006ACFC8 /* XFCellAttrsData.h */,
-				4008884B1D35ECEE006ACFC8 /* XFCellAttrsData.m */,
-				4008884C1D35ECEE006ACFC8 /* XFSettingArrowItem.h */,
-				4008884D1D35ECEE006ACFC8 /* XFSettingArrowItem.m */,
-				4008884E1D35ECEE006ACFC8 /* XFSettingAssistImageCell.h */,
-				4008884F1D35ECEE006ACFC8 /* XFSettingAssistImageCell.m */,
-				400888501D35ECEE006ACFC8 /* XFSettingAssistImageItem.h */,
-				400888511D35ECEE006ACFC8 /* XFSettingAssistImageItem.m */,
-				400888521D35ECEE006ACFC8 /* XFSettingCell.h */,
-				400888531D35ECEE006ACFC8 /* XFSettingCell.m */,
-				400888541D35ECEE006ACFC8 /* XFSettingGroup.h */,
-				400888551D35ECEE006ACFC8 /* XFSettingGroup.m */,
-				400888561D35ECEE006ACFC8 /* XFSettingInfoCell.h */,
-				400888571D35ECEE006ACFC8 /* XFSettingInfoCell.m */,
-				400888581D35ECEE006ACFC8 /* XFSettingInfoCountCell.h */,
-				400888591D35ECEE006ACFC8 /* XFSettingInfoCountCell.m */,
-				4008885A1D35ECEE006ACFC8 /* XFSettingInfoDotCell.h */,
-				4008885B1D35ECEE006ACFC8 /* XFSettingInfoDotCell.m */,
-				4008885C1D35ECEE006ACFC8 /* XFSettingInfoItem.h */,
-				4008885D1D35ECEE006ACFC8 /* XFSettingInfoItem.m */,
-				4008885E1D35ECEE006ACFC8 /* XFSettingItem.h */,
-				4008885F1D35ECEE006ACFC8 /* XFSettingItem.m */,
-				400888601D35ECEE006ACFC8 /* XFSettings.h */,
-				400888611D35ECEE006ACFC8 /* XFSettings.m */,
-				400888621D35ECEE006ACFC8 /* XFSettingsProt.h */,
-				400888631D35ECEE006ACFC8 /* XFSettingSwitchItem.h */,
-				400888641D35ECEE006ACFC8 /* XFSettingSwitchItem.m */,
-				400888651D35ECEE006ACFC8 /* XFSettingTableViewController.h */,
-				400888661D35ECEE006ACFC8 /* XFSettingTableViewController.m */,
-				400888671D35ECEE006ACFC8 /* XFSettingTableViewDataSource.h */,
-				400888681D35ECEE006ACFC8 /* XFTableViewAgent.h */,
-				400888691D35ECEE006ACFC8 /* XFTableViewAgent.m */,
+				4048AF4A1EF2828600E8715A /* UIViewController+XFSettings.h */,
+				4048AF4B1EF2828600E8715A /* UIViewController+XFSettings.m */,
+				4048AF4C1EF2828600E8715A /* XFCellAttrsData.h */,
+				4048AF4D1EF2828600E8715A /* XFCellAttrsData.m */,
+				4048AF4E1EF2828600E8715A /* XFSettingArrowItem.h */,
+				4048AF4F1EF2828600E8715A /* XFSettingArrowItem.m */,
+				4048AF501EF2828600E8715A /* XFSettingAssistImageCell.h */,
+				4048AF511EF2828600E8715A /* XFSettingAssistImageCell.m */,
+				4048AF521EF2828600E8715A /* XFSettingAssistImageItem.h */,
+				4048AF531EF2828600E8715A /* XFSettingAssistImageItem.m */,
+				4048AF541EF2828600E8715A /* XFSettingCell.h */,
+				4048AF551EF2828600E8715A /* XFSettingCell.m */,
+				4048AF561EF2828600E8715A /* XFSettingGroup.h */,
+				4048AF571EF2828600E8715A /* XFSettingGroup.m */,
+				4048AF581EF2828600E8715A /* XFSettingInfoCell.h */,
+				4048AF591EF2828600E8715A /* XFSettingInfoCell.m */,
+				4048AF5A1EF2828600E8715A /* XFSettingInfoCountCell.h */,
+				4048AF5B1EF2828600E8715A /* XFSettingInfoCountCell.m */,
+				4048AF5C1EF2828600E8715A /* XFSettingInfoDotCell.h */,
+				4048AF5D1EF2828600E8715A /* XFSettingInfoDotCell.m */,
+				4048AF5E1EF2828600E8715A /* XFSettingInfoItem.h */,
+				4048AF5F1EF2828600E8715A /* XFSettingInfoItem.m */,
+				4048AF601EF2828600E8715A /* XFSettingItem.h */,
+				4048AF611EF2828600E8715A /* XFSettingItem.m */,
+				4048AF621EF2828600E8715A /* XFSettings.h */,
+				4048AF631EF2828600E8715A /* XFSettings.m */,
+				4048AF641EF2828600E8715A /* XFSettingsProt.h */,
+				4048AF651EF2828600E8715A /* XFSettingSwitchItem.h */,
+				4048AF661EF2828600E8715A /* XFSettingSwitchItem.m */,
+				4048AF671EF2828600E8715A /* XFSettingTableViewController.h */,
+				4048AF681EF2828600E8715A /* XFSettingTableViewController.m */,
+				4048AF691EF2828600E8715A /* XFSettingTableViewDataSource.h */,
+				4048AF6A1EF2828600E8715A /* XFTableViewAgent.h */,
+				4048AF6B1EF2828600E8715A /* XFTableViewAgent.m */,
 			);
 			name = XFSettings;
 			path = ../XFSettings;
@@ -269,28 +269,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				400888731D35ECEE006ACFC8 /* XFSettingInfoDotCell.m in Sources */,
-				400888791D35ECEE006ACFC8 /* XFTableViewAgent.m in Sources */,
-				400888761D35ECEE006ACFC8 /* XFSettings.m in Sources */,
+				4048AF751EF2828600E8715A /* XFSettingInfoDotCell.m in Sources */,
+				4048AF7B1EF2828600E8715A /* XFTableViewAgent.m in Sources */,
+				4048AF781EF2828600E8715A /* XFSettings.m in Sources */,
 				40F4057C1B66257100A93A48 /* UpdateViewController.m in Sources */,
 				400384BE1B404979003071FD /* ViewController.m in Sources */,
-				400888741D35ECEE006ACFC8 /* XFSettingInfoItem.m in Sources */,
-				4008886F1D35ECEE006ACFC8 /* XFSettingCell.m in Sources */,
-				4008886C1D35ECEE006ACFC8 /* XFSettingArrowItem.m in Sources */,
-				4008886B1D35ECEE006ACFC8 /* XFCellAttrsData.m in Sources */,
-				400888701D35ECEE006ACFC8 /* XFSettingGroup.m in Sources */,
-				400888711D35ECEE006ACFC8 /* XFSettingInfoCell.m in Sources */,
+				4048AF761EF2828600E8715A /* XFSettingInfoItem.m in Sources */,
+				4048AF711EF2828600E8715A /* XFSettingCell.m in Sources */,
+				4048AF6E1EF2828600E8715A /* XFSettingArrowItem.m in Sources */,
+				4048AF6D1EF2828600E8715A /* XFCellAttrsData.m in Sources */,
+				4048AF721EF2828600E8715A /* XFSettingGroup.m in Sources */,
+				4048AF731EF2828600E8715A /* XFSettingInfoCell.m in Sources */,
 				400384BB1B404979003071FD /* AppDelegate.m in Sources */,
-				4008886D1D35ECEE006ACFC8 /* XFSettingAssistImageCell.m in Sources */,
+				4048AF6F1EF2828600E8715A /* XFSettingAssistImageCell.m in Sources */,
 				40C058AF1B7E04FE00575C21 /* XFNewFriendViewController.m in Sources */,
-				400888721D35ECEE006ACFC8 /* XFSettingInfoCountCell.m in Sources */,
+				4048AF741EF2828600E8715A /* XFSettingInfoCountCell.m in Sources */,
 				400384B81B404979003071FD /* main.m in Sources */,
 				400384FE1B405F52003071FD /* NSString+Tools.m in Sources */,
-				4008886E1D35ECEE006ACFC8 /* XFSettingAssistImageItem.m in Sources */,
-				400888781D35ECEE006ACFC8 /* XFSettingTableViewController.m in Sources */,
-				400888771D35ECEE006ACFC8 /* XFSettingSwitchItem.m in Sources */,
-				4008886A1D35ECEE006ACFC8 /* UIViewController+XFSettings.m in Sources */,
-				400888751D35ECEE006ACFC8 /* XFSettingItem.m in Sources */,
+				4048AF701EF2828600E8715A /* XFSettingAssistImageItem.m in Sources */,
+				4048AF7A1EF2828600E8715A /* XFSettingTableViewController.m in Sources */,
+				4048AF791EF2828600E8715A /* XFSettingSwitchItem.m in Sources */,
+				4048AF6C1EF2828600E8715A /* UIViewController+XFSettings.m in Sources */,
+				4048AF771EF2828600E8715A /* XFSettingItem.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

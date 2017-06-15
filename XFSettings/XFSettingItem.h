@@ -14,7 +14,7 @@ typedef enum : NSUInteger {
     XFSettingPhaseTypeCellInteracted
 } XFSettingPhaseType;
 
-typedef void(^SettingItemOptionBlock)(UITableViewCell *cell,XFSettingPhaseType phaseType,id intentData);
+typedef void(^SettingItemOptionBlock)(UITableViewCell *cell,XFSettingPhaseType phaseType,id intentData,id state);
 
 @interface XFSettingItem : NSObject
 /** 标题*/
@@ -25,6 +25,8 @@ typedef void(^SettingItemOptionBlock)(UITableViewCell *cell,XFSettingPhaseType p
 @property (nonatomic, assign) Class relatedCellClass;
 /** 交互事件Block*/
 @property (nonatomic, copy) SettingItemOptionBlock optionBlock;
+/** 视图自定义数据*/
+@property (nonatomic, strong) id state;
 
 
 - (instancetype)initWithDict:(NSDictionary *)dict;

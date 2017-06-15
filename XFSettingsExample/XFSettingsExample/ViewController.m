@@ -191,13 +191,23 @@
                              XFSettingItemTitle: @"版本号",
                              XFSettingItemClass : [XFSettingInfoItem class],
                              XFSettingItemAttrRightInfo : @"当前版本：V2.3.0",
+                             // 保存的动态信息
+                             XFSettingItemState:@{
+                                     @"num":@1
+                                     }.mutableCopy,
                              XFSettingItemRelatedCellClass:[XFSettingInfoCell class],
-                             XFSettingOptionActionBlock : ^(XFSettingInfoCell *cell,XFSettingPhaseType phaseType,id intentData){
+                             XFSettingOptionActionBlock : ^(XFSettingInfoCell *cell,XFSettingPhaseType phaseType,id intentData,id state){
                                 if(phaseType == XFSettingPhaseTypeCellLayout){
                                      CGSize textSize = [cell.rightInfoLabel.text sizeWithFont:cell.rightInfoLabel.font];
                                      CGRect frame = cell.rightInfoLabel.frame;
                                      frame.origin.x =  [UIScreen mainScreen].bounds.size.width - textSize.width - 32 - 15;
                                      cell.rightInfoLabel.frame = frame;
+                                 }
+                                 
+                                 if (phaseType == XFSettingPhaseTypeCellInteracted) {
+                                     NSLog(@"当前状态数据：%@",state);
+                                     // 修改数据
+                                     state[@"num"] = @([state[@"num"] integerValue] + 1);
                                  }
                              }
                              },
@@ -239,6 +249,8 @@
                 });
             });
         }
+            break;
+            default:
             break;
     }
 }

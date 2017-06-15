@@ -14,6 +14,10 @@
 @property (nonatomic, strong) UIColor *cellSelectedBackgroundColor;
 @property (nonatomic, strong) UIView *cellBackgroundView;
 @property (nonatomic, strong) UIView *cellSelectedBackgroundView;
+/**
+ *  是否允许选中单个Cell
+ */
+@property (nonatomic, assign) BOOL cellEnableRadioSelectStyle;
 // cell下线颜色
 @property (nonatomic, strong) UIColor *cellBottomLineColor;
 /**

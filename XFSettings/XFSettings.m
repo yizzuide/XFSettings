@@ -23,6 +23,7 @@ NSString * const XFSettingItemDestViewControllerClass = @"destVCClass";
 NSString * const XFSettingItemDestViewControllerUserInfo = @"destVCUserInfo";
 
 NSString * const XFSettingOptionActionBlock = @"optionBlock";
+NSString * const XFSettingItemState = @"state";
 
 // 属性
 NSString * const XFSettingItemAttrDetailText = @"detailText";

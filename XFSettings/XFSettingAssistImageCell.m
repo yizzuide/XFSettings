@@ -12,7 +12,7 @@
 #import "XFCellAttrsData.h"
 
 @interface XFSettingAssistImageCell ()
-@property (nonatomic, weak) UIImageView *assistImageView;
+
 @end
 
 @implementation XFSettingAssistImageCell
@@ -63,6 +63,16 @@
     self.detailTextLabel.textColor = self.cellAttrsData.contentDetailTextColor ? self.cellAttrsData.contentDetailTextColor : [UIColor grayColor];
     
     self.assistImageView.image = [UIImage imageNamed:assistImageItem.assistImageName];
+}
+
+- (void)setSelected:(BOOL)selected animated:(BOOL)animated
+{
+    [super setSelected:selected animated:animated];
+    
+    // 是否允许Radio方式
+    if(self.cellAttrsData.cellEnableRadioSelectStyle){
+        self.assistImageView.hidden = !selected;
+    }
 }
 
 

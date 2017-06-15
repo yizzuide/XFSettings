@@ -59,7 +59,7 @@ static void * xfSettings_Agent = (void *)@"xfSettings_Agent";
 - (NSMutableArray *)xf_settingGroups
 {
     NSMutableArray *groups = objc_getAssociatedObject(self, &xfSettings_SettingGroups);
-    if (groups == nil) {
+    if (groups == nil || !groups.count) {
         NSArray *source = [self.xf_dataSource settingItems];
         groups = [XFSettingGroup settingGroupsWithArray:source];
         [self setXf_settingGroups:groups];

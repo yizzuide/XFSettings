@@ -43,7 +43,7 @@
     self.rightInfoLabel.frame = rightInfoFrame;
     
     // 执行自定义布局
-    self.item.optionBlock(self,XFSettingPhaseTypeCellLayout,nil);
+    self.item.optionBlock(self,XFSettingPhaseTypeCellLayout,nil,self.item.state);
 }
 
 - (CGSize)rightInfoSize

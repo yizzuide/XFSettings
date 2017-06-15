@@ -87,14 +87,16 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     // 取消选中状态
-    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    if (!self.cellAttrsData.cellEnableRadioSelectStyle) {
+        [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    }
     
     XFSettingItem *item = [self.settingGroups[indexPath.section] items][indexPath.row];
     // 如果有操作要执行
     UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
-    if (cell.selectionStyle != UITableViewCellSelectionStyleNone) {
+    if (cell.selectionStyle != UITableViewCellSelectionStyleNone || self.cellAttrsData.cellEnableRadioSelectStyle) {
         if (item.optionBlock) {
-            item.optionBlock([tableView cellForRowAtIndexPath:indexPath],XFSettingPhaseTypeCellInteracted,nil);
+            item.optionBlock([tableView cellForRowAtIndexPath:indexPath],XFSettingPhaseTypeCellInteracted,nil,item.state);
         }
     }
     
