@@ -1,6 +1,6 @@
 ![XFSettings logo](./ScreenShot/XFSettingLogo.png)
 
-[![CocoaPods](https://img.shields.io/badge/cocoapods-v2.3.2-brightgreen.svg)](http://cocoadocs.org/docsets/XFSettings)
+[![CocoaPods](https://img.shields.io/badge/cocoapods-v2.4.0-brightgreen.svg)](http://cocoadocs.org/docsets/XFSettings)
 ![Language](https://img.shields.io/badge/language-ObjC-orange.svg)
 ![License](https://img.shields.io/hexpm/l/plug.svg)
 ![Version](https://img.shields.io/badge/platform-ios7%2B-green.svg)
@@ -11,13 +11,14 @@
 
 ## 安装
 1、通过cocoapods
-> pod 'XFSettings','2.3.2'
+> pod 'XFSettings','2.4.0'
 
 2、手动加入
 
 把XFSettings整个目录拖入到工程
 
 ## 更新记录
+* 2017/9/14   V2.4.0  支持行高设置`XFSettingItemHeight`字段，自定义底部满线风格下首个cell顶部自动画线
 * 2016/12/9   V2.3.2  修复图标循环使用问题
 * 2016/9/12   V2.3.1  使`XFSetttingCell`可以在外部初始化设置它的子视图状态
 * 2016/8/15   V2.3.0  支持自定义布局`XFSettingPhaseTypeCellLayout`阶段
