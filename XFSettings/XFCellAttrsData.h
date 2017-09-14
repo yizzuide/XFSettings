@@ -21,7 +21,7 @@
 // cell下线颜色
 @property (nonatomic, strong) UIColor *cellBottomLineColor;
 /**
- *  只显示下方的画线
+ *  显示满线
  */
 @property (nonatomic, assign) BOOL cellFullLineEnable;
 

@@ -163,6 +163,17 @@
    
     // 如果满横屏填充
     if(self.cellAttrsData.cellFullLineEnable){
+        // 添加第一个cell的顶部线条
+        if(self.item.isFirst){
+            UIView *topLineView = [[UIView alloc] init];
+            topLineView.backgroundColor = [UIColor grayColor];
+            topLineView.frame = CGRectMake(0, 0, self.bounds.size.width, 0.8);
+            [self addSubview:topLineView];
+            if (self.cellAttrsData.cellBottomLineColor) {
+                topLineView.backgroundColor = self.cellAttrsData.cellBottomLineColor;
+            }
+        }
+        
         // 画cell底部的线
         CGRect frame = self.bottomLineView.frame;
         frame.size.width = self.frame.size.width;
