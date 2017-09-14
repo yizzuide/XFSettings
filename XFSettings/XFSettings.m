@@ -24,6 +24,7 @@ NSString * const XFSettingItemDestViewControllerUserInfo = @"destVCUserInfo";
 
 NSString * const XFSettingOptionActionBlock = @"optionBlock";
 NSString * const XFSettingItemState = @"state";
+NSString * const XFSettingItemHeight = @"height";
 
 // 属性
 NSString * const XFSettingItemAttrDetailText = @"detailText";

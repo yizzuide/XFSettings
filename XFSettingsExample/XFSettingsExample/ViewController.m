@@ -153,7 +153,8 @@
                              XFSettingItemAttrDetailText : @"帮助文档",
                              XFSettingItemAttrAssistImageName : @"picture_download",
                              XFSettingItemClass : [XFSettingAssistImageItem class],
-                             XFSettingItemRelatedCellClass:[XFSettingAssistImageCell class]
+                             XFSettingItemRelatedCellClass:[XFSettingAssistImageCell class],
+                             XFSettingItemHeight : @55
                              },
                          @{
                              XFSettingItemTitle: @"服务协议",

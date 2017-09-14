@@ -82,6 +82,10 @@ extern NSString * const XFSettingOptionActionBlock;
  */
 extern NSString * const XFSettingItemState;
 /**
+ * Cell高度
+ */
+extern NSString * const XFSettingItemHeight;
+/**
  * 使用XFSettingInfoItem和XFSettingInfoCell时的属性,详细信息
  */
 extern NSString * const XFSettingItemAttrDetailText;

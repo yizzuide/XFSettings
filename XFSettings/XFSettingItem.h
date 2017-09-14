@@ -27,6 +27,8 @@ typedef void(^SettingItemOptionBlock)(UITableViewCell *cell,XFSettingPhaseType p
 @property (nonatomic, copy) SettingItemOptionBlock optionBlock;
 /** 视图自定义数据*/
 @property (nonatomic, strong) id state;
+/* 行高*/
+@property (nonatomic, strong) NSNumber *height;
 
 
 - (instancetype)initWithDict:(NSDictionary *)dict;

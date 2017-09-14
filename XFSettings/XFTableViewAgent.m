@@ -48,6 +48,15 @@
     return [self.settingsProt.xf_settingGroups[section] footer];
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    XFSettingItem *item = [self.settingsProt.xf_settingGroups[indexPath.section] items][indexPath.row];
+    if (item.height) {
+        return item.height.floatValue;
+    }
+    return 44;
+}
+
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     // 取消选中状态
