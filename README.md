@@ -1,6 +1,6 @@
 ![XFSettings logo](./ScreenShot/XFSettingLogo.png)
 
-[![CocoaPods](https://img.shields.io/badge/cocoapods-v2.5.0-brightgreen.svg)](http://cocoadocs.org/docsets/XFSettings)
+[![CocoaPods](https://img.shields.io/badge/cocoapods-v2.5.1-brightgreen.svg)](http://cocoadocs.org/docsets/XFSettings)
 ![Language](https://img.shields.io/badge/language-ObjC-orange.svg)
 ![License](https://img.shields.io/hexpm/l/plug.svg)
 ![Version](https://img.shields.io/badge/platform-ios7%2B-green.svg)
@@ -18,6 +18,7 @@
 把XFSettings整个目录拖入到工程
 
 ## 更新记录
+* 2017/11/14  V2.5.1  修复一组只有一行的卡片式样式圆角问题
 * 2017/11/14  V2.5.0  新增卡片式UI可选样式设置`XFSettingStyleCard`
 * 2017/9/14   V2.4.0  支持行高设置`XFSettingItemHeight`字段，自定义底部满线风格下首个cell顶部自动画线
 * 2016/12/9   V2.3.2  修复图标循环使用问题
