@@ -164,7 +164,7 @@
     // 如果满横屏填充
     if(self.cellAttrsData.cellFullLineEnable){
         // 添加第一个cell的顶部线条
-        if(self.item.isFirst){
+        if(self.item.isFirst && !self.cellAttrsData.disableTopLine){
             UIView *topLineView = [[UIView alloc] init];
             topLineView.backgroundColor = [UIColor grayColor];
             topLineView.frame = CGRectMake(0, 0, self.bounds.size.width, 0.8);
@@ -217,6 +217,33 @@
     }
 }
 
+- (void)setFrame:(CGRect)frame
+{
+    // 卡片样式
+    if (self.cellAttrsData.settingStyle == XFSettingStyleCard) {
+        CGFloat margin = self.cellAttrsData.cardSettingStyleMargin;
+        CGSize screenSize = [UIScreen mainScreen].bounds.size;
+        frame.origin.x = margin;
+        frame.size.width = screenSize.width - margin * 2;
+        
+        // 设置圆角
+        CGFloat radii = self.cellAttrsData.cardSettingStyleCornerRadius;
+        CGRect bounds = CGRectMake(0, 0, frame.size.width, frame.size.height);
+        if (self.item.isFirst || self.item.isLast) {
+            UIRectCorner corner = UIRectCornerTopLeft | UIRectCornerTopRight;
+            if (self.item.isLast) {
+                corner = UIRectCornerBottomLeft | UIRectCornerBottomRight;
+            }
+            UIBezierPath *maskPathTop = [UIBezierPath bezierPathWithRoundedRect:bounds byRoundingCorners:corner cornerRadii:CGSizeMake(radii, radii)];
+            CAShapeLayer *maskLayerTop = [[CAShapeLayer alloc] init];
+            maskLayerTop.frame = bounds;
+            maskLayerTop.path = maskPathTop.CGPath;
+            self.layer.mask = maskLayerTop;
+        }
+    }
+    [super setFrame:frame];
+}
+
 + (NSString *)settingCellReuseIdentifierString
 {
     return @"setting-cell";
@@ -224,7 +251,8 @@
 
 - (void)stateChanged:(UISwitch *)switchView {
     if (self.item.optionBlock) {
-        self.item.optionBlock(self,XFSettingPhaseTypeCellInteracted,@{@"switchOn":@(switchView.isOn)},self.item.state);
+        self.item.optionBlock(self,XFSettingPhaseTypeCellInteracted,
+                              @{@"switchOn":@(switchView.isOn)},self.item.state);
     }
 }
 

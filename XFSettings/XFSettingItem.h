@@ -30,14 +30,12 @@ typedef void(^SettingItemOptionBlock)(UITableViewCell *cell,XFSettingPhaseType p
 /* 行高*/
 @property (nonatomic, strong) NSNumber *height;
 
-
 - (instancetype)initWithDict:(NSDictionary *)dict;
 + (instancetype)settingItemWithDict:(NSDictionary *)dict;
 + (NSMutableArray *)settingItemsWithArray:(NSArray *)arr;
 
-/**
- *  是否是第一个item
- *
- */
+/* 是否是第一个item*/
 - (BOOL)isFirst;
+/* 是否是最后一个item*/
+- (BOOL)isLast;
 @end

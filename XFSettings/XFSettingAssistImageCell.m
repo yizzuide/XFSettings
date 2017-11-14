@@ -57,7 +57,7 @@
     
     XFSettingAssistImageItem *assistImageItem = (XFSettingAssistImageItem *)item;
     
-    self.detailTextLabel.font = [UIFont systemFontOfSize:12];
+    self.detailTextLabel.font = [UIFont systemFontOfSize:(self.cellAttrsData.contentTextMaxSize > 1.f ? self.cellAttrsData.contentTextMaxSize - 1 : 12)];
     self.detailTextLabel.text = assistImageItem.detailText;
     self.detailTextLabel.textAlignment = NSTextAlignmentLeft;
     self.detailTextLabel.textColor = self.cellAttrsData.contentDetailTextColor ? self.cellAttrsData.contentDetailTextColor : [UIColor grayColor];

@@ -6,12 +6,12 @@
 //  Copyright © 2015年 Yizzuide. All rights reserved.
 //
 
-#import "ViewController.h"
-#import "XFSettings.h"
-#import "UIViewController+XFSettings.h"
 #import "NSString+Tools.h"
+#import "UIViewController+XFSettings.h"
 #import "UpdateViewController.h"
+#import "ViewController.h"
 #import "XFNewFriendViewController.h"
+#import "XFSettings.h"
 
 #define WS(weakSelf)  __weak __typeof(&*self)weakSelf = self;
 
@@ -24,35 +24,44 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.navigationItem.title = @"设置";
-    self.view.backgroundColor = [UIColor whiteColor];
+    self.navigationItem.title                  = @"设置";
+    self.view.backgroundColor                  = [UIColor whiteColor];
     
     // set cell attrs
-    XFCellAttrsData *cellAttrsData = [XFCellAttrsData cellColorDataWithBackgroundColor:[UIColor whiteColor] selBackgroundColor:[UIColor colorWithWhite:0 alpha:0.4]];
+    XFCellAttrsData *cellAttrsData             = [XFCellAttrsData cellColorDataWithBackgroundColor :[UIColor whiteColor] selBackgroundColor :[UIColor colorWithWhite :0 alpha :0.4]];
     // 设置图标大小
-    cellAttrsData.contentIconSize = 20;
+    cellAttrsData.contentIconSize              = 20;
     // 设置内容间距
-    cellAttrsData.contentEachOtherPadding = 15;
+    cellAttrsData.contentEachOtherPadding      = 15;
     // cell 线条颜色
-    cellAttrsData.cellBottomLineColor = [UIColor purpleColor];
+//    cellAttrsData.cellBottomLineColor        = [UIColor purpleColor];
     // 显示填充整个cell宽度画线
-    cellAttrsData.cellFullLineEnable = YES;
+//    cellAttrsData.cellFullLineEnable         = YES;
     // 标题文字大小（其它文字会按个大小自动调整）
-    cellAttrsData.contentTextMaxSize = 13;
+    cellAttrsData.contentTextMaxSize           = 13;
     // 标题颜色
-    cellAttrsData.contentTitleTextColor = [UIColor purpleColor];
+    cellAttrsData.contentTitleTextColor        = [UIColor purpleColor];
     // 详细文字颜色
-    cellAttrsData.contentDetailTextColor = [UIColor blueColor];
+    cellAttrsData.contentDetailTextColor       = [UIColor blueColor];
     // 辅助文字颜色
-    cellAttrsData.contentInfoTextColor = [UIColor brownColor];
+    cellAttrsData.contentInfoTextColor         = [UIColor brownColor];
     // 表格风格
-    cellAttrsData.tableViewStyle = UITableViewStyleGrouped;
+    cellAttrsData.tableViewStyle               = UITableViewStyleGrouped;
+    // 卡片样式
+    cellAttrsData.settingStyle                 = XFSettingStyleCard;
+    // 卡片样式下的外间距
+    cellAttrsData.cardSettingStyleMargin       = 20;
+    // 卡片样式下的圆角
+    cellAttrsData.cardSettingStyleCornerRadius = 5;
     
-    self.xf_cellAttrsData = cellAttrsData;
+    self.xf_cellAttrsData                      = cellAttrsData;
     // 设置数据源
-    self.xf_dataSource = self;
+    self.xf_dataSource                         = self;
     // 调用配置设置
     [self xf_setup];
+    
+    // 获得UITableView来设置分隔线样式
+    self.xf_tableView.separatorStyle           = UITableViewCellSeparatorStyleNone;
     
     
 }
@@ -154,7 +163,7 @@
                              XFSettingItemAttrAssistImageName : @"picture_download",
                              XFSettingItemClass : [XFSettingAssistImageItem class],
                              XFSettingItemRelatedCellClass:[XFSettingAssistImageCell class],
-                             XFSettingItemHeight : @55
+                             XFSettingItemHeight : @55 // 自定义行高
                              },
                          @{
                              XFSettingItemTitle: @"服务协议",

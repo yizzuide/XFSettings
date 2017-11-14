@@ -9,12 +9,11 @@
 #import "XFSettingItem.h"
 #import "XFSettingArrowItem.h"
 
-@interface XFSettingItem ()
-
-@property (nonatomic, assign) BOOL first;
-@end
-
 @implementation XFSettingItem
+{
+    BOOL _firstIndex;
+    BOOL _lastIndex;
+}
 
 - (instancetype)initWithDict:(NSDictionary *)dict
 {
@@ -33,6 +32,7 @@
 + (NSMutableArray *)settingItemsWithArray:(NSArray *)arr
 {
     NSMutableArray *mArr = [NSMutableArray array];
+    NSInteger count = arr.count;
     [arr enumerateObjectsUsingBlock:^(NSDictionary *item, NSUInteger idx, BOOL *stop) {
         // 创建到一个可变数组
         NSMutableDictionary *mItem= [item mutableCopy];
@@ -53,13 +53,23 @@
         }
         // 判断是否是第一个item,作为标记
         if (idx == 0) {
-            instance.first = YES;
+            instance->_firstIndex = YES;
+        }
+        if (idx == count - 1) {
+            instance->_lastIndex = YES;
+        }
+        if (count == 1) {
+            instance->_lastIndex = YES;
         }
     }];
     return mArr;
 }
 
 - (BOOL)isFirst {
-    return self.first;
+    return self->_firstIndex;
+}
+- (BOOL)isLast
+{
+    return self->_lastIndex;
 }
 @end

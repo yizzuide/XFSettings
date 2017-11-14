@@ -8,6 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
+typedef enum : NSUInteger {
+    // 默认样式
+    XFSettingStyleDefault,
+    // 卡片样式
+    XFSettingStyleCard,
+} XFSettingStyle;
+
 @interface XFCellAttrsData : NSObject
 // Cell Color
 @property (nonatomic, strong) UIColor *cellBackgroundColor;
@@ -55,11 +62,21 @@
  */
 @property (nonatomic, assign) BOOL disableTopLine;
 /**
- *  列表显示风格（注意：只适用于使用分类UIViewController+XFSettings.h方式）
+ *  UITableView列表显示风格（注意：只适用于使用分类UIViewController+XFSettings.h方式）
  */
 @property (nonatomic, assign) UITableViewStyle tableViewStyle;
-
-
+/**
+ * 设置列表样式
+ */
+@property (nonatomic, assign) XFSettingStyle settingStyle;
+/**
+ * 卡片样式下的外间距
+ */
+@property (nonatomic, assign) CGFloat cardSettingStyleMargin;
+/**
+ * 卡片样式下的圆角
+ */
+@property (nonatomic, assign) CGFloat cardSettingStyleCornerRadius;
 
 
 /**
