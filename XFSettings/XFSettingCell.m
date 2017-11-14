@@ -231,7 +231,9 @@
         CGRect bounds = CGRectMake(0, 0, frame.size.width, frame.size.height);
         if (self.item.isFirst || self.item.isLast) {
             UIRectCorner corner = UIRectCornerTopLeft | UIRectCornerTopRight;
-            if (self.item.isLast) {
+            if (self.item.isFirst && self.item.isLast) {
+                corner = UIRectCornerAllCorners;
+            } else if (self.item.isLast) {
                 corner = UIRectCornerBottomLeft | UIRectCornerBottomRight;
             }
             UIBezierPath *maskPathTop = [UIBezierPath bezierPathWithRoundedRect:bounds byRoundingCorners:corner cornerRadii:CGSizeMake(radii, radii)];
