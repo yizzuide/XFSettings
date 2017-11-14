@@ -11,7 +11,7 @@
 
 ## 安装
 1、通过cocoapods
-> pod 'XFSettings','~2.0'
+> pod 'XFSettings','~> 2.5.0'
 
 2、手动加入
 
