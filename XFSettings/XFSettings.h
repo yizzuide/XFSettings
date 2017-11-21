@@ -97,7 +97,26 @@ extern NSString * const XFSettingItemAttrRightInfo;
  *  使用XFSettingAssistImageItem和XfSettingAssistImageCell时的属性，右边辅助图
  */
 extern NSString * const XFSettingItemAttrAssistImageName;
-
+/**
+ *  使用XFSettingAssistImageItem和XfSettingAssistImageCell时的属性，右边辅助图(UIImage)
+ */
+extern NSString * const XFSettingItemAttrAssistImage;
+/**
+ *  使用XFSettingAssistImageItem和XfSettingAssistImageCell时的属性，右边辅助图填充模式
+ */
+extern NSString * const XFSettingItemAttrAssistImageContentMode;
+/**
+ *  使用XFSettingAssistImageItem和XfSettingAssistImageCell时的属性，右边辅助图上下Margin
+ */
+extern NSString * const XFSettingItemAttrAssistImageMargin;
+/**
+ *  使用XFSettingAssistImageItem和XfSettingAssistImageCell时的属性，右边辅助图渲染半径
+ */
+extern NSString * const XFSettingItemAttrAssistImageRadii;
+/**
+ *  使用XFSettingAssistImageItem和XfSettingAssistImageCell时,右边辅助图正圆半径常量
+ */
+extern const CGFloat XFSettingItemAttrAssistImageRadiiCircle;
 
 /**
  *  开关交互信息

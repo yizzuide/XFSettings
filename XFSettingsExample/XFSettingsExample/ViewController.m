@@ -160,7 +160,10 @@
                              XFSettingItemTitle: @"vip帮助",
                              XFSettingItemIcon : @"1435529211_circle_help_question-mark",
                              XFSettingItemAttrDetailText : @"帮助文档",
-                             XFSettingItemAttrAssistImageName : @"picture_download",
+                             XFSettingItemAttrAssistImageName : @"defaultUserIcon",
+                             XFSettingItemAttrAssistImageRadii : @(XFSettingItemAttrAssistImageRadiiCircle),
+                             XFSettingItemAttrAssistImageMargin: @(8.f),
+                             XFSettingItemAttrAssistImageContentMode : @(UIViewContentModeScaleToFill),
                              XFSettingItemClass : [XFSettingAssistImageItem class],
                              XFSettingItemRelatedCellClass:[XFSettingAssistImageCell class],
                              XFSettingItemHeight : @55 // 自定义行高

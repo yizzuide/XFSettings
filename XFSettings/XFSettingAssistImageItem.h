@@ -10,5 +10,9 @@
 
 @interface XFSettingAssistImageItem : XFSettingArrowItem
 @property (nonatomic, copy) NSString *detailText;
-@property (nonatomic, weak) NSString *assistImageName;
+@property (nonatomic, copy) NSString *assistImageName;
+@property (nonatomic, strong) UIImage *assistImage;
+@property (nonatomic, strong) NSNumber *assistImageContentMode;
+@property (nonatomic, strong) NSNumber *assistImageMargin;
+@property (nonatomic, strong) NSNumber *assistImageRenderRadii;
 @end

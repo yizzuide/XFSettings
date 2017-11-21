@@ -54,7 +54,7 @@
     if (item.height) {
         return item.height.floatValue;
     }
-    return 44;
+    return tableView.rowHeight > 0 ? tableView.rowHeight : 44;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath

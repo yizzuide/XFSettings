@@ -6,7 +6,7 @@
 //  Copyright © 2016年 Yizzuide. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 // group
 NSString * const XFSettingGroupHeader = @"header";
@@ -22,14 +22,20 @@ NSString * const XFSettingItemRelatedCellClass = @"relatedCellClass";
 NSString * const XFSettingItemDestViewControllerClass = @"destVCClass";
 NSString * const XFSettingItemDestViewControllerUserInfo = @"destVCUserInfo";
 
+// 自定义状态
 NSString * const XFSettingOptionActionBlock = @"optionBlock";
 NSString * const XFSettingItemState = @"state";
 NSString * const XFSettingItemHeight = @"height";
 
-// 属性
+// 修饰属性
 NSString * const XFSettingItemAttrDetailText = @"detailText";
 NSString * const XFSettingItemAttrRightInfo = @"rightInfo";
-NSString * const XFSettingItemAttrAssistImageName= @"assistImageName";
+NSString * const XFSettingItemAttrAssistImageName = @"assistImageName";
+NSString * const XFSettingItemAttrAssistImage = @"assistImage";
+NSString * const XFSettingItemAttrAssistImageContentMode = @"assistImageContentMode";
+NSString * const XFSettingItemAttrAssistImageMargin = @"assistImageMargin";
+NSString * const XFSettingItemAttrAssistImageRadii = @"assistImageRenderRadii";
+const CGFloat XFSettingItemAttrAssistImageRadiiCircle = 2199;
 
 // intentData
 NSString * const XFSettingIntentDataSwitchOn = @"switchOn";
