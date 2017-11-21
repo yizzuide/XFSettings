@@ -1,6 +1,6 @@
 ![XFSettings logo](./ScreenShot/XFSettingLogo.png)
 
-[![CocoaPods](https://img.shields.io/badge/cocoapods-v2.5.1-brightgreen.svg)](http://cocoadocs.org/docsets/XFSettings)
+[![CocoaPods](https://img.shields.io/badge/cocoapods-v2.6.0-brightgreen.svg)](http://cocoadocs.org/docsets/XFSettings)
 ![Language](https://img.shields.io/badge/language-ObjC-orange.svg)
 ![License](https://img.shields.io/hexpm/l/plug.svg)
 ![Version](https://img.shields.io/badge/platform-ios7%2B-green.svg)
@@ -11,13 +11,14 @@
 
 ## 安装
 1、通过cocoapods
-> pod 'XFSettings','~> 2.5.0'
+> pod 'XFSettings','~> 2.6.0'
 
 2、手动加入
 
 把XFSettings整个目录拖入到工程
 
 ## 更新记录
+* 2017/11/21  V2.6.0  增强对`XFSettingAssistImageCell`类型的控制能力
 * 2017/11/14  V2.5.2  修复一个block安全检查问题
 * 2017/11/14  V2.5.1  修复一组只有一行的卡片式样式圆角问题
 * 2017/11/14  V2.5.0  新增卡片式UI可选样式设置`XFSettingStyleCard`
